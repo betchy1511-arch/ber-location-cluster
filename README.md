@@ -42,19 +42,32 @@ Verified at source on 2026-08-30:
 - Jefferson Parish residential re roofing permit is **$50**, paid by card via MGO Connect, no plans
   and no survey required. Source: jeffparish.gov. **This corrects the $175 figure carried in the
   earlier prototype round.**
-- From **1 January 2026**, residential roof work valued over **$7,500** requires a Louisiana
-  Residential Roofing or Residential Construction licence. Source: jeffparish.gov.
+- From **1 January 2026**, residential roof work valued at **$7,500 or more** requires a Louisiana
+  Residential Roofing or Residential Construction licence. Source: jeffparish.gov, statute
+  La. R.S. 37:2156.4. A Codex cross-check corrected this from "over $7,500"; the statute reads
+  "or more", and on a threshold claim that difference is the whole claim.
 - Re roofing must comply with the **2021 International Residential Code**. Source: jeffparish.gov.
 - Jefferson Parish sends **no inspector**. Phases are verified from geo tagged photographs showing
   the nailing pattern and material packaging with wind ratings. Source: jeffparish.gov.
-- Louisiana Fortify Homes Program pays **up to $10,000** toward the **FORTIFIED upgrade portion**
-  of the work, not the whole roof, and runs as a lottery.
+- Louisiana Fortify Homes Program grants **up to $10,000**, "limited to construction costs", toward
+  a roof that meets the FORTIFIED standard, and the homeowner pays everything above the grant plus
+  the separate evaluator fees. The grant must be **awarded before work starts**. Source: ldi.la.gov.
+  A Codex cross-check corrected an earlier draft that described it as covering only the incremental
+  upgrade above a standard replacement, which understated it.
 - Phone `(504) 800-8196` and address `4523 Croyden Ave, New Orleans LA` read from the
   `RoofingContractor` JSON-LD in BER's own page source, not off a rendered page.
 
 **Not verified, needs BER sign off before launch:** every price band ($7,000 to $18,000,
 $16,000 to $28,000, $65 to $95 a sheet, $1,800 to $4,500, $900 to $2,400) and the
 neighbourhood characterisations in variant B. These come from BER's own unpublished draft copy.
+
+## Cross-check
+
+A Codex CLI cross-check was run over all seven factual and accessibility claims on 2026-08-30.
+It confirmed five and **rejected two**, both of which were then verified at source and corrected
+in all three variants: the licence threshold wording, and the scope of the state grant. Regulatory
+statements now carry an "as of August 2026" line on the page, also on its recommendation.
+No second-model review of the prose itself has run.
 
 ## Images
 
