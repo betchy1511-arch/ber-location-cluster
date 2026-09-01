@@ -246,13 +246,15 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .svctabs button.on span{color:var(--blue)}
 .svctabs button.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--yellow);border-radius:2px}
 .svctabs button:hover:not(.on){color:var(--deep)}
-.svcstage{overflow:hidden;position:relative}
-.svctrack{display:flex;width:200%;transition:transform .55s var(--ease)}
+.svcstage{overflow:hidden;position:relative;transition:height .55s var(--ease)}
+.svctrack{display:flex;width:200%;align-items:flex-start;transition:transform .55s var(--ease)}
 .svcpanel{width:50%;flex:0 0 50%;box-sizing:border-box;padding:6px 2px 2px}
 .svctrack.show-com{transform:translateX(-50%)}
 .svcgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-@media(max-width:900px){.svcgrid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.svcgrid{grid-template-columns:1fr}}
+/* Centre an orphan card when the last row has only 1 (e.g. 10 items in 3 cols, 16 items in 3 cols) */
+.svcgrid > .svc2:last-child:nth-child(3n+1){grid-column:2 / 3}
+@media(max-width:900px){.svcgrid{grid-template-columns:repeat(2,1fr)} .svcgrid > .svc2:last-child:nth-child(3n+1){grid-column:auto}}
+@media(max-width:560px){.svcgrid{grid-template-columns:1fr} .svcgrid > .svc2:last-child:nth-child(3n+1){grid-column:auto}}
 
 /* Photo-topped service card */
 .svc2{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none;color:inherit;transform-style:preserve-3d;
@@ -832,6 +834,11 @@ footer a{color:#fff}
     gridCom.innerHTML=renderGroup('Commercial',cur,c);
     $('t-res-city').textContent='in '+c;
     $('t-com-city').textContent='in '+c;
+    // After the cards paint, re-measure the visible panel so the stage
+    // height snaps to the active panel instead of the taller of the two
+    if(window.__updateStageHeight){
+      requestAnimationFrame(function(){ window.__updateStageHeight(); });
+    }
   }
 
   function sync(){
@@ -934,6 +941,16 @@ footer a{color:#fff}
   // Residential / Commercial slide tabs
   var svcTabs=[].slice.call(document.querySelectorAll('#svctabs button'));
   var svcTrack=document.getElementById('svctrack');
+  var svcStage=svcTrack ? svcTrack.parentElement : null;
+  function updateStageHeight(){
+    if(!svcTrack || !svcStage) return;
+    var showCom=svcTrack.classList.contains('show-com');
+    var panelRes=svcTrack.children[0], panelCom=svcTrack.children[1];
+    var active=showCom?panelCom:panelRes;
+    if(!active) return;
+    var h=active.offsetHeight;
+    if(h>0) svcStage.style.height=h+'px';
+  }
   function setSvcTab(which){
     svcTabs.forEach(function(x){
       var on=(x.getAttribute('data-tab')===which);
@@ -941,8 +958,13 @@ footer a{color:#fff}
       x.setAttribute('aria-selected',on?'true':'false');
     });
     svcTrack.classList.toggle('show-com',which==='com');
+    updateStageHeight();
   }
   svcTabs.forEach(function(b){ b.addEventListener('click',function(){ setSvcTab(b.getAttribute('data-tab')); }); });
+  var _stageResizeT;
+  window.addEventListener('resize',function(){ clearTimeout(_stageResizeT); _stageResizeT=setTimeout(updateStageHeight,120); });
+  // Expose so buildServices() can re-measure after it repaints cards
+  window.__updateStageHeight=updateStageHeight;
 
   // Read ?svc= from URL and pre-select the service + right tab
   try{
