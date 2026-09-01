@@ -26,7 +26,9 @@ h1{font-size:clamp(28px,3.9vw,46px);letter-spacing:-.028em}
 h2{font-size:clamp(23px,2.7vw,32px);letter-spacing:-.02em}
 h3{font-size:17px;letter-spacing:-.01em}
 h4{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--deep)}
-.b{color:var(--blue)}
+.b{color:var(--blue);position:relative;display:inline-block;padding-bottom:2px}
+.b::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--yellow);border-radius:2px;transform:scaleX(0);transform-origin:left center;transition:transform .9s cubic-bezier(.22,1,.36,1) .1s}
+.b.in-view::after{transform:scaleX(1)}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
 .btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:45px;padding:13px 27px;
   font-family:var(--body);font-size:16.5px;font-weight:700;cursor:pointer;text-decoration:none;
@@ -177,7 +179,7 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .tblwrap{overflow-x:auto}
 .tbl{width:100%;border-collapse:collapse;font-size:15px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .tbl th,.tbl td{text-align:left;padding:13px 15px;border-bottom:1px solid var(--line);vertical-align:top}
-.tbl thead th{background:var(--navy);color:#fff;font-family:var(--head);font-size:13.5px}
+.tbl thead th{background:var(--navy);color:#fff;font-family:var(--head);font-size:16px;letter-spacing:.01em;padding:17px 18px;white-space:nowrap}
 .tbl tbody th{background:var(--sand);font-family:var(--head);font-size:14px;font-weight:700;white-space:nowrap}
 .tbl tr:last-child td,.tbl tr:last-child th{border-bottom:0}
 .tbl tbody td.best{background:#fffdf0}
@@ -275,6 +277,9 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .svc2:hover .go2 .arw{transform:translateX(3px) rotate(-45deg);background:rgba(255,255,255,.32)}
 
 
+.tbl-note{margin:14px 0 4px;padding:12px 16px;background:var(--cream);border-left:3px solid var(--yellow);border-radius:8px;font-size:14.5px;color:#3a4450;line-height:1.55}
+.tbl-note a{color:var(--deep);font-weight:700;text-decoration:underline}
+
 /* ============ FAQ, WELLNESTY PATTERN ============ */
 #faq{background:var(--sand);overflow:hidden}
 .faqhead{font-size:clamp(24px,3.3vw,44px);line-height:1.06;letter-spacing:-.032em;white-space:nowrap;margin:0 auto 14px;text-align:center}
@@ -336,7 +341,7 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .pcard::before{content:"";position:absolute;inset:0;z-index:-1;
   background:radial-gradient(120% 150% at 86% 50%,rgba(255,255,255,.26),transparent 58%)}
 .pcopy{text-align:center}
-.pcopy h2{color:#fff;font-size:clamp(27px,3.4vw,40px);max-width:17ch;margin:0 auto;text-shadow:0 2px 14px rgba(7,16,24,.42)}
+.pcopy h2{color:#fff;font-size:clamp(24px,3.1vw,36px);max-width:none;margin:0 auto;text-shadow:0 2px 14px rgba(7,16,24,.42);letter-spacing:-.02em}
 .pcopy p{color:#fff;margin:14px auto 22px;max-width:46ch;font-size:17px;text-shadow:0 1px 10px rgba(7,16,24,.46)}
 .pcopy .btn-y{box-shadow:0 10px 26px rgba(7,16,24,.28)}
 .pshots{position:relative;height:236px}
@@ -470,7 +475,7 @@ footer a{color:#fff}
   </div>
 
   <div class="statline">
-    <div class="stat"><b>$6 to $40 /lf</b><span>Typical installed cost range</span></div>
+    <div class="stat"><b>$6 to $40 /lf</b><span>Estimated installed cost</span></div>
     <div class="stat"><b>1 to 2 days</b><span>Typical install time</span></div>
     <div class="stat"><b id="s-permit">No permit</b><span id="s-permit-l">Gutters are not a roof covering</span></div>
     <div class="stat"><b>20 to 50 yrs</b><span>Aluminum service life</span></div>
@@ -492,7 +497,7 @@ footer a{color:#fff}
   <div class="sechead"><h2><span id="t-specs">Metairie gutter installation</span> <span class="b">at a glance</span></h2>
   <p class="bluf">A Metairie gutter installation is a same-day to two-day scoped job: measure the fascia runs, choose the size and material, form seamless aluminum on site or deliver pre-cut copper, hang on hidden hangers every 24 inches, cut in downspouts, and finish with splash blocks. Priced per linear foot, quoted before work starts.</p></div>
   <div class="specgrid">
-    <div class="spec"><h4>Typical cost band</h4><div class="v">$800 to $4,000</div><p>Whole-home residential install in seamless aluminum, 120 to 180 linear feet typical, before guards or fascia repair.</p></div>
+    <div class="spec"><h4>Estimated cost band</h4><div class="v">$800 to $4,000</div><p>Whole-home residential install in seamless aluminum, 120 to 180 linear feet typical, before guards or fascia repair. Call for a written estimate.</p></div>
     <div class="spec"><h4>Typical duration</h4><div class="v">1 to 2 days</div><p>Time on site from tear-off of old runs to splash blocks in place, depending on linear footage and fascia condition.</p></div>
     <div class="spec"><h4>Permit authority</h4><div class="v" id="v-auth">None</div><p id="v-auth-p">Gutter installation is not a roof covering change, so no Jefferson Parish permit is required for a gutter-only job.</p></div>
     <div class="spec"><h4>Licence threshold</h4><div class="v">Usually under</div><p>Most Metairie gutter installs sit under the La. R.S. 37:2156.4 residential threshold of $7,500. A whole-home seamless copper install can cross it, and Big Easy Roofing holds the residential licence either way.</p></div>
@@ -517,7 +522,7 @@ footer a{color:#fff}
   <div class="sechead"><h2>Sizing your Metairie gutters <span class="b" id="t-compare">against Gulf rainfall</span></h2>
   <p class="bluf">The New Orleans metro averages about 63.5 inches of rain a year per NOAA climate normals, with short-duration thunderstorm intensity high enough to overflow undersized gutters. A 5-inch K-style aluminum gutter handles roughly 5,500 square feet of roof at typical Gulf intensity. A 6-inch K-style handles about 7,960. Anything larger points to 6-inch with 3 by 4 downspouts.</p></div>
   <div class="tblwrap"><table class="tbl">
-    <thead><tr><th>Roof area drained</th><th>Recommended size</th><th>Downspout count</th><th>Installed cost band</th></tr></thead>
+    <thead><tr><th>Roof area drained</th><th>Recommended size</th><th>Downspout count</th><th>Estimated cost/lf</th></tr></thead>
     <tbody>
       <tr><th>Under 2,000 sqft</th><td>5-inch K-style aluminum</td><td>2 x 3 downspout, one per 20 lf of gutter</td><td class="money">$6 to $9 per lf</td></tr>
       <tr><th>2,000 to 4,000 sqft</th><td>5-inch K-style aluminum</td><td>2 x 3 downspout, one per 20 lf of gutter</td><td class="money">$6 to $9 per lf</td></tr>
@@ -529,6 +534,7 @@ footer a{color:#fff}
       <tr><th>Vinyl (PVC)</th><td>Not offered</td><td>Not offered</td><td>5 to 10 year life on the Gulf Coast, so we skip it</td></tr>
     </tbody>
   </table></div>
+  <p class="tbl-note">Estimated market ranges only. <a href="tel:+15048008196">Call (504) 800-8196</a> for a written estimate on your Metairie project.</p>
   <p class="srcline">Sizing rule of thumb is the SMACNA Architectural Sheet Metal Manual applied to Metairie rainfall intensity. NOAA New Orleans annual rainfall normal is drawn from the 1991-2020 climate normals. Cost bands are 2026 southeast Louisiana pricing on a residential install; a specific quote is written from a fascia measure.</p>
 </div></section>
 
@@ -537,7 +543,7 @@ footer a{color:#fff}
   <div class="tex-d" style="background-image:url('img/photo/inspector.jpg')"></div>
   <div class="wrap">
   <div class="sechead"><h2><span id="t-permit">Do you need a permit</span> <span class="b">for a Metairie gutter installation</span></h2>
-  <p class="bluf" id="p-permit">No permit in most cases. Gutter installation is not a roof covering change, so Jefferson Parish does not require the $50 residential re-roofing form for a gutter-only job. The state contractor licence threshold sits at $7,500 of construction work per La. R.S. 37:2156.4, and most Metairie gutter installs price out under it.</p></div>
+  <p class="bluf" id="p-permit">No permit in most cases. Gutter installation is not a roof covering change, so Jefferson Parish does not require the $50 residential re-roofing form for a gutter-only job. Roof drainage sits under 2021 IRC section R903.4, which governs how the gutter and downspout carry water clear of the wall but does not require a permit. The state contractor licence threshold sits at $7,500 of construction work per La. R.S. 37:2156.4, and most Metairie gutter installs price out under it.</p></div>
   <div class="iconrow">
     <div class="icard">
       <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span>
@@ -710,7 +716,7 @@ footer a{color:#fff}
 <section class="promo"><div class="wrap">
   <div class="pcard">
     <div class="pcopy">
-      <h2 id="t-cta">Get your free Metairie gutter quote this week</h2>
+      <h2 id="t-cta">Get your free <span class="b">Metairie gutter quote</span> this week</h2>
       <p id="p-cta">Free on-site fascia measure and a written per-linear-foot quote in the material you pick, sized against Gulf rainfall, with the fascia condition checked before any new gutter goes up.</p>
       <a class="btn btn-y" href="tel:+15048008196">Call (504) 800-8196</a>
     </div>
@@ -1038,6 +1044,21 @@ footer a{color:#fff}
 
   // On first paint, open the tab that matches the current service group
   setSvcTab(SVC[svcSel.value].g==='Commercial'?'com':'res');
+  // Animated underline on important keywords: fire when the .b enters viewport
+  if ('IntersectionObserver' in window) {
+    var _uObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in-view');
+          _uObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.25, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.b').forEach(function(el){ _uObs.observe(el); });
+  } else {
+    document.querySelectorAll('.b').forEach(function(el){ el.classList.add('in-view'); });
+  }
+
 })();
 </script>
 </body>
