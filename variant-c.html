@@ -25,7 +25,9 @@ h1{font-size:clamp(28px,3.9vw,46px);letter-spacing:-.028em}
 h2{font-size:clamp(23px,2.7vw,32px);letter-spacing:-.02em}
 h3{font-size:17px;letter-spacing:-.01em}
 h4{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--deep)}
-.b{color:var(--blue)}
+.b{color:var(--blue);position:relative;display:inline-block;padding-bottom:2px}
+.b::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--yellow);border-radius:2px;transform:scaleX(0);transform-origin:left center;transition:transform .9s cubic-bezier(.22,1,.36,1) .1s}
+.b.in-view::after{transform:scaleX(1)}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
 .btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:45px;padding:13px 27px;
   font-family:var(--body);font-size:16.5px;font-weight:700;cursor:pointer;text-decoration:none;
@@ -176,7 +178,7 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .tblwrap{overflow-x:auto}
 .tbl{width:100%;border-collapse:collapse;font-size:15px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .tbl th,.tbl td{text-align:left;padding:13px 15px;border-bottom:1px solid var(--line);vertical-align:top}
-.tbl thead th{background:var(--navy);color:#fff;font-family:var(--head);font-size:13.5px}
+.tbl thead th{background:var(--navy);color:#fff;font-family:var(--head);font-size:16px;letter-spacing:.01em;padding:17px 18px;white-space:nowrap}
 .tbl tbody th{background:var(--sand);font-family:var(--head);font-size:14px;font-weight:700;white-space:nowrap}
 .tbl tr:last-child td,.tbl tr:last-child th{border-bottom:0}
 .tbl tbody td.best{background:#fffdf0}
@@ -272,6 +274,9 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .svc2:hover .go2 .arw{transform:translateX(3px) rotate(-45deg);background:rgba(255,255,255,.32)}
 
 
+.tbl-note{margin:14px 0 4px;padding:12px 16px;background:var(--cream);border-left:3px solid var(--yellow);border-radius:8px;font-size:14.5px;color:#3a4450;line-height:1.55}
+.tbl-note a{color:var(--deep);font-weight:700;text-decoration:underline}
+
 /* ============ FAQ, WELLNESTY PATTERN ============ */
 #faq{background:var(--sand);overflow:hidden}
 .faqhead{font-size:clamp(24px,3.3vw,44px);line-height:1.06;letter-spacing:-.032em;white-space:nowrap;margin:0 auto 14px;text-align:center}
@@ -333,7 +338,7 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .pcard::before{content:"";position:absolute;inset:0;z-index:-1;
   background:radial-gradient(120% 150% at 86% 50%,rgba(255,255,255,.26),transparent 58%)}
 .pcopy{text-align:center}
-.pcopy h2{color:#fff;font-size:clamp(27px,3.4vw,40px);max-width:17ch;margin:0 auto;text-shadow:0 2px 14px rgba(7,16,24,.42)}
+.pcopy h2{color:#fff;font-size:clamp(24px,3.1vw,36px);max-width:none;margin:0 auto;text-shadow:0 2px 14px rgba(7,16,24,.42);letter-spacing:-.02em}
 .pcopy p{color:#fff;margin:14px auto 22px;max-width:46ch;font-size:17px;text-shadow:0 1px 10px rgba(7,16,24,.46)}
 .pcopy .btn-y{box-shadow:0 10px 26px rgba(7,16,24,.28)}
 .pshots{position:relative;height:236px}
@@ -467,7 +472,7 @@ footer a{color:#fff}
   </div>
 
   <div class="statline">
-    <div class="stat"><b>$7k to $18k</b><span>Typical asphalt replacement</span></div>
+    <div class="stat"><b>$7k to $18k</b><span>Estimated asphalt replacement</span></div>
     <div class="stat"><b id="s-permit">$50</b><span id="s-permit-l">Jefferson Parish permit</span></div>
     <div class="stat"><b>1 day</b><span>Most single family roofs</span></div>
     <div class="stat"><b>Up to $10k</b><span>State FORTIFIED grant</span></div>
@@ -489,8 +494,8 @@ footer a{color:#fff}
   <div class="sechead"><h2><span id="t-specs">Metairie roof replacement</span> <span class="b">at a glance</span></h2>
   <p class="bluf">A full architectural asphalt roof replacement in Metairie runs $7,000 to $18,000, and standing seam metal or a complex roof runs $16,000 to $28,000. Jefferson Parish adds a flat $50 residential re roofing permit. Most single family roofs in Metairie are torn off and re covered inside one working day.</p></div>
   <div class="specgrid">
-    <div class="spec"><h4>Typical cost</h4><div class="v">$7,000 to $18,000</div><p>Full architectural asphalt replacement, size and pitch dependent.</p></div>
-    <div class="spec"><h4>Metal or complex</h4><div class="v">$16,000 to $28,000</div><p>Standing seam metal, steep pitch, or multiple valleys.</p></div>
+    <div class="spec"><h4>Estimated cost</h4><div class="v">$7,000 to $18,000</div><p>Full architectural asphalt replacement, size and pitch dependent. Call for a written estimate.</p></div>
+    <div class="spec"><h4>Metal or complex</h4><div class="v">$16,000 to $28,000</div><p>Estimated band for standing seam metal, steep pitch, or multiple valleys. Call for a written estimate.</p></div>
     <div class="spec"><h4>Permit authority</h4><div class="v" id="v-auth">Jefferson Parish</div><p id="v-auth-p">Flat $50 permit for a one or two family home in unincorporated Jefferson Parish, paid by card via MGO Connect.</p></div>
     <div class="spec"><h4>Licence threshold</h4><div class="v">$7,500</div><p>Work at or above this needs a Louisiana residential licence from 1 Jan 2026.</p></div>
     <div class="spec"><h4>Building code</h4><div class="v" id="v-code">2021 IRC</div><p id="v-code-p">Required by Jefferson Parish for re roofing: nailing pattern, underlayment and edge detail.</p></div>
@@ -516,7 +521,7 @@ footer a{color:#fff}
   <div class="tblwrap"><table class="tbl">
     <thead><tr><th>&nbsp;</th><th>Architectural asphalt</th><th class="best">Asphalt built to FORTIFIED</th><th>Standing seam metal</th></tr></thead>
     <tbody>
-      <tr><th>Installed cost</th><td class="money">$7,000 to $18,000</td><td class="money best">$9,000 to $22,500</td><td class="money">$16,000 to $28,000</td></tr>
+      <tr><th>Estimated installed cost</th><td class="money">$7,000 to $18,000</td><td class="money best">$9,000 to $22,500</td><td class="money">$16,000 to $28,000</td></tr>
       <tr><th>Realistic life here</th><td>18 to 22 years</td><td class="best">20 to 25 years</td><td>40 years plus</td></tr>
       <tr><th>State grant eligible</th><td>No</td><td class="best">Yes, up to $10,000 of construction cost, if approved first</td><td>Only if built to FORTIFIED</td></tr>
       <tr><th>Insurance discount</th><td>None</td><td class="best">Yes, on the FORTIFIED designation</td><td>Varies by carrier</td></tr>
@@ -524,6 +529,7 @@ footer a{color:#fff}
       <tr><th>Best for</th><td>Straightforward replacement on a budget</td><td class="best" id="t-bestfor">Most Metairie homeowners staying put</td><td>Long hold, low slope sections, coastal exposure</td></tr>
     </tbody>
   </table></div>
+  <p class="tbl-note">Estimated market ranges only. <a href="tel:+15048008196">Call (504) 800-8196</a> for a written estimate on your Metairie project.</p>
 </div></section>
 
 <!-- ============ PERMIT AND CODE, ICON REDESIGN ============ -->
@@ -574,7 +580,7 @@ footer a{color:#fff}
   <div class="tex" style="background-image:url('img/photo/tearoff-aerial.jpg')"></div>
   <div class="wrap">
   <div class="sechead"><h2>What a Metairie roof <span class="b">is actually up against</span></h2>
-  <p class="bluf">Metairie's housing stock is dominated by post-WWII ranch homes with shallow pitched roofs and wide eaves, concentrated through Old Metairie and along Metairie Ridge. Hurricane Ida crossed Jefferson Parish in August 2021 and started a replacement cycle that is still working through the parish four years later.</p></div>
+  <p class="bluf">Metairie's housing stock is dominated by post-WWII ranch homes with shallow pitched roofs and wide eaves, concentrated through Old Metairie, Bucktown along Lake Pontchartrain, and along Metairie Ridge. Hurricane Ida crossed Jefferson Parish in August 2021 and started a replacement cycle that is still working through the parish four years later.</p></div>
   <div class="ncards">
     <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-8 9 8"/><path d="M5 11v9h14v-9"/><path d="M9 20v-5h6v5"/></svg></span><h3>Shallow pitch and wide eaves</h3><p>Water moves off a low slope roof slowly, so wind driven rain has time to work back under the courses at the eave, and the decking closest to the gutter line is almost always the first thing a crew finds soft during tear off.</p><p>On the older properties around Old Metairie the eaves are wide enough that the damage can run several feet in from the edge before anything shows on a ceiling inside.</p></div>
     <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h8"/></svg></span><h3>Hurricane Ida, August 2021</h3><p>Jefferson Parish took sustained wind rather than the catastrophic surge that hit further south. Sustained wind lifts ridge caps, peels back the first course at a rake edge and loosens roof to wall connections without removing a single visible shingle.</p><p>Roofs that looked intact in September 2021 have been failing steadily since, which is why <a href="https://www.bigeasyroofing.com/storm-damage/" style="font-weight: bold; text-decoration: underline;">wind and storm damage</a> is still the most common reason a Metairie homeowner calls about a replacement rather than a repair.</p></div>
@@ -587,7 +593,7 @@ footer a{color:#fff}
   <div class="aiv">
     <div class="aiv-left">
       <h2>Big Easy Roofing <span class="b">Process</span></h2>
-      <p class="lede">Three steps from the first call to a finished roof, with the price agreed in writing before anyone climbs a ladder. Every Metairie job starts with <a href="https://www.bigeasyroofing.com/residential/roof-inspection/" style="font-weight: bold; text-decoration: underline;">a free roof inspection</a> and the photographs stay with the homeowner either way.</p>
+      <p class="lede">Three steps from the first call to a finished roof, with the price agreed in writing before anyone climbs a ladder. Every Metairie job starts with <a href="https://www.bigeasyroofing.com/service-areas/louisiana/metairie/roof-inspection/" style="font-weight: bold; text-decoration: underline;">a free roof inspection</a> and the photographs stay with the homeowner either way.</p>
       <div class="aiv-figure">
         <img src="img/photo/estimator.jpg" alt="Roofing estimator in a high visibility vest checking the siding and roof edge of a home" width="1024" height="682">
       </div>
@@ -702,7 +708,7 @@ footer a{color:#fff}
 <section class="promo"><div class="wrap">
   <div class="pcard">
     <div class="pcopy">
-      <h2 id="t-cta">Get a written price for your Metairie roof</h2>
+      <h2 id="t-cta">Get a written price for your <span class="b">Metairie roof</span></h2>
       <p id="p-cta">Free inspection, photographs you keep, and a scope with every line itemised before anything is signed.</p>
       <a class="btn btn-y" href="tel:+15048008196">Call (504) 800-8196</a>
     </div>
@@ -960,6 +966,21 @@ footer a{color:#fff}
 
   // On first paint, open the tab that matches the current service group
   setSvcTab(SVC[svcSel.value].g==='Commercial'?'com':'res');
+  // Animated underline on important keywords: fire when the .b enters viewport
+  if ('IntersectionObserver' in window) {
+    var _uObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in-view');
+          _uObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.25, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.b').forEach(function(el){ _uObs.observe(el); });
+  } else {
+    document.querySelectorAll('.b').forEach(function(el){ el.classList.add('in-view'); });
+  }
+
 })();
 </script>
 </body>
