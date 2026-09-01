@@ -237,15 +237,23 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .svc .go{font-family:var(--head);font-weight:700;font-size:14px;color:var(--deep);display:inline-flex;align-items:center;gap:6px}
 .svc:hover .go{color:var(--blue)}
 
-/* Res + Commercial groups */
-.svcgroup{margin-top:42px}
-.svcgroup:first-of-type{margin-top:30px}
-.sgh{margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--line)}
-.sgh-t{font-family:var(--head);font-weight:700;font-size:22px;letter-spacing:-.02em;color:var(--navy);margin:0}
-.sgh-t span{color:var(--blue)}
+/* Res + Commercial as slide tabs */
+.svctabs{display:flex;gap:28px;margin:30px 0 20px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.svctabs button{background:none;border:0;padding:12px 2px 14px;font-family:var(--head);font-weight:700;font-size:22px;letter-spacing:-.02em;color:#8a94a1;cursor:pointer;position:relative;transition:color .25s var(--ease)}
+.svctabs button span{color:inherit;font-weight:700}
+.svctabs button.on{color:var(--navy)}
+.svctabs button.on span{color:var(--blue)}
+.svctabs button.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--yellow);border-radius:2px}
+.svctabs button:hover:not(.on){color:var(--deep)}
+.svcstage{overflow:hidden;position:relative}
+.svctrack{display:flex;width:200%;transition:transform .55s var(--ease)}
+.svcpanel{width:50%;flex:0 0 50%;box-sizing:border-box;padding:6px 2px 2px}
+.svctrack.show-com{transform:translateX(-50%)}
+.svcgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.svcgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.svcgrid{grid-template-columns:1fr}}
 
-/* Photo-topped service card, click-to-forward (B PUSH) */
-.svcgrid{perspective:1400px;perspective-origin:50% 40%}
+/* Photo-topped service card */
 .svc2{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none;color:inherit;transform-style:preserve-3d;
   transition:transform .38s var(--ease), box-shadow .38s var(--ease), border-color .38s var(--ease), opacity .38s var(--ease), filter .38s var(--ease);
   will-change:transform,opacity}
@@ -618,18 +626,15 @@ footer a{color:#fff}
   <div class="sechead"><h2>Everything else we do <span class="b" id="t-more">in Metairie</span></h2>
   <p class="bluf" id="p-more">The rest of the Big Easy Roofing services available in Metairie, each with its own page, crew and written scope. Where a roof does not need <a href="https://www.bigeasyroofing.com/roof-replacement/" style="font-weight: bold; text-decoration: underline;">a full roof replacement</a>, a repair, an inspection or gutter work is usually the cheaper honest answer.</p></div>
 
-  <div class="svcgroup">
-    <div class="sgh">
-      <h3 class="sgh-t">Residential Services <span id="t-res-city">in Metairie</span></h3>
-    </div>
-    <div class="svcgrid" id="svcgrid-res"></div>
+  <div class="svctabs" role="tablist" id="svctabs">
+    <button type="button" data-tab="res" class="on" role="tab" aria-selected="true">Residential Services <span id="t-res-city">in Metairie</span></button>
+    <button type="button" data-tab="com" role="tab" aria-selected="false">Commercial Services <span id="t-com-city">in Metairie</span></button>
   </div>
-
-  <div class="svcgroup">
-    <div class="sgh">
-      <h3 class="sgh-t">Commercial Services <span id="t-com-city">in Metairie</span></h3>
+  <div class="svcstage">
+    <div class="svctrack" id="svctrack">
+      <div class="svcpanel" role="tabpanel"><div class="svcgrid" id="svcgrid-res"></div></div>
+      <div class="svcpanel" role="tabpanel"><div class="svcgrid" id="svcgrid-com"></div></div>
     </div>
-    <div class="svcgrid" id="svcgrid-com"></div>
   </div>
 </div></section>
 
@@ -811,7 +816,7 @@ footer a{color:#fff}
       if(o.g!==groupName) return;
       if(k===cur) return;
       var img=PHOTOS[k]||'';
-      html+='<a class="svc2" href="#top" data-s="'+k+'">'
+      html+='<a class="svc2" href="variant-c.html?svc='+encodeURIComponent(k)+'" data-s="'+k+'">'
           +'<div class="head"><img src="'+img+'" alt="'+o.n+' in '+c+'" loading="lazy"></div>'
           +'<div class="body">'
           +'<h3>'+o.n+' in '+c+'</h3>'
@@ -828,15 +833,6 @@ footer a{color:#fff}
     gridCom.innerHTML=renderGroup('Commercial',cur,c);
     $('t-res-city').textContent='in '+c;
     $('t-com-city').textContent='in '+c;
-    [].slice.call(document.querySelectorAll('#svcgrid-res .svc2, #svcgrid-com .svc2')).forEach(function(a){
-      a.addEventListener('click',function(e){
-        if(e.metaKey||e.ctrlKey||e.shiftKey||e.button===1) return;
-        e.preventDefault();
-        var k=a.getAttribute('data-s');
-        svcSel.value=k;
-        sync();
-      });
-    });
   }
 
   function sync(){
@@ -936,7 +932,32 @@ footer a{color:#fff}
   }
   window.addEventListener('scroll',function(){ if(!ticking){ticking=true;requestAnimationFrame(spy);} },{passive:true});
 
+  // Residential / Commercial slide tabs
+  var svcTabs=[].slice.call(document.querySelectorAll('#svctabs button'));
+  var svcTrack=document.getElementById('svctrack');
+  function setSvcTab(which){
+    svcTabs.forEach(function(x){
+      var on=(x.getAttribute('data-tab')===which);
+      x.classList.toggle('on',on);
+      x.setAttribute('aria-selected',on?'true':'false');
+    });
+    svcTrack.classList.toggle('show-com',which==='com');
+  }
+  svcTabs.forEach(function(b){ b.addEventListener('click',function(){ setSvcTab(b.getAttribute('data-tab')); }); });
+
+  // Read ?svc= from URL and pre-select the service + right tab
+  try{
+    var params=new URLSearchParams(window.location.search);
+    var pSvc=params.get('svc');
+    if(pSvc && SVC[pSvc]) svcSel.value=pSvc;
+    var pCity=params.get('city');
+    if(pCity && CITY[pCity]) citySel.value=pCity;
+  }catch(_){}
+
   sync(); spy();
+
+  // On first paint, open the tab that matches the current service group
+  setSvcTab(SVC[svcSel.value].g==='Commercial'?'com':'res');
 })();
 </script>
 </body>
