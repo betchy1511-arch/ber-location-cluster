@@ -140,6 +140,7 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .tbl tbody td.best{background:#fffdf0}
 .tbl thead th.best{background:#123253;box-shadow:inset 0 -3px 0 var(--yellow)}
 .money{font-family:var(--head);font-weight:700;white-space:nowrap}
+.disclaim{margin:18px 0 0;font-size:13.5px;color:#5b6470;max-width:96ch;line-height:1.55}
 
 /* ============ PERMIT, ICON REDESIGN ============ */
 #permit{color:#fff}
@@ -368,10 +369,10 @@ footer a{color:#fff}
   <div class="specgrid">
     <div class="spec"><h4>Typical cost</h4><div class="v">$7,000 to $18,000</div><p>Full architectural asphalt replacement, size and pitch dependent.</p></div>
     <div class="spec"><h4>Metal or complex</h4><div class="v">$16,000 to $28,000</div><p>Standing seam metal, steep pitch, or multiple valleys.</p></div>
-    <div class="spec"><h4>Permit authority</h4><div class="v" id="v-auth">Jefferson Parish</div><p id="v-auth-p">Flat $50 residential re roofing permit, paid by card via MGO Connect.</p></div>
+    <div class="spec"><h4>Permit authority</h4><div class="v" id="v-auth">Jefferson Parish</div><p id="v-auth-p">Flat $50 permit for a one or two family home in unincorporated Jefferson Parish, paid by card via MGO Connect.</p></div>
     <div class="spec"><h4>Licence threshold</h4><div class="v">$7,500</div><p>Work at or above this needs a Louisiana residential licence from 1 Jan 2026.</p></div>
-    <div class="spec"><h4>Building code</h4><div class="v">2021 IRC</div><p>Sets nailing pattern, underlayment and edge detail statewide.</p></div>
-    <div class="spec"><h4>Site inspection</h4><div class="v">Photos only</div><p>Geo tagged phase photography replaces an inspector visit.</p></div>
+    <div class="spec"><h4>Building code</h4><div class="v" id="v-code">2021 IRC</div><p id="v-code-p">Required by Jefferson Parish for re roofing: nailing pattern, underlayment and edge detail.</p></div>
+    <div class="spec"><h4>Site inspection</h4><div class="v" id="v-insp">Photos only</div><p id="v-insp-p">Geo tagged phase photography replaces a routine site visit.</p></div>
   </div>
 </div></section>
 
@@ -382,16 +383,17 @@ footer a{color:#fff}
   <div class="sechead"><h2>Choosing a system <span class="b" id="t-compare">for a Metairie roof</span></h2>
   <p>Three realistic options for a replacement here, with the tradeoff stated rather than implied.</p></div>
   <div class="tblwrap"><table class="tbl">
-    <thead><tr><th>&nbsp;</th><th>Architectural asphalt</th><th class="best">FORTIFIED asphalt</th><th>Standing seam metal</th></tr></thead>
+    <thead><tr><th>&nbsp;</th><th>Architectural asphalt</th><th class="best">Asphalt built to FORTIFIED</th><th>Standing seam metal</th></tr></thead>
     <tbody>
       <tr><th>Installed cost</th><td class="money">$7,000 to $18,000</td><td class="money best">$9,000 to $22,500</td><td class="money">$16,000 to $28,000</td></tr>
       <tr><th>Realistic life here</th><td>18 to 22 years</td><td class="best">20 to 25 years</td><td>40 years plus</td></tr>
-      <tr><th>State grant eligible</th><td>No</td><td class="best">Yes, up to $10,000 of construction cost</td><td>Only if built to FORTIFIED</td></tr>
+      <tr><th>State grant eligible</th><td>No</td><td class="best">Yes, up to $10,000 of construction cost, if approved first</td><td>Only if built to FORTIFIED</td></tr>
       <tr><th>Insurance discount</th><td>None</td><td class="best">Yes, on the FORTIFIED designation</td><td>Varies by carrier</td></tr>
       <tr><th>Install time</th><td>1 day typical</td><td class="best">1 to 2 days</td><td>2 to 4 days</td></tr>
       <tr><th>Best for</th><td>Straightforward replacement on a budget</td><td class="best" id="t-bestfor">Most Metairie homeowners staying put</td><td>Long hold, low slope sections, coastal exposure</td></tr>
     </tbody>
   </table></div>
+  <p class="disclaim">FORTIFIED is a designation from the Insurance Institute for Business and Home Safety, awarded after an approved evaluator inspects the finished roof. Choosing the shingle alone does not earn it. Figures on this page are illustrative ranges for a typical single family roof, not a quote, and are subject to Big Easy Roofing sign off. Your price and timescale depend on size, pitch, access, layers, decking condition, materials and weather, and are fixed only in your written scope.</p>
 </div></section>
 
 <!-- ============ PERMIT AND CODE, ICON REDESIGN ============ -->
@@ -405,7 +407,7 @@ footer a{color:#fff}
       <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span>
       <h3>Permit, no plans</h3>
       <div class="val" id="v-fee">$50 flat</div>
-      <p id="v-fee-p">Residential re roofing permit paid by credit card through MGO Connect. No construction plans and no survey required.</p>
+      <p id="v-fee-p">Replacing 50 percent or more of the roof covering on a one or two family home in unincorporated Jefferson Parish. Paid by credit card through MGO Connect, with no construction plans and no survey required.</p>
     </div>
     <div class="icard">
       <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 5.4 6 .9-4.3 4.2 1 6-5.3-2.8L6.7 18.5l1-6L3.4 8.3l6-.9z"/><path d="M8 21.5h8"/></svg></span>
@@ -416,17 +418,17 @@ footer a{color:#fff}
     <div class="icard">
       <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h7M8 11h7"/><path d="M18 3v18"/></svg></span>
       <h3>Building code</h3>
-      <div class="val">2021 IRC</div>
-      <p>Re roofing must meet the 2021 International Residential Code for nailing pattern, underlayment and edge detail.</p>
+      <div class="val" id="v-code2">2021 IRC</div>
+      <p id="v-code2-p">Jefferson Parish requires re roofing to meet the 2021 International Residential Code for nailing pattern, underlayment and edge detail.</p>
     </div>
     <div class="icard">
       <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h2.4l1.3-2h6.6l1.3 2H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.4"/></svg></span>
       <h3>Photo verification</h3>
-      <div class="val">No inspector visit</div>
-      <p>Every phase is documented with the nailing pattern visible and the material packaging showing its wind rating.</p>
+      <div class="val" id="v-insp2">No routine site visit</div>
+      <p id="v-insp2-p">Jefferson Parish verifies from geo tagged photographs. Every phase is documented with the nailing pattern visible and the material packaging showing its wind rating.</p>
     </div>
   </div>
-  <p class="srcnote">Source: Jefferson Parish residential re roofing permit requirements, jeffparish.gov, and the Louisiana Fortify Homes Program, ldi.la.gov. Permit fee, licence threshold, code edition and grant terms as of August 2026 and subject to change. Permit fees outside Jefferson Parish are set by the local authority named above and are confirmed in your written scope.</p>
+  <p class="srcnote">Source: Jefferson Parish residential re roofing permit requirements, jeffparish.gov, the Louisiana State Uniform Construction Code, lsuccc.dps.louisiana.gov, La. R.S. 37:2156.4, and the Louisiana Fortify Homes Program, ldi.la.gov. Permit fee, licence threshold, code edition and grant terms as of September 2026 and subject to change. The $50 fee, the photo verification process and the 2021 IRC requirement above are confirmed for unincorporated Jefferson Parish. Permit requirements and government fees vary by address and project, so we confirm them with the permitting authority and itemise them in your written proposal.</p>
 </div></section>
 
 <!-- ============ PROCESS, AIVORA PATTERN ============ -->
@@ -515,7 +517,7 @@ footer a{color:#fff}
       <details data-t="permit"><summary>Will an inspector come to my house</summary>
         <div class="ans"><p>No. The parish verifies re roofing from geo tagged photographs of every phase instead of a site visit, with the nailing pattern visible and the material packaging showing its wind rating.</p></div></details>
       <details data-t="grant"><summary>Can I get the $10,000 state grant</summary>
-        <div class="ans"><p>The Louisiana Fortify Homes Program grants up to $10,000 toward the construction cost of a roof built to the FORTIFIED standard. You must be awarded before work starts, and it runs as a lottery with limited application windows.</p></div></details>
+        <div class="ans"><p>The Louisiana Fortify Homes Program grants up to $10,000 toward the construction cost of a roof built to the FORTIFIED standard. You need programme approval before you choose a contractor or start work, and it runs in funded rounds with limited application windows, so it is not always open. Check ldi.la.gov for the current round before you plan around it.</p></div></details>
       <details data-t="material"><summary id="q5">Is metal worth it in Metairie</summary>
         <div class="ans"><p>On a long hold it usually is. Standing seam runs roughly double the asphalt price and lasts roughly twice as long, and it handles low slope sections that shingles do not. On a five year hold, asphalt is the better number.</p></div></details>
       <details data-t="time"><summary>How long does the work actually take</summary>
@@ -634,7 +636,15 @@ footer a{color:#fff}
       $('v-auth-p').textContent='Flat $50 residential re roofing permit, paid by card via MGO Connect.';
       $('p-permit').textContent=d.lede+' Four requirements, all handled by us.';
       $('a1').textContent='Most full architectural asphalt replacements land between $7,000 and $18,000 depending on size, pitch and how many layers come off. Larger or complex roofs and standing seam metal run $16,000 to $28,000. The parish permit adds a flat $50.';
-      $('a2').textContent='Yes. '+c+' sits in unincorporated Jefferson Parish, which requires a residential re roofing permit. It is $50, paid by card through MGO Connect, with no construction plans and no survey required.';
+      $('a2').textContent='Yes. '+c+' sits in unincorporated Jefferson Parish, which requires a residential re roofing permit. Replacing 50 percent or more of the covering on a one or two family home is $50, paid by card through MGO Connect, with no construction plans and no survey required.';
+      $('v-code').textContent='2021 IRC';
+      $('v-code-p').textContent='Required by Jefferson Parish for re roofing: nailing pattern, underlayment and edge detail.';
+      $('v-code2').textContent='2021 IRC';
+      $('v-code2-p').textContent='Jefferson Parish requires re roofing to meet the 2021 International Residential Code for nailing pattern, underlayment and edge detail.';
+      $('v-insp').textContent='Photos only';
+      $('v-insp-p').textContent='Geo tagged phase photography replaces a routine site visit.';
+      $('v-insp2').textContent='No routine site visit';
+      $('v-insp2-p').textContent='Jefferson Parish verifies from geo tagged photographs. Every phase is documented with the nailing pattern visible and the material packaging showing its wind rating.';
     } else {
       $('s-permit').textContent='Required';
       $('s-permit-l').textContent=d.a+' permit';
@@ -644,6 +654,14 @@ footer a{color:#fff}
       $('p-permit').textContent=(d.inc ? c+' is incorporated, so '+art(d.a)+' issues your roofing permit'+(d.par?' rather than '+d.par:'')+'.' : c+' is unincorporated, so '+d.a+' permits your roof directly.')+' Four requirements, all handled by us.';
       $('a1').textContent='Most full architectural asphalt replacements land between $7,000 and $18,000 depending on size, pitch and how many layers come off. Larger or complex roofs and standing seam metal run $16,000 to $28,000. The '+d.a+' permit fee is itemised separately in your written scope.';
       $('a2').textContent='Yes. Roof replacement in '+c+' needs a residential re roofing permit from '+art(d.a)+'. We pull it for you, and the fee appears as its own line in your written scope.';
+      $('v-code').textContent='Set locally';
+      $('v-code-p').textContent='Louisiana has adopted the 2021 IRC with state amendments. '+art(d.a).replace(/^the /,'The ')+' decides what applies to a re roof, and we build to it.';
+      $('v-code2').textContent='Set locally';
+      $('v-code2-p').textContent='Louisiana has adopted the 2021 International Residential Code with state amendments. The edition and the detail that apply to a re roof are set by '+art(d.a)+', and we build to whatever it requires.';
+      $('v-insp').textContent='Set locally';
+      $('v-insp-p').textContent='Inspection and documentation requirements are set by the permitting authority and confirmed before we start.';
+      $('v-insp2').textContent='Set by the authority';
+      $('v-insp2-p').textContent='Whether an inspector attends or the work is verified from photographs is decided by '+art(d.a)+'. We document every phase either way, with the nailing pattern visible and the material packaging showing its wind rating.';
     }
     buildServices();
   }
