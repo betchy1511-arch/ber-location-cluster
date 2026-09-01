@@ -125,6 +125,10 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .sechead p{margin:10px auto 0;color:#3a4450}
 .sechead .bluf{font-size:17.5px;color:#26313d;max-width:74ch;margin-left:auto;margin-right:auto}
 /* designed note cards, replaces dumped paragraphs */
+.prose{max-width:74ch;margin:26px auto 0;color:#2f3a46;font-size:16.5px;line-height:1.72;text-align:left}
+.prose p{margin:0 0 16px}
+.prose p:last-child{margin-bottom:0}
+.prose a{color:var(--deep)}
 .ncards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px;text-align:left}
 .ncards.two{grid-template-columns:repeat(2,1fr);max-width:900px;margin-left:auto;margin-right:auto}
 @media(max-width:940px){.ncards,.ncards.two{grid-template-columns:1fr}}
@@ -368,13 +372,41 @@ footer a{color:#fff}
     <div class="field">
       <label for="svc">Service</label>
       <select id="svc">
-        <option value="Roof Replacement" selected>Roof Replacement</option>
-        <option value="Roof Repair">Roof Repair</option>
-        <option value="Storm Damage Repair">Storm Damage Repair</option>
-        <option value="Roof Inspection">Roof Inspection</option>
-        <option value="Metal Roofing">Metal Roofing</option>
-        <option value="Gutters">Gutters</option>
-        <option value="Commercial Roofing">Commercial Roofing</option>
+        <optgroup label="Residential">
+          <option value="res-replacement" selected>Roof Replacement</option>
+          <option value="res-repairs">Roof Repairs</option>
+          <option value="res-inspection">Roof Inspection</option>
+          <option value="res-hail">Hail Damage Roof Repair</option>
+          <option value="res-emergency">Emergency Roofing</option>
+          <option value="res-leak">Roof Leak Detection</option>
+          <option value="res-maintenance">Roof Maintenance</option>
+          <option value="res-coating">Roof Coating</option>
+          <option value="res-ventilation">Roof Ventilation</option>
+          <option value="res-weatherproofing">Roof Weatherproofing</option>
+          <option value="res-restoration">Roof Restoration</option>
+          <option value="res-flashing">Roof Flashing Repair</option>
+          <option value="res-fascia">Fascia Board Repair</option>
+          <option value="res-gutter-install">Gutters and Downspouts Installation</option>
+          <option value="res-gutter-repair">Gutters and Downspouts Repair</option>
+          <option value="res-siding">Siding Installation</option>
+          <option value="res-asbestos">Asbestos Roof Removal</option>
+        </optgroup>
+        <optgroup label="Commercial">
+          <option value="com-replacement">Roof Replacement</option>
+          <option value="com-repairs">Roof Repairs</option>
+          <option value="com-inspections">Roof Inspections</option>
+          <option value="com-hail">Hail Damage Repair</option>
+          <option value="com-reroof">Re-Roofing</option>
+          <option value="com-coating">Roof Coating</option>
+          <option value="com-elastomeric">Elastomeric Coatings</option>
+          <option value="com-ventilation">Roof Ventilation</option>
+          <option value="com-leak">Roof Leak Detection</option>
+          <option value="com-siding">Siding Installation</option>
+        </optgroup>
+        <optgroup label="Soffit Services">
+          <option value="sof-install">Soffit Installation</option>
+          <option value="sof-repair">Soffit Repair</option>
+        </optgroup>
       </select>
     </div>
     <div class="field">
@@ -429,9 +461,9 @@ footer a{color:#fff}
     <div class="spec"><h4>Building code</h4><div class="v" id="v-code">2021 IRC</div><p id="v-code-p">Required by Jefferson Parish for re roofing: nailing pattern, underlayment and edge detail.</p></div>
     <div class="spec"><h4>Site inspection</h4><div class="v" id="v-insp">Photos only</div><p id="v-insp-p">Geo tagged phase photography replaces a routine site visit.</p></div>
   </div>
-  <div class="ncards two">
-    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><h3>What actually drives the price</h3><p>The largest line on a Metairie roof replacement is rarely the shingle. It is the tear off and whatever the crew finds under it, because a roof that has already been layered over carries twice the disposal weight and often hides decking that has been absorbing water at the eaves.</p><p>The decking replacement is priced as a rate per sheet in the written scope rather than discovered on the day, so the number a homeowner signs is the number they pay.</p></div>
-    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Paying for it</h3><p>Financing changes the shape of the number rather than the number itself. Homeowners who would rather spread the cost can <a href="https://www.bigeasyroofing.com/roofing-financing/" style="font-weight: bold; text-decoration: underline;">pay for the work monthly</a> instead of in a single payment, and the parish permit fee is itemised separately either way.</p></div>
+  <div class="prose">
+    <p>The largest line on a Metairie roof replacement is rarely the shingle. It is the tear off and whatever the crew finds under it, because a roof that has already been layered over carries twice the disposal weight and often hides decking that has been absorbing water at the eaves. The decking replacement is priced as a rate per sheet in the written scope rather than discovered on the day, so the number a homeowner signs is the number they pay.</p>
+    <p>Financing changes the shape of that number rather than the number itself. Homeowners who would rather spread the cost can <a href="https://www.bigeasyroofing.com/roofing-financing/" style="font-weight: bold; text-decoration: underline;">pay for the work monthly</a> instead of in a single payment, and the parish permit fee is itemised separately either way.</p>
   </div>
   <p class="srcline">Cost bands are illustrative ranges for a typical Metairie single family roof, not a quote, and are subject to Big Easy Roofing sign off. Price and timescale depend on size, pitch, access, layers, decking condition, materials and weather, and are fixed only in your written scope.</p>
   <div class="seccta seccta-l">
@@ -594,7 +626,7 @@ footer a{color:#fff}
       </div>
     </div>
     <div class="qa" id="qa">
-      <details open data-t="cost"><summary id="q1">How much does a new roof cost in Metairie</summary>
+      <details data-t="cost"><summary id="q1">How much does a new roof cost in Metairie</summary>
         <div class="ans"><p id="a1">Most full architectural asphalt replacements on a Metairie home land between $7,000 and $18,000, depending on size, pitch and how many layers have to come off. Standing seam metal and complex roofs with multiple valleys run $16,000 to $28,000, and the Jefferson Parish permit adds a flat $50 on top.</p></div></details>
       <details data-t="cost"><summary id="q9">Is $30,000 too much for a roof</summary>
         <div class="ans"><p id="a9">For a standard single storey Metairie ranch home in architectural asphalt, $30,000 is well above the normal band of $7,000 to $18,000 and is worth challenging line by line. That figure is only reasonable on a large or steeply pitched roof, on standing seam metal, or where structural decking replacement runs across most of the roof.</p></div></details>
@@ -665,28 +697,50 @@ footer a{color:#fff}
     "Baton Rouge":{a:"City of Baton Rouge and Parish of East Baton Rouge",inc:1}
   };
   var SVC={
-    "Roof Replacement":{ic:"img/brand/ico-replacement.png",d:"Full tear off and re cover, itemised by layers, decking and material."},
-    "Roof Repair":{ic:"img/brand/ico-repair.png",d:"Leaks, missing shingles, flashing and valley work, priced per repair."},
-    "Storm Damage Repair":{ic:"img/brand/ico-storm.png",d:"Emergency tarping, documented damage, and help with the insurance claim."},
-    "Roof Inspection":{ic:"img/brand/ico-inspection.png",d:"Free photographed inspection of roof, flashing and visible decking."},
-    "Metal Roofing":{ic:"img/brand/ico-metal.png",d:"Standing seam and metal panel, built for low slope and coastal exposure."},
-    "Gutters":{ic:"img/brand/ico-gutters.png",d:"Gutter and downspout replacement sized for Gulf Coast rainfall."},
-    "Commercial Roofing":{ic:"img/brand/ico-commercial.png",d:"Flat and low slope systems, recoat and full replacement for businesses."}
+    "res-replacement":{n:"Roof Replacement",g:"Residential",u:"residential/roof-replacement/",ic:"img/brand/ico-replacement.png",d:"Full tear off and re cover, itemised by layers, decking and material."},
+    "res-repairs":{n:"Roof Repairs",g:"Residential",u:"residential/roof-repairs/",ic:"img/brand/ico-repair.png",d:"Leaks, missing shingles, flashing and valley work, priced per repair."},
+    "res-inspection":{n:"Roof Inspection",g:"Residential",u:"residential/roof-inspection/",ic:"img/brand/ico-inspection.png",d:"Free photographed inspection of roof, flashing and visible decking."},
+    "res-hail":{n:"Hail Damage Roof Repair",g:"Residential",u:"residential/hail-damage-roof-repair/",ic:"img/brand/ico-storm.png",d:"Documented hail damage and help with the insurance claim."},
+    "res-emergency":{n:"Emergency Roofing",g:"Residential",u:"residential/emergency-roofing/",ic:"img/brand/ico-storm.png",d:"Emergency tarping and make safe work after a storm."},
+    "res-leak":{n:"Roof Leak Detection",g:"Residential",u:"residential/roof-leak-detection/",ic:"img/brand/ico-inspection.png",d:"Tracing a leak back to its entry point before anything is opened up."},
+    "res-maintenance":{n:"Roof Maintenance",g:"Residential",u:"residential/roof-maintenance/",ic:"img/brand/ico-inspection.png",d:"Scheduled checks that catch a failure while it is still a repair."},
+    "res-coating":{n:"Roof Coating",g:"Residential",u:"residential/roof-coating/",ic:"img/brand/ico-replacement.png",d:"Protective coating for low slope and flat residential sections."},
+    "res-ventilation":{n:"Roof Ventilation",g:"Residential",u:"residential/roof-ventilation-services/",ic:"img/brand/ico-inspection.png",d:"Ridge, soffit and powered ventilation sized for Gulf Coast humidity."},
+    "res-weatherproofing":{n:"Roof Weatherproofing",g:"Residential",u:"residential/roof-weatherproofing/",ic:"img/brand/ico-storm.png",d:"Sealing the details that let wind driven rain in."},
+    "res-restoration":{n:"Roof Restoration",g:"Residential",u:"residential/roof-restoration/",ic:"img/brand/ico-replacement.png",d:"Bringing a tired roof back without a full replacement."},
+    "res-flashing":{n:"Roof Flashing Repair",g:"Residential",u:"residential/roof-flashing-repair/",ic:"img/brand/ico-repair.png",d:"Chimney, valley and wall flashing, the usual source of a stubborn leak."},
+    "res-fascia":{n:"Fascia Board Installation and Repair",g:"Residential",u:"residential/fascia-board-installation-repair/",ic:"img/brand/ico-repair.png",d:"Rotten fascia behind the gutter line, replaced and repainted."},
+    "res-gutter-install":{n:"Gutters and Downspouts Installation",g:"Residential",u:"residential/gutters-downspouts-installation/",ic:"img/brand/ico-gutters.png",d:"Gutter and downspout installation sized for Gulf Coast rainfall."},
+    "res-gutter-repair":{n:"Gutters and Downspouts Repair",g:"Residential",u:"residential/gutters-and-downspouts-repair/",ic:"img/brand/ico-gutters.png",d:"Sagging, leaking and overflowing gutters put back to work."},
+    "res-siding":{n:"Siding Installation",g:"Residential",u:"residential/siding-installation/",ic:"img/brand/ico-replacement.png",d:"Siding replacement alongside a roof, usually after storm damage."},
+    "res-asbestos":{n:"Asbestos Roof Removal",g:"Residential",u:"residential/asbestos-roof-removal/",ic:"img/brand/ico-storm.png",d:"Safe removal and disposal of an older asbestos covering."},
+    "com-replacement":{n:"Commercial Roof Replacement",g:"Commercial",u:"commercial/roof-replacement/",ic:"img/brand/ico-commercial.png",d:"Full commercial replacement on flat and low slope systems."},
+    "com-repairs":{n:"Commercial Roof Repairs",g:"Commercial",u:"commercial/roof-repairs/",ic:"img/brand/ico-commercial.png",d:"Targeted repair on membrane, built up and low slope roofs."},
+    "com-inspections":{n:"Commercial Roof Inspections",g:"Commercial",u:"commercial/roof-inspections/",ic:"img/brand/ico-inspection.png",d:"Documented condition report for owners and property managers."},
+    "com-hail":{n:"Commercial Hail Damage Repair",g:"Commercial",u:"commercial/hail-damage-repair/",ic:"img/brand/ico-storm.png",d:"Hail damage assessed, documented and repaired on commercial roofs."},
+    "com-reroof":{n:"Commercial Re-Roofing",g:"Commercial",u:"commercial/re-roofing/",ic:"img/brand/ico-commercial.png",d:"Re covering an existing commercial roof without a full strip."},
+    "com-coating":{n:"Commercial Roof Coating",g:"Commercial",u:"commercial/roof-coating/",ic:"img/brand/ico-commercial.png",d:"Coating that extends the life of an existing commercial roof."},
+    "com-elastomeric":{n:"Commercial Elastomeric Coatings",g:"Commercial",u:"commercial/elastomeric-coatings/",ic:"img/brand/ico-commercial.png",d:"Seamless elastomeric membrane over a low slope commercial roof."},
+    "com-ventilation":{n:"Commercial Roof Ventilation",g:"Commercial",u:"commercial/roof-ventilation/",ic:"img/brand/ico-inspection.png",d:"Ventilation sized for commercial building loads."},
+    "com-leak":{n:"Commercial Roof Leak Detection",g:"Commercial",u:"commercial/roof-leak-detection/",ic:"img/brand/ico-inspection.png",d:"Finding the entry point on a large flat roof before it spreads."},
+    "com-siding":{n:"Commercial Siding Installation",g:"Commercial",u:"commercial/siding-installation/",ic:"img/brand/ico-commercial.png",d:"Commercial siding and cladding replacement."},
+    "sof-install":{n:"Soffit Installation",g:"Soffit",u:"soffit-services/soffit-installation/",ic:"img/brand/ico-repair.png",d:"New soffit, vented for the roof it sits under."},
+    "sof-repair":{n:"Soffit Repair",g:"Soffit",u:"soffit-services/soffit-repair/",ic:"img/brand/ico-repair.png",d:"Damaged or sagging soffit repaired at the eave."}
   };
-  var UP="";
   var svcSel=document.getElementById('svc'), citySel=document.getElementById('city');
   var grid=document.getElementById('svcgrid');
   function $(id){return document.getElementById(id);}
   function art(n){return /^(City|Town) of /.test(n) ? 'the '+n : n;}
 
   function buildServices(){
-    var cur=svcSel.value, c=citySel.value, html='';
-    Object.keys(SVC).forEach(function(name){
-      if(name===cur) return;
-      var s=SVC[name];
-      html+='<a class="svc" href="#top" data-s="'+name+'">'
-          +'<span class="sic"><img src="'+UP+s.ic+'" alt="" width="32" height="32"></span>'
-          +'<h3>'+name+' in '+c+'</h3><p>'+s.d+'</p>'
+    var cur=svcSel.value, c=citySel.value, grp=SVC[cur].g, html='', n=0;
+    Object.keys(SVC).forEach(function(k){
+      if(k===cur || SVC[k].g!==grp || n>=6) return;
+      n++;
+      var o=SVC[k];
+      html+='<a class="svc" href="#top" data-s="'+k+'">'
+          +'<span class="sic"><img src="'+o.ic+'" alt="" width="32" height="32"></span>'
+          +'<h3>'+o.n+' in '+c+'</h3><p>'+o.d+'</p>'
           +'<span class="go">See the '+c+' page <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a>';
     });
     grid.innerHTML=html;
@@ -701,8 +755,8 @@ footer a{color:#fff}
   }
 
   function sync(){
-    var s=svcSel.value, c=citySel.value, d=CITY[c]||{a:"the local authority",inc:1};
-    var sl=s.toLowerCase();
+    var key=svcSel.value, c=citySel.value, d=CITY[c]||{a:"the local authority",inc:1};
+    var s=SVC[key].n, sl=s.toLowerCase();
     $('h-service').textContent=s;
     $('h-city').textContent=c+', LA';
     $('crumb-city').textContent=c;
