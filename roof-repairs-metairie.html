@@ -772,7 +772,7 @@ footer a{color:#fff}
   };
   var svcSel=document.getElementById('svc'), citySel=document.getElementById('city');
   var gridRes=document.getElementById('svcgrid-res'), gridCom=document.getElementById('svcgrid-com');
-  function $(id){return document.getElementById(id);}
+  function $(id){return document.getElementById(id)||{textContent:'',innerHTML:'',value:'',setAttribute:function(){},getAttribute:function(){return null;}};}
   function art(n){return /^(City|Town) of /.test(n) ? 'the '+n : n;}
 
   var ARROW='<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>';
