@@ -887,6 +887,13 @@ footer a{color:#fff}
     if(isGutter(key)){
       // Gutter-install-specific copy: same-day residential drainage job, no permit.
       // Keep the static HTML defaults for FAQs and permit cards; only refresh city labels.
+      // Use the short display name "Gutter Installation" for title/H1/crumb/badge so
+      // <title> stays inside the ~60 char meta-title guideline the brief locked.
+      var shortName='Gutter Installation';
+      $('h-service').textContent=shortName;
+      $('crumb-service').textContent=shortName;
+      document.title=shortName+' in '+c+', LA | Big Easy Roofing';
+      $('t-badge').innerHTML='<b>Gutter Install</b>in '+c;
       $('h-sub').textContent='Big Easy Roofing installs seamless gutters and downspouts across '+c+' and the surrounding parishes, licensed by the Louisiana State Licensing Board for Contractors. A residential gutter installation is a one to two day job, priced per linear foot on the material and the size, and sized against the New Orleans area annual rainfall of roughly 63.5 inches per NOAA.';
       $('t-specs').textContent=c+' gutter installation';
       $('t-compare').textContent='against Gulf rainfall';
