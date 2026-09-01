@@ -26,7 +26,9 @@ h1{font-size:clamp(28px,3.9vw,46px);letter-spacing:-.028em}
 h2{font-size:clamp(23px,2.7vw,32px);letter-spacing:-.02em}
 h3{font-size:17px;letter-spacing:-.01em}
 h4{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--deep)}
-.b{color:var(--blue)}
+.b{color:var(--blue);position:relative;display:inline-block;padding-bottom:2px}
+.b::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--yellow);border-radius:2px;transform:scaleX(0);transform-origin:left center;transition:transform .9s cubic-bezier(.22,1,.36,1) .1s}
+.b.in-view::after{transform:scaleX(1)}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
 .btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:45px;padding:13px 27px;
   font-family:var(--body);font-size:16.5px;font-weight:700;cursor:pointer;text-decoration:none;
@@ -172,7 +174,7 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .tblwrap{overflow-x:auto}
 .tbl{width:100%;border-collapse:collapse;font-size:15px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .tbl th,.tbl td{text-align:left;padding:13px 15px;border-bottom:1px solid var(--line);vertical-align:top}
-.tbl thead th{background:var(--navy);color:#fff;font-family:var(--head);font-size:13.5px}
+.tbl thead th{background:var(--navy);color:#fff;font-family:var(--head);font-size:16px;letter-spacing:.01em;padding:17px 18px;white-space:nowrap}
 .tbl tbody th{background:var(--sand);font-family:var(--head);font-size:14px;font-weight:700;white-space:nowrap}
 .tbl tr:last-child td,.tbl tr:last-child th{border-bottom:0}
 .tbl tbody td.best{background:#fffdf0}
@@ -270,6 +272,10 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .svc2:hover .go2 .arw{transform:translateX(3px) rotate(-45deg);background:rgba(255,255,255,.32)}
 
 
+
+.tbl-note{margin:14px 0 4px;padding:12px 16px;background:var(--cream);border-left:3px solid var(--yellow);border-radius:8px;font-size:14.5px;color:#3a4450;line-height:1.55}
+.tbl-note a{color:var(--deep);font-weight:700;text-decoration:underline}
+
 /* ============ FAQ, WELLNESTY PATTERN ============ */
 #faq{background:var(--sand);overflow:hidden}
 .faqhead{font-size:clamp(24px,3.3vw,44px);line-height:1.06;letter-spacing:-.032em;white-space:nowrap;margin:0 auto 14px;text-align:center}
@@ -331,7 +337,7 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .pcard::before{content:"";position:absolute;inset:0;z-index:-1;
   background:radial-gradient(120% 150% at 86% 50%,rgba(255,255,255,.26),transparent 58%)}
 .pcopy{text-align:center}
-.pcopy h2{color:#fff;font-size:clamp(27px,3.4vw,40px);max-width:17ch;margin:0 auto;text-shadow:0 2px 14px rgba(7,16,24,.42)}
+.pcopy h2{color:#fff;font-size:clamp(24px,3.1vw,36px);max-width:none;margin:0 auto;text-shadow:0 2px 14px rgba(7,16,24,.42);letter-spacing:-.02em}
 .pcopy p{color:#fff;margin:14px auto 22px;max-width:46ch;font-size:17px;text-shadow:0 1px 10px rgba(7,16,24,.46)}
 .pcopy .btn-y{box-shadow:0 10px 26px rgba(7,16,24,.28)}
 .pshots{position:relative;height:236px}
@@ -465,7 +471,7 @@ footer a{color:#fff}
   </div>
 
   <div class="statline">
-    <div class="stat"><b>$5 to $20 /sqft</b><span>Typical installed cost</span></div>
+    <div class="stat"><b>$5 to $20 /sqft</b><span>Estimated cost</span></div>
     <div class="stat"><b>2 to 6 weeks</b><span>Typical project length</span></div>
     <div class="stat"><b id="s-permit">IBC 2021</b><span id="s-permit-l">Commercial building code</span></div>
     <div class="stat"><b>20 to 30 yr NDL</b><span>Manufacturer warranty</span></div>
@@ -487,7 +493,7 @@ footer a{color:#fff}
   <div class="sechead"><h2><span id="t-specs">Metairie commercial roof replacement</span> <span class="b">at a glance</span></h2>
   <p class="bluf">A Big Easy Roofing commercial re-roof in Metairie is a permitted, plan-scoped tear-off and new-install on a flat or low-slope building, quoted per square foot on the system selected, with a manufacturer NDL warranty at closeout. It runs 2 to 6 weeks depending on system and size, and it is priced against seven systems, not one shingle brand.</p></div>
   <div class="specgrid">
-    <div class="spec"><h4>Typical cost</h4><div class="v">$5 to $20 /sqft</div><p>Installed cost band across TPO, PVC, EPDM, modified bitumen, BUR, SPF and standing seam metal on a Metairie commercial building.</p></div>
+    <div class="spec"><h4>Estimated cost</h4><div class="v">$5 to $20 /sqft</div><p>Estimated installed cost band across TPO, PVC, EPDM, modified bitumen, BUR, SPF and standing seam metal on a Metairie commercial building. Call for a written estimate.</p></div>
     <div class="spec"><h4>Typical duration</h4><div class="v">2 to 6 weeks</div><p>Single-tenant single-ply on 5,000 to 15,000 sqft runs 2 to 3 weeks. Phased tenant-occupied on 30,000 to 60,000 sqft runs 4 to 6 weeks.</p></div>
     <div class="spec"><h4>Permit authority</h4><div class="v" id="v-auth">Jefferson Parish</div><p id="v-auth-p">Commercial building permit through the Jefferson Parish Department of Inspection and Code Enforcement, on the commercial application track.</p></div>
     <div class="spec"><h4>Licence threshold</h4><div class="v">$50,000</div><p>La. R.S. 37:2150 et seq. sets the state commercial contractor licence threshold at $50,000 or more of construction work. Big Easy Roofing carries the LSLBC licence for the classification.</p></div>
@@ -512,7 +518,7 @@ footer a{color:#fff}
   <div class="sechead"><h2>Commercial roofing systems we install on <span class="b" id="t-compare">Metairie flat roofs</span></h2>
   <p class="bluf">Seven systems dominate Metairie commercial roofing: TPO, PVC, EPDM, modified bitumen, built-up roofing, spray polyurethane foam, and standing seam metal. Each has a cost band per square foot, a typical service life, and a building type it fits best. Selecting the right one is the biggest cost decision on any commercial re-roof.</p></div>
   <div class="tblwrap"><table class="tbl">
-    <thead><tr><th>System</th><th>Best for</th><th>Typical lifespan</th><th>Cost per sqft</th></tr></thead>
+    <thead><tr><th>System</th><th>Best for</th><th>Typical lifespan</th><th>Estimated cost/sqft</th></tr></thead>
     <tbody>
       <tr><th class="best">TPO (single-ply)</th><td class="best">Warehouses, retail, restaurants, medical office under 30,000 sqft</td><td class="best">20 to 25 years</td><td class="best money">$5.50 to $11</td></tr>
       <tr><th>PVC (single-ply)</th><td>Restaurants with grease exhaust, healthcare with chemical vents, roofs with high foot traffic</td><td>20 to 30 years</td><td class="money">$6 to $13</td></tr>
@@ -523,6 +529,7 @@ footer a{color:#fff}
       <tr><th>Standing seam metal</th><td>Commercial buildings at 2/12 pitch or greater, long-service design intent</td><td>40 to 60 years</td><td class="money">$9 to $18</td></tr>
     </tbody>
   </table></div>
+  <p class="tbl-note">Estimated market ranges only. <a href="tel:+15048008196">Call (504) 800-8196</a> for a written estimate on your Metairie commercial re-roof.</p>
   <p class="srcline">TPO is the workhorse of Metairie commercial roofing at $5.50 to $11 per square foot installed and a 20 year service life. PVC is the premium single-ply where grease or chemical exposure is on the roof. Metal is the long-life pick where the pitch allows it and the budget carries the cost.</p>
 </div></section>
 
@@ -714,7 +721,7 @@ footer a{color:#fff}
 <section class="promo"><div class="wrap">
   <div class="pcard">
     <div class="pcopy">
-      <h2 id="t-cta">Scope your Metairie commercial re-roof this month</h2>
+      <h2 id="t-cta">Scope your <span class="b">Metairie commercial re-roof</span> this month</h2>
       <p id="p-cta">Walk-through with a property manager, written scope per square foot per system, engineered plan where structural work is involved, and a manufacturer NDL warranty at closeout.</p>
       <a class="btn btn-y" href="tel:+15048008196">Call (504) 800-8196</a>
     </div>
@@ -991,6 +998,23 @@ footer a{color:#fff}
   // This is a commercial-topic page, so the default is Commercial when the
   // page loads on com-replacement (no ?svc= param).
   setSvcTab(SVC[svcSel.value].g==='Commercial'?'com':'res');
+
+  // Animated underline on important keywords: fire when the .b enters viewport
+  if ('IntersectionObserver' in window) {
+    var _uObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in-view');
+          _uObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.25, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.b').forEach(function(el){ _uObs.observe(el); });
+  } else {
+    document.querySelectorAll('.b').forEach(function(el){ el.classList.add('in-view'); });
+  }
+
+
 })();
 </script>
 </body>
