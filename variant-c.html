@@ -238,7 +238,9 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .svc:hover .go{color:var(--blue)}
 
 /* Res + Commercial as slide tabs */
-.svctabs{display:flex;gap:28px;margin:30px 0 20px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.svc-ask{margin:34px 0 12px;font-family:var(--head);font-weight:700;font-size:17px;letter-spacing:-.01em;color:var(--deep);display:flex;align-items:center;gap:12px}
+.svc-ask::before{content:"";width:26px;height:2px;background:var(--yellow);border-radius:2px;flex:none}
+.svctabs{display:flex;gap:28px;margin:0 0 20px;border-bottom:1px solid var(--line);flex-wrap:wrap}
 .svctabs button{background:none;border:0;padding:12px 2px 14px;font-family:var(--head);font-weight:700;font-size:22px;letter-spacing:-.02em;color:#8a94a1;cursor:pointer;position:relative;transition:color .25s var(--ease)}
 .svctabs button span{color:inherit;font-weight:700}
 .svctabs button.on{color:var(--navy)}
@@ -626,6 +628,7 @@ footer a{color:#fff}
   <div class="sechead"><h2>Everything else we do <span class="b" id="t-more">in Metairie</span></h2>
   <p class="bluf" id="p-more">The rest of the Big Easy Roofing services available in Metairie, each with its own page, crew and written scope. Where a roof does not need <a href="https://www.bigeasyroofing.com/roof-replacement/" style="font-weight: bold; text-decoration: underline;">a full roof replacement</a>, a repair, an inspection or gutter work is usually the cheaper honest answer.</p></div>
 
+  <div class="svc-ask">What kind of service are you looking for?</div>
   <div class="svctabs" role="tablist" id="svctabs">
     <button type="button" data-tab="res" class="on" role="tab" aria-selected="true">Residential Services <span id="t-res-city">in Metairie</span></button>
     <button type="button" data-tab="com" role="tab" aria-selected="false">Commercial Services <span id="t-com-city">in Metairie</span></button>
