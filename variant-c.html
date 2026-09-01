@@ -262,13 +262,6 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .svc2 .go2 .arw svg{width:11px;height:11px}
 .svc2:hover .go2 .arw{transform:translateX(3px) rotate(-45deg);background:rgba(255,255,255,.32)}
 
-/* Click animation: PUSH forward, siblings recede */
-.svc2.pushing{transform:translateZ(240px) translateY(-18px) !important;
-  box-shadow:0 90px 150px rgba(0,0,0,.5), 0 40px 70px rgba(21,71,126,.4) !important;
-  z-index:1000;transition-duration:.55s}
-.svcgrid.push-active .svc2:not(.pushing){transform:translateZ(-120px) !important;opacity:.2;filter:blur(4px)}
-.push-backdrop{position:fixed;inset:0;background:rgba(7,16,24,.5);backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .5s var(--ease);z-index:900}
-.push-backdrop.on{opacity:1}
 
 /* ============ FAQ, WELLNESTY PATTERN ============ */
 #faq{background:var(--sand);overflow:hidden}
@@ -639,7 +632,6 @@ footer a{color:#fff}
     <div class="svcgrid" id="svcgrid-com"></div>
   </div>
 </div></section>
-<div class="push-backdrop" id="pushBackdrop"></div>
 
 <!-- ============ FAQ, WELLNESTY PATTERN ============ -->
 <section id="faq"><div class="wrap">
@@ -830,8 +822,6 @@ footer a{color:#fff}
     return html;
   }
 
-  var pushBackdrop=document.getElementById('pushBackdrop');
-
   function buildServices(){
     var cur=svcSel.value, c=citySel.value;
     gridRes.innerHTML=renderGroup('Residential',cur,c);
@@ -843,20 +833,8 @@ footer a{color:#fff}
         if(e.metaKey||e.ctrlKey||e.shiftKey||e.button===1) return;
         e.preventDefault();
         var k=a.getAttribute('data-s');
-        var grid=a.closest('.svcgrid');
-        if(grid.classList.contains('push-busy')) return;
-        grid.classList.add('push-busy','push-active');
-        a.classList.add('pushing');
-        pushBackdrop.classList.add('on');
-        setTimeout(function(){
-          a.classList.remove('pushing');
-          grid.classList.remove('push-active');
-          pushBackdrop.classList.remove('on');
-          svcSel.value=k;
-          sync();
-          window.scrollTo({top:0,behavior:'smooth'});
-          setTimeout(function(){ grid.classList.remove('push-busy'); }, 400);
-        }, 620);
+        svcSel.value=k;
+        sync();
       });
     });
   }
