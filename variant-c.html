@@ -140,7 +140,10 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .tbl tbody td.best{background:#fffdf0}
 .tbl thead th.best{background:#123253;box-shadow:inset 0 -3px 0 var(--yellow)}
 .money{font-family:var(--head);font-weight:700;white-space:nowrap}
-.disclaim{margin:18px 0 0;font-size:13.5px;color:#5b6470;max-width:96ch;line-height:1.55}
+.seccta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.seccta .btn-b{color:#fff}
+.seccta .btn-o{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.55);font-weight:700}
+.seccta .btn-o:hover{background:rgba(255,255,255,.1)}
 
 /* ============ PERMIT, ICON REDESIGN ============ */
 #permit{color:#fff}
@@ -155,13 +158,14 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .icard h3{color:#fff;font-size:16.5px;margin-bottom:7px}
 .icard .val{font-family:var(--head);font-weight:700;font-size:21px;color:var(--yellow);letter-spacing:-.02em;margin-bottom:7px}
 .icard p{margin:0;font-size:14.2px;color:rgba(255,255,255,.8);line-height:1.55}
-.srcnote{margin-top:20px;font-size:13.5px;color:rgba(255,255,255,.6);max-width:92ch}
 
 /* ============ PROCESS, AIVORA PATTERN ============ */
 #process{background:var(--cream)}
-.aiv{display:grid;grid-template-columns:1fr 1.12fr;gap:48px;align-items:center}
+.aiv{display:grid;grid-template-columns:1fr 1.12fr;gap:48px;align-items:center;min-width:0}
+.aiv>*{min-width:0}
 @media(max-width:900px){.aiv{grid-template-columns:1fr;gap:30px}}
-.aiv-left h2{font-size:clamp(28px,3.4vw,40px);max-width:14ch}
+.aiv-left h2{font-size:clamp(26px,3vw,38px);max-width:none;white-space:nowrap}
+@media(max-width:520px){.aiv-left h2{white-space:normal}}
 .aiv-left p.lede{margin:14px 0 0;color:#3a4450;max-width:44ch}
 .aiv-figure{margin-top:24px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 40px rgba(7,16,24,.14)}
 .aiv-figure img{width:100%;height:260px;object-fit:cover}
@@ -193,18 +197,20 @@ section{padding:58px 0;position:relative;isolation:isolate}
 
 /* ============ FAQ, WELLNESTY PATTERN ============ */
 #faq{background:var(--sand);overflow:hidden}
-.faqtop{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:start;margin-bottom:34px}
+.faqhead{font-size:clamp(24px,3.3vw,44px);line-height:1.06;letter-spacing:-.032em;white-space:nowrap;margin-bottom:14px}
+@media(max-width:820px){.faqhead{white-space:normal;font-size:clamp(26px,7vw,38px)}}
+.faqtop{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center;margin-bottom:26px;min-width:0}
+.faqtop>*{min-width:0}
 @media(max-width:900px){.faqtop{grid-template-columns:1fr}}
-.faqtop h2{font-size:clamp(32px,5vw,58px);line-height:1.03;letter-spacing:-.035em;max-width:11ch}
-.faqtop p{margin:16px 0 0;color:#43505e;max-width:44ch;font-size:17px}
-.photostack{position:relative;height:240px}
-@media(max-width:900px){.photostack{height:200px}}
+.faqtop p{margin:0;color:#43505e;max-width:46ch;font-size:17px}
+.photostack{position:relative;height:186px}
+@media(max-width:900px){.photostack{height:180px}}
 .photostack figure{position:absolute;margin:0;border-radius:16px;overflow:hidden;border:5px solid #fff;box-shadow:0 14px 34px rgba(7,16,24,.2)}
 .photostack figure img{width:100%;height:100%;object-fit:cover}
-.ps1{width:200px;height:140px;left:1%;top:8%;transform:rotate(-6deg)}
-.ps2{width:180px;height:126px;left:36%;top:38%;transform:rotate(4deg)}
-.ps3{width:165px;height:118px;right:1%;top:2%;transform:rotate(8deg)}
-.qmark{position:absolute;right:33%;top:2%;font-family:var(--head);font-weight:800;font-size:54px;color:var(--deep);
+.ps1{width:186px;height:130px;left:1%;top:4%;transform:rotate(-6deg)}
+.ps2{width:168px;height:118px;left:36%;top:32%;transform:rotate(4deg)}
+.ps3{width:154px;height:110px;right:1%;top:0;transform:rotate(8deg)}
+.qmark{position:absolute;right:33%;top:0;font-family:var(--head);font-weight:800;font-size:46px;color:var(--deep);
   transform:rotate(-9deg)}
 .faqbody{display:grid;grid-template-columns:250px 1fr;gap:34px;align-items:start}
 @media(max-width:820px){.faqbody{grid-template-columns:1fr;gap:20px}}
@@ -237,10 +243,15 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .qa .ans p{margin:0}
 
 /* ============ PROMO BANNER CTA ============ */
-.promo{padding:56px 0}
-.pcard{position:relative;border-radius:26px;overflow:hidden;isolation:isolate;
+.promo{padding:0}
+.promo .wrap{max-width:none;padding:0}
+.pcard{position:relative;border-radius:0;overflow:hidden;isolation:isolate;
   background:linear-gradient(112deg,#15477e 0%,#2388da 46%,#4fb4e8 72%,#ffeb01 138%);
-  padding:44px 46px;display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center;min-height:296px}
+  padding:56px 46px;display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center;min-height:330px;
+  max-width:none}
+.pcard>*{max-width:600px}
+.pcard>.pcopy{justify-self:end;width:100%}
+.pcard>.pshots{justify-self:start;width:100%}
 @media(max-width:900px){.pcard{grid-template-columns:1fr;padding:32px 26px}}
 .pcard::before{content:"";position:absolute;inset:0;z-index:-1;
   background:radial-gradient(120% 150% at 86% 50%,rgba(255,255,255,.26),transparent 58%)}
@@ -374,6 +385,10 @@ footer a{color:#fff}
     <div class="spec"><h4>Building code</h4><div class="v" id="v-code">2021 IRC</div><p id="v-code-p">Required by Jefferson Parish for re roofing: nailing pattern, underlayment and edge detail.</p></div>
     <div class="spec"><h4>Site inspection</h4><div class="v" id="v-insp">Photos only</div><p id="v-insp-p">Geo tagged phase photography replaces a routine site visit.</p></div>
   </div>
+  <div class="seccta seccta-l">
+    <a class="btn btn-y" href="https://www.bigeasyroofing.com/contact/">Get Your FREE Quote Only for Today!</a>
+    <a class="btn btn-b" href="tel:+15048008196">Call Our Roofing Experts!</a>
+  </div>
 </div></section>
 
 <!-- ============ COMPARE ============ -->
@@ -393,7 +408,6 @@ footer a{color:#fff}
       <tr><th>Best for</th><td>Straightforward replacement on a budget</td><td class="best" id="t-bestfor">Most Metairie homeowners staying put</td><td>Long hold, low slope sections, coastal exposure</td></tr>
     </tbody>
   </table></div>
-  <p class="disclaim">FORTIFIED is a designation from the Insurance Institute for Business and Home Safety, awarded after an approved evaluator inspects the finished roof. Choosing the shingle alone does not earn it. Figures on this page are illustrative ranges for a typical single family roof, not a quote, and are subject to Big Easy Roofing sign off. Your price and timescale depend on size, pitch, access, layers, decking condition, materials and weather, and are fixed only in your written scope.</p>
 </div></section>
 
 <!-- ============ PERMIT AND CODE, ICON REDESIGN ============ -->
@@ -428,7 +442,10 @@ footer a{color:#fff}
       <p id="v-insp2-p">Jefferson Parish verifies from geo tagged photographs. Every phase is documented with the nailing pattern visible and the material packaging showing its wind rating.</p>
     </div>
   </div>
-  <p class="srcnote">Source: Jefferson Parish residential re roofing permit requirements, jeffparish.gov, the Louisiana State Uniform Construction Code, lsuccc.dps.louisiana.gov, La. R.S. 37:2156.4, and the Louisiana Fortify Homes Program, ldi.la.gov. Permit fee, licence threshold, code edition and grant terms as of September 2026 and subject to change. The $50 fee, the photo verification process and the 2021 IRC requirement above are confirmed for unincorporated Jefferson Parish. Permit requirements and government fees vary by address and project, so we confirm them with the permitting authority and itemise them in your written proposal.</p>
+  <div class="seccta">
+    <a class="btn btn-y" href="https://www.bigeasyroofing.com/contact/">Get Your FREE Quote Only for Today!</a>
+    <a class="btn btn-o" href="tel:+15048008196">Call (504) 800-8196</a>
+  </div>
 </div></section>
 
 <!-- ============ PROCESS, AIVORA PATTERN ============ -->
@@ -480,9 +497,9 @@ footer a{color:#fff}
 
 <!-- ============ FAQ, WELLNESTY PATTERN ============ -->
 <section id="faq"><div class="wrap">
+  <h2 id="t-faq" class="faqhead">Metairie Roof Replacement <span class="b">FAQs</span></h2>
   <div class="faqtop">
     <div>
-      <h2>Frequently Asked Questions</h2>
       <p id="p-faq">The questions Metairie homeowners actually ask us about roof replacement, answered before you have to pick up the phone.</p>
     </div>
     <div class="photostack" aria-hidden="true">
@@ -620,6 +637,7 @@ footer a{color:#fff}
     $('t-more').textContent='in '+c;
     $('p-more').textContent='The rest of the Big Easy Roofing services available in '+c+', each with its own page, crew and written scope.';
     $('p-faq').textContent='The questions '+c+' homeowners actually ask us about '+sl+', answered before you have to pick up the phone.';
+    $('t-faq').innerHTML=c+' '+s+' <span class="b">FAQs</span>';
     $('q1').textContent='How much does a new roof cost in '+c;
     $('q2').textContent='Do I need a permit to replace a roof in '+c;
     $('q5').textContent='Is metal worth it in '+c;
