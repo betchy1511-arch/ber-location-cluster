@@ -120,10 +120,29 @@ h4{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--deep
 
 section{padding:58px 0;position:relative;isolation:isolate}
 .sec-cream{background:var(--cream)}
-.sechead{max-width:64ch;margin-bottom:26px}
-.sechead p{margin:10px 0 0;color:#3a4450}
-.sechead .bluf{font-size:17.5px;color:#26313d;max-width:74ch}
-.prose{max-width:74ch;margin:22px 0 0;color:#2f3a46;font-size:16.5px;line-height:1.72}
+.sechead{max-width:72ch;margin:0 auto 26px;text-align:center}
+#process .sechead{margin:0 0 26px;text-align:left}
+.sechead p{margin:10px auto 0;color:#3a4450}
+.sechead .bluf{font-size:17.5px;color:#26313d;max-width:74ch;margin-left:auto;margin-right:auto}
+/* designed note cards, replaces dumped paragraphs */
+.ncards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px;text-align:left}
+.ncards.two{grid-template-columns:repeat(2,1fr);max-width:900px;margin-left:auto;margin-right:auto}
+@media(max-width:940px){.ncards,.ncards.two{grid-template-columns:1fr}}
+.ncard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 22px;
+  box-shadow:0 1px 2px rgba(7,16,24,.04);transition:transform .18s var(--ease),box-shadow .18s var(--ease)}
+.ncard:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(7,16,24,.1)}
+.ncard .nc-ico{width:46px;height:46px;border-radius:13px;background:var(--yellow);display:grid;place-items:center;margin-bottom:15px}
+.ncard .nc-ico svg{width:24px;height:24px;stroke:#071018;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ncard h3{font-size:17px;margin-bottom:9px;line-height:1.25}
+.ncard p{margin:0;font-size:15.2px;line-height:1.66;color:#4a5460}
+.ncard p + p{margin-top:11px}
+.ncard a{color:var(--deep)}
+#permit .ncard{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.16);box-shadow:none}
+#permit .ncard:hover{background:rgba(255,255,255,.09);border-color:rgba(255,235,1,.5)}
+#permit .ncard h3{color:#fff}
+#permit .ncard p{color:rgba(255,255,255,.8)}
+#permit .ncard a{color:#8fd0ff}
+.prose{max-width:74ch;margin:24px auto 0;color:#2f3a46;font-size:16.5px;line-height:1.72}
 .prose p{margin:0 0 16px}
 .prose p:last-child{margin-bottom:0}
 .prose a{color:var(--deep)}
@@ -134,7 +153,7 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .fact{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:12px;padding:16px 18px}
 .fact b{display:block;font-family:var(--head);font-size:15.5px;margin-bottom:5px}
 .fact span{font-size:14.2px;color:#5b6470;line-height:1.55}
-.srcline{margin:24px 0 0;max-width:82ch;font-size:13.2px;color:#6b7480;line-height:1.6}
+.srcline{margin:24px auto 0;max-width:82ch;font-size:13.2px;color:#6b7480;line-height:1.6;text-align:center}
 #permit .srcline{color:rgba(255,255,255,.6)}
 .tex{position:absolute;inset:0;z-index:-1;background:center/cover no-repeat;opacity:.07}
 .tex-d{position:absolute;inset:0;z-index:-1;background:center/cover no-repeat;background-color:#071018}
@@ -216,12 +235,12 @@ section{padding:58px 0;position:relative;isolation:isolate}
 
 /* ============ FAQ, WELLNESTY PATTERN ============ */
 #faq{background:var(--sand);overflow:hidden}
-.faqhead{font-size:clamp(24px,3.3vw,44px);line-height:1.06;letter-spacing:-.032em;white-space:nowrap;margin-bottom:14px}
+.faqhead{font-size:clamp(24px,3.3vw,44px);line-height:1.06;letter-spacing:-.032em;white-space:nowrap;margin:0 auto 14px;text-align:center}
 @media(max-width:820px){.faqhead{white-space:normal;font-size:clamp(26px,7vw,38px)}}
 .faqtop{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center;margin-bottom:26px;min-width:0}
 .faqtop>*{min-width:0}
 @media(max-width:900px){.faqtop{grid-template-columns:1fr}}
-.faqtop p{margin:0;color:#43505e;max-width:46ch;font-size:17px}
+.faqtop p{margin:0;color:#43505e;max-width:46ch;font-size:17px;text-align:center}
 .photostack{position:relative;height:186px}
 @media(max-width:900px){.photostack{height:180px}}
 .photostack figure{position:absolute;margin:0;border-radius:16px;overflow:hidden;border:5px solid #fff;box-shadow:0 14px 34px rgba(7,16,24,.2)}
@@ -410,9 +429,9 @@ footer a{color:#fff}
     <div class="spec"><h4>Building code</h4><div class="v" id="v-code">2021 IRC</div><p id="v-code-p">Required by Jefferson Parish for re roofing: nailing pattern, underlayment and edge detail.</p></div>
     <div class="spec"><h4>Site inspection</h4><div class="v" id="v-insp">Photos only</div><p id="v-insp-p">Geo tagged phase photography replaces a routine site visit.</p></div>
   </div>
-  <div class="prose">
-    <p>The single largest line on a Metairie roof replacement is rarely the shingle. It is the tear off and whatever the crew finds under it, because a roof that has already been layered over once carries twice the disposal weight and often hides decking that has been quietly absorbing water at the eaves. The decking replacement is priced as a rate per sheet in the written scope rather than discovered on the day, so the number a homeowner signs is the number they pay.</p>
-    <p>Financing changes the shape of that number rather than the number itself. Homeowners who would rather spread the cost can <a href="https://www.bigeasyroofing.com/roofing-financing/" style="font-weight: bold; text-decoration: underline;">pay for the work monthly</a> instead of in a single payment, and the parish permit fee is itemised separately either way.</p>
+  <div class="ncards two">
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><h3>What actually drives the price</h3><p>The largest line on a Metairie roof replacement is rarely the shingle. It is the tear off and whatever the crew finds under it, because a roof that has already been layered over carries twice the disposal weight and often hides decking that has been absorbing water at the eaves.</p><p>The decking replacement is priced as a rate per sheet in the written scope rather than discovered on the day, so the number a homeowner signs is the number they pay.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Paying for it</h3><p>Financing changes the shape of the number rather than the number itself. Homeowners who would rather spread the cost can <a href="https://www.bigeasyroofing.com/roofing-financing/" style="font-weight: bold; text-decoration: underline;">pay for the work monthly</a> instead of in a single payment, and the parish permit fee is itemised separately either way.</p></div>
   </div>
   <p class="srcline">Cost bands are illustrative ranges for a typical Metairie single family roof, not a quote, and are subject to Big Easy Roofing sign off. Price and timescale depend on size, pitch, access, layers, decking condition, materials and weather, and are fixed only in your written scope.</p>
   <div class="seccta seccta-l">
@@ -438,11 +457,6 @@ footer a{color:#fff}
       <tr><th>Best for</th><td>Straightforward replacement on a budget</td><td class="best" id="t-bestfor">Most Metairie homeowners staying put</td><td>Long hold, low slope sections, coastal exposure</td></tr>
     </tbody>
   </table></div>
-  <div class="prose">
-    <p>Shingle class is the question homeowners ask most often once the system is chosen. Class 4 is the highest impact rating in the UL 2218 test used across the industry, and on the Gulf Coast the argument for it is hail and wind borne debris rather than everyday weather. Class 4 products from GAF, CertainTeed and Owens Corning carry a price premium over a standard architectural shingle, and some Louisiana insurers recognise an impact resistant covering when rating a policy, so the decision is worth putting to your carrier before the order is placed rather than after.</p>
-    <p>Where a Metairie roof has a low slope section over a carport, a rear addition or a flat porch roof, shingles are the wrong product regardless of class, because asphalt shingles rely on slope to shed water. Those sections are the usual reason a homeowner comparing <a href="https://www.bigeasyroofing.com/roofing-types/shingle/" style="font-weight: bold; text-decoration: underline;">architectural asphalt shingles</a> against <a href="https://www.bigeasyroofing.com/roofing-types/metal-roofs/standing-seam/" style="font-weight: bold; text-decoration: underline;">standing seam metal</a> ends up with both on the same house.</p>
-  </div>
-  <p class="srcline">FORTIFIED is a designation from the Insurance Institute for Business and Home Safety, awarded after an approved evaluator inspects the finished roof. Choosing the shingle alone does not earn it.</p>
 </div></section>
 
 <!-- ============ PERMIT AND CODE, ICON REDESIGN ============ -->
@@ -477,9 +491,9 @@ footer a{color:#fff}
       <p id="v-insp2-p">Jefferson Parish verifies from geo tagged photographs. Every phase is documented with the nailing pattern visible and the material packaging showing its wind rating.</p>
     </div>
   </div>
-  <div class="prose">
-    <p>The licence threshold is the change most Metairie homeowners have not heard about. Louisiana Revised Statute 37:2156.4 requires a residential roofing or residential construction licence from the Louisiana State Licensing Board for Contractors on residential roof work valued at $7,500 or more, and the statute reads "or more" rather than "over", so a project priced at exactly $7,500 is covered. Since almost every full replacement in Metairie clears that figure, asking a contractor for a licence number is now a legal check rather than a courtesy.</p>
-    <p>Jefferson Parish does not send an inspector to a re roof. The parish verifies the work from geo tagged photographs of each phase, which means the nailing pattern has to be visible in the record and the material packaging has to show its wind rating. Big Easy Roofing files that photographic record on the homeowner's behalf as part of <a href="https://www.bigeasyroofing.com/service-areas/louisiana/metairie/" style="font-weight: bold; text-decoration: underline;">every job across Metairie</a>, so the permit closes without the owner chasing it.</p>
+  <div class="ncards two">
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 5.4 6 .9-4.3 4.2 1 6-5.3-2.8L6.7 18.5l1-6L3.4 8.3l6-.9z"/></svg></span><h3>The licence rule most homeowners miss</h3><p>Louisiana Revised Statute 37:2156.4 requires a residential roofing or residential construction licence from the Louisiana State Licensing Board for Contractors on residential roof work valued at $7,500 or more, and the statute reads "or more" rather than "over".</p><p>Almost every full replacement in Metairie clears that figure, so asking a contractor for a licence number is now a legal check rather than a courtesy.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h2.4l1.3-2h6.6l1.3 2H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.4"/></svg></span><h3>Nobody comes to look at it</h3><p>Jefferson Parish does not send an inspector to a re roof. The parish verifies the work from geo tagged photographs of each phase, so the nailing pattern has to be visible in the record and the material packaging has to show its wind rating.</p><p>That photographic record is filed with the parish on the homeowner's behalf as part of <a href="https://www.bigeasyroofing.com/service-areas/louisiana/metairie/" style="font-weight: bold; text-decoration: underline;">every job across Metairie</a>, so the permit closes without the owner chasing it.</p></div>
   </div>
   <p class="srcline">Permit fee, the 50 percent threshold and the photographic verification process are published by <a href="https://www.jeffparish.gov/" style="font-weight: bold; text-decoration: underline;">Jefferson Parish</a> and apply to unincorporated Jefferson Parish. The licence rule is La. R.S. 37:2156.4. Figures current as of September 2026 and subject to change.</p>
   <div class="seccta">
@@ -494,30 +508,11 @@ footer a{color:#fff}
   <div class="wrap">
   <div class="sechead"><h2>What a Metairie roof <span class="b">is actually up against</span></h2>
   <p class="bluf">Metairie's housing stock is dominated by post-WWII ranch homes with shallow pitched roofs and wide eaves, concentrated through Old Metairie and along Metairie Ridge. Hurricane Ida crossed Jefferson Parish in August 2021 and started a replacement cycle that is still working through the parish four years later.</p></div>
-  <div class="prose">
-    <p>A shallow pitch is the defining feature of the Metairie roof and it drives most of what goes wrong. Water moves off a low slope roof slowly, so wind driven rain has time to work back under the courses at the eave, and the decking closest to the gutter line is almost always the first thing a crew finds soft during tear off. On the older properties around Old Metairie the eaves are wide enough that the damage can run several feet in from the edge before anything shows on a ceiling inside.</p>
-    <p>Hurricane Ida did not damage Metairie roofs evenly. The parish took sustained wind rather than the catastrophic surge that hit further south, and sustained wind is what lifts ridge caps, peels back the first course at a rake edge and loosens the fasteners holding a roof to wall connection without necessarily removing a single visible shingle. Roofs that looked intact in September 2021 have been failing steadily since, which is why <a href="https://www.bigeasyroofing.com/storm-damage/" style="font-weight: bold; text-decoration: underline;">wind and storm damage</a> is still the most common reason a Metairie homeowner calls about a replacement rather than a repair.</p>
-    <p>Metairie Ridge sits on the old natural levee and runs a few feet higher than the neighbourhoods either side of it, which matters less for roofing than the tree canopy that comes with it. Mature live oaks over a shallow pitched roof mean constant leaf load in the valleys and gutters, and standing debris on a low slope roof holds moisture against the covering for weeks after the rain has stopped.</p>
+  <div class="ncards">
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-8 9 8"/><path d="M5 11v9h14v-9"/><path d="M9 20v-5h6v5"/></svg></span><h3>Shallow pitch and wide eaves</h3><p>Water moves off a low slope roof slowly, so wind driven rain has time to work back under the courses at the eave, and the decking closest to the gutter line is almost always the first thing a crew finds soft during tear off.</p><p>On the older properties around Old Metairie the eaves are wide enough that the damage can run several feet in from the edge before anything shows on a ceiling inside.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h8"/></svg></span><h3>Hurricane Ida, August 2021</h3><p>Jefferson Parish took sustained wind rather than the catastrophic surge that hit further south. Sustained wind lifts ridge caps, peels back the first course at a rake edge and loosens roof to wall connections without removing a single visible shingle.</p><p>Roofs that looked intact in September 2021 have been failing steadily since, which is why <a href="https://www.bigeasyroofing.com/storm-damage/" style="font-weight: bold; text-decoration: underline;">wind and storm damage</a> is still the most common reason a Metairie homeowner calls about a replacement rather than a repair.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l5 6h-3l4 5h-3l3 4H6l3-4H6l4-5H7z"/><path d="M12 18v3"/></svg></span><h3>The Old Metairie tree canopy</h3><p>Metairie Ridge sits on the old natural levee and runs a few feet higher than the neighbourhoods either side of it, which matters less for roofing than the tree canopy that comes with it.</p><p>Mature live oaks over a shallow pitched roof mean constant leaf load in the valleys and gutters, and standing debris on a low slope roof holds moisture against the covering for weeks after the rain has stopped.</p></div>
   </div>
-  <div class="factrow">
-    <div class="fact"><b>Post-WWII ranch homes</b><span>Shallow pitch, wide eaves, long unbroken runs. Cheap to cover, quick to fail at the eave.</span></div>
-    <div class="fact"><b>Hurricane Ida, August 2021</b><span>Sustained wind across Jefferson Parish rather than surge. Damage shows up years later.</span></div>
-    <div class="fact"><b>Old Metairie tree canopy</b><span>Live oak debris sits in valleys on a low slope roof and holds water against the covering.</span></div>
-  </div>
-</div></section>
-
-<!-- ============ FORTIFIED, INSURANCE AND THE GRANT ============ -->
-<section id="fortified" class="sec-cream">
-  <div class="tex" style="background-image:url('img/photo/tex-granules.jpg')"></div>
-  <div class="wrap">
-  <div class="sechead"><h2>FORTIFIED, insurance <span class="b">and the state grant</span></h2>
-  <p class="bluf">The FORTIFIED standard is set by the Insurance Institute for Business and Home Safety and covers roof deck attachment, a sealed roof deck and roof to wall connections. The Louisiana Fortify Homes Program grants up to $10,000 toward construction cost, and approval has to come before a contractor is chosen.</p></div>
-  <div class="prose">
-    <p>FORTIFIED is a designation, not a product. A homeowner cannot buy a FORTIFIED roof off a shelf, because the designation is issued after an approved evaluator inspects the finished work against the Insurance Institute for Business and Home Safety standard. That is the part most Metairie homeowners get wrong, and it is why the sequence matters: the evaluator has to be engaged and the Louisiana Fortify Homes Program application has to be approved before the tear off starts, not after the roof is on.</p>
-    <p>The grant covers up to $10,000 and is limited to construction costs, so the homeowner still carries anything above that plus the evaluator fees. It also runs in funded rounds rather than continuously, which means the answer to whether it is available depends entirely on when you ask. The Louisiana Department of Insurance publishes the current round and the application window at ldi.la.gov, and that is the page to check before planning a replacement around the money.</p>
-    <p>Separately from the grant, a wind mitigation inspection documents the roof features a Louisiana insurer uses when rating a policy, including the roof covering, the deck attachment and the roof to wall connections. The team carries out <a href="https://www.bigeasyroofing.com/wind-mitigation-inspection-louisiana-insurance-discount/" style="font-weight: bold; text-decoration: underline;">a wind mitigation inspection</a> on request and works with homeowners who are running <a href="https://www.bigeasyroofing.com/roof-insurance-claims/" style="font-weight: bold; text-decoration: underline;">an insurance claim on the roof</a> at the same time as the replacement, which on a storm damaged Metairie property is usually the same conversation.</p>
-  </div>
-  <p class="srcline">FORTIFIED programme detail from the Insurance Institute for Business and Home Safety. Grant terms and the current application round from the <a href="https://www.ldi.la.gov/" style="font-weight: bold; text-decoration: underline;">Louisiana Department of Insurance</a>. Current as of September 2026 and subject to change.</p>
 </div></section>
 
 <!-- ============ PROCESS, AIVORA PATTERN ============ -->
