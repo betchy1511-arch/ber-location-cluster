@@ -237,6 +237,46 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .svc .go{font-family:var(--head);font-weight:700;font-size:14px;color:var(--deep);display:inline-flex;align-items:center;gap:6px}
 .svc:hover .go{color:var(--blue)}
 
+/* Res + Commercial groups */
+.svcgroup{margin-top:42px}
+.svcgroup:first-of-type{margin-top:30px}
+.sgh{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:18px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.sgh-t{font-family:var(--head);font-weight:700;font-size:22px;letter-spacing:-.02em;color:var(--navy);margin:0}
+.sgh-t span{color:var(--blue)}
+.sgh-all{font-family:var(--head);font-weight:700;font-size:14.5px;color:var(--deep);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:color .18s var(--ease),gap .18s var(--ease)}
+.sgh-all:hover{color:var(--blue);gap:10px}
+
+/* Photo-topped service card, click-to-forward */
+.svc2{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none;color:inherit;
+  transition:transform .32s var(--ease), box-shadow .32s var(--ease), border-color .32s var(--ease);
+  will-change:transform}
+.svc2:hover{transform:translateY(-10px);box-shadow:0 26px 46px rgba(21,71,126,.18);border-color:var(--blue)}
+.svc2:active{transform:translateY(-14px) scale(1.02);box-shadow:0 32px 58px rgba(21,71,126,.28);transition-duration:.12s}
+.svc2 .head{aspect-ratio:16/10;background:linear-gradient(135deg,#eaf3fc 0%,#dbe9f6 100%);display:grid;place-items:center;position:relative;overflow:hidden}
+.svc2 .head::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 22%, rgba(255,255,255,.55), transparent 55%);pointer-events:none}
+.svc2 .head img{width:78px;height:78px;object-fit:contain;filter:drop-shadow(0 6px 12px rgba(21,71,126,.18));z-index:1;transition:transform .35s var(--ease)}
+.svc2:hover .head img{transform:scale(1.09) translateY(-2px)}
+.svc2 .body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.svc2 .lbl{font-family:var(--head);font-weight:700;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.svc2 h3{font-family:var(--head);font-weight:700;font-size:18px;line-height:1.24;letter-spacing:-.01em;color:var(--navy);margin:0 0 16px;flex:1}
+.svc2 .go2{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-family:var(--head);font-weight:700;font-size:14px;padding:10px 18px;border-radius:30px;transition:background .18s var(--ease), gap .18s var(--ease), box-shadow .18s var(--ease)}
+.svc2:hover .go2{background:var(--deep);gap:12px;box-shadow:0 8px 18px rgba(21,71,126,.28)}
+.svc2 .go2 .arw{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.22);transition:transform .3s var(--ease), background .18s var(--ease)}
+.svc2 .go2 .arw svg{width:11px;height:11px}
+.svc2:hover .go2 .arw{transform:translateX(3px) rotate(-45deg);background:rgba(255,255,255,.32)}
+
+/* Featured middle card, BER brand blue */
+.svc2.feat{background:var(--deep);border-color:var(--deep)}
+.svc2.feat .head{background:linear-gradient(135deg,#2b6bb0 0%,#15477e 100%)}
+.svc2.feat .head::after{background:radial-gradient(circle at 72% 22%, rgba(255,255,255,.18), transparent 55%)}
+.svc2.feat .head img{filter:drop-shadow(0 6px 14px rgba(0,0,0,.4)) brightness(0) invert(1)}
+.svc2.feat .lbl{color:var(--yellow)}
+.svc2.feat h3{color:#fff}
+.svc2.feat .go2{background:var(--yellow);color:#000}
+.svc2.feat:hover .go2{background:#ffe600;color:#000;box-shadow:0 10px 22px rgba(255,235,1,.35)}
+.svc2.feat .go2 .arw{background:rgba(0,0,0,.16)}
+.svc2.feat:hover .go2 .arw{background:rgba(0,0,0,.22)}
+
 /* ============ FAQ, WELLNESTY PATTERN ============ */
 #faq{background:var(--sand);overflow:hidden}
 .faqhead{font-size:clamp(24px,3.3vw,44px);line-height:1.06;letter-spacing:-.032em;white-space:nowrap;margin:0 auto 14px;text-align:center}
@@ -591,7 +631,22 @@ footer a{color:#fff}
   <div class="wrap">
   <div class="sechead"><h2>Everything else we do <span class="b" id="t-more">in Metairie</span></h2>
   <p class="bluf" id="p-more">The rest of the Big Easy Roofing services available in Metairie, each with its own page, crew and written scope. Where a roof does not need <a href="https://www.bigeasyroofing.com/roof-replacement/" style="font-weight: bold; text-decoration: underline;">a full roof replacement</a>, a repair, an inspection or gutter work is usually the cheaper honest answer.</p></div>
-  <div class="svcgrid" id="svcgrid"></div>
+
+  <div class="svcgroup">
+    <div class="sgh">
+      <h3 class="sgh-t">Residential Services <span id="t-res-city">in Metairie</span></h3>
+      <a class="sgh-all" id="a-res-all" href="https://www.bigeasyroofing.com/residential/">See all 17 residential services in Metairie <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="svcgrid" id="svcgrid-res"></div>
+  </div>
+
+  <div class="svcgroup">
+    <div class="sgh">
+      <h3 class="sgh-t">Commercial Services <span id="t-com-city">in Metairie</span></h3>
+      <a class="sgh-all" id="a-com-all" href="https://www.bigeasyroofing.com/commercial/">See all 10 commercial services in Metairie <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="svcgrid" id="svcgrid-com"></div>
+  </div>
 </div></section>
 
 <!-- ============ FAQ, WELLNESTY PATTERN ============ -->
@@ -728,28 +783,56 @@ footer a{color:#fff}
     "sof-repair":{n:"Soffit Repair",g:"Soffit",u:"soffit-services/soffit-repair/",ic:"img/brand/ico-repair.png",d:"Damaged or sagging soffit repaired at the eave."}
   };
   var svcSel=document.getElementById('svc'), citySel=document.getElementById('city');
-  var grid=document.getElementById('svcgrid');
+  var gridRes=document.getElementById('svcgrid-res'), gridCom=document.getElementById('svcgrid-com');
   function $(id){return document.getElementById(id);}
   function art(n){return /^(City|Town) of /.test(n) ? 'the '+n : n;}
 
-  function buildServices(){
-    var cur=svcSel.value, c=citySel.value, grp=SVC[cur].g, html='', n=0;
-    Object.keys(SVC).forEach(function(k){
-      if(k===cur || SVC[k].g!==grp || n>=6) return;
-      n++;
+  var RES_FEAT=['res-replacement','res-repairs','res-inspection','res-hail','res-emergency','res-leak'];
+  var COM_FEAT=['com-replacement','com-repairs','com-inspections','com-hail','com-reroof','com-coating'];
+  var ARROW='<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>';
+
+  function pad2(n){n=String(n);return n.length<2?'0'+n:n;}
+
+  function renderGroup(list, cur, c){
+    var picks=[], i;
+    for(i=0;i<list.length && picks.length<3;i++){
+      if(list[i]===cur) continue;
+      picks.push(list[i]);
+    }
+    var html='';
+    picks.forEach(function(k,idx){
       var o=SVC[k];
-      html+='<a class="svc" href="#top" data-s="'+k+'">'
-          +'<span class="sic"><img src="'+o.ic+'" alt="" width="32" height="32"></span>'
-          +'<h3>'+o.n+' in '+c+'</h3><p>'+o.d+'</p>'
-          +'<span class="go">See the '+c+' page <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a>';
+      var feat=(idx===1)?' feat':'';
+      html+='<a class="svc2'+feat+'" href="https://www.bigeasyroofing.com/'+o.u+'" data-s="'+k+'">'
+          +'<div class="head"><img src="'+o.ic+'" alt="" width="78" height="78" loading="lazy"></div>'
+          +'<div class="body">'
+          +'<div class="lbl">Service &mdash; '+pad2(idx+1)+'</div>'
+          +'<h3>'+o.n+' in '+c+'</h3>'
+          +'<span class="go2">Read More '+ARROW+'</span>'
+          +'</div>'
+          +'</a>';
     });
-    grid.innerHTML=html;
-    [].slice.call(grid.querySelectorAll('.svc')).forEach(function(a){
+    return html;
+  }
+
+  function buildServices(){
+    var cur=svcSel.value, c=citySel.value;
+    gridRes.innerHTML=renderGroup(RES_FEAT,cur,c);
+    gridCom.innerHTML=renderGroup(COM_FEAT,cur,c);
+    $('t-res-city').textContent='in '+c;
+    $('t-com-city').textContent='in '+c;
+    $('a-res-all').innerHTML='See all 17 residential services in '+c+' <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>';
+    $('a-com-all').innerHTML='See all 10 commercial services in '+c+' <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>';
+    [].slice.call(document.querySelectorAll('#svcgrid-res .svc2, #svcgrid-com .svc2')).forEach(function(a){
       a.addEventListener('click',function(e){
+        if(e.metaKey||e.ctrlKey||e.shiftKey||e.button===1) return;
         e.preventDefault();
-        svcSel.value=a.getAttribute('data-s');
-        sync();
-        window.scrollTo({top:0,behavior:'smooth'});
+        var k=a.getAttribute('data-s');
+        setTimeout(function(){
+          svcSel.value=k;
+          sync();
+          window.scrollTo({top:0,behavior:'smooth'});
+        },220);
       });
     });
   }
