@@ -26,7 +26,9 @@ h1{font-size:clamp(28px,3.9vw,46px);letter-spacing:-.028em}
 h2{font-size:clamp(23px,2.7vw,32px);letter-spacing:-.02em}
 h3{font-size:17px;letter-spacing:-.01em}
 h4{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--deep)}
-.b{color:var(--blue)}
+.b{color:var(--blue);position:relative;display:inline-block;padding-bottom:2px}
+.b::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--yellow);border-radius:2px;transform:scaleX(0);transform-origin:left center;transition:transform .9s cubic-bezier(.22,1,.36,1) .1s}
+.b.in-view::after{transform:scaleX(1)}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
 .btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:45px;padding:13px 27px;
   font-family:var(--body);font-size:16.5px;font-weight:700;cursor:pointer;text-decoration:none;
@@ -177,7 +179,7 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .tblwrap{overflow-x:auto}
 .tbl{width:100%;border-collapse:collapse;font-size:15px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .tbl th,.tbl td{text-align:left;padding:13px 15px;border-bottom:1px solid var(--line);vertical-align:top}
-.tbl thead th{background:var(--navy);color:#fff;font-family:var(--head);font-size:13.5px}
+.tbl thead th{background:var(--navy);color:#fff;font-family:var(--head);font-size:16px;letter-spacing:.01em;padding:17px 18px;white-space:nowrap}
 .tbl tbody th{background:var(--sand);font-family:var(--head);font-size:14px;font-weight:700;white-space:nowrap}
 .tbl tr:last-child td,.tbl tr:last-child th{border-bottom:0}
 .tbl tbody td.best{background:#fffdf0}
@@ -275,6 +277,9 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .svc2:hover .go2 .arw{transform:translateX(3px) rotate(-45deg);background:rgba(255,255,255,.32)}
 
 
+.tbl-note{margin:14px 0 4px;padding:12px 16px;background:var(--cream);border-left:3px solid var(--yellow);border-radius:8px;font-size:14.5px;color:#3a4450;line-height:1.55}
+.tbl-note a{color:var(--deep);font-weight:700;text-decoration:underline}
+
 /* ============ FAQ, WELLNESTY PATTERN ============ */
 #faq{background:var(--sand);overflow:hidden}
 .faqhead{font-size:clamp(24px,3.3vw,44px);line-height:1.06;letter-spacing:-.032em;white-space:nowrap;margin:0 auto 14px;text-align:center}
@@ -336,7 +341,7 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .pcard::before{content:"";position:absolute;inset:0;z-index:-1;
   background:radial-gradient(120% 150% at 86% 50%,rgba(255,255,255,.26),transparent 58%)}
 .pcopy{text-align:center}
-.pcopy h2{color:#fff;font-size:clamp(27px,3.4vw,40px);max-width:17ch;margin:0 auto;text-shadow:0 2px 14px rgba(7,16,24,.42)}
+.pcopy h2{color:#fff;font-size:clamp(24px,3.1vw,36px);max-width:none;margin:0 auto;text-shadow:0 2px 14px rgba(7,16,24,.42);letter-spacing:-.02em}
 .pcopy p{color:#fff;margin:14px auto 22px;max-width:46ch;font-size:17px;text-shadow:0 1px 10px rgba(7,16,24,.46)}
 .pcopy .btn-y{box-shadow:0 10px 26px rgba(7,16,24,.28)}
 .pshots{position:relative;height:236px}
@@ -583,9 +588,9 @@ footer a{color:#fff}
   <div class="sechead"><h2>What Metairie roof inspections <span class="b">most often find</span></h2>
   <p class="bluf">Three defect patterns dominate Metairie roof inspection reports. Wind uplift on the ridge line, driven by sustained north winds off Lake Pontchartrain. Pipe boot and flashing failure, driven by Gulf sun UV. Granule loss on shingle mats, driven by age plus persistent humidity across a long warm season.</p></div>
   <div class="ncards">
-    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-8 9 8"/><path d="M5 11v9h14v-9"/><path d="M9 20v-5h6v5"/></svg></span><h3>Wind uplift on the ridge line</h3><p>Sustained north winds off Lake Pontchartrain lift the ridge cap and the first course at a rake edge before a homeowner ever sees a visible failure. The tell from the ground is a subtle dark line where a tab is no longer sealed to the course beneath it.</p><p>An inspection catches this early. Left unphotographed and untreated it becomes water damage under the felt, and the same defect turns into <a href="https://www.bigeasyroofing.com/storm-damage/" style="font-weight: bold; text-decoration: underline;">a storm damage claim</a> next hurricane season.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-8 9 8"/><path d="M5 11v9h14v-9"/><path d="M9 20v-5h6v5"/></svg></span><h3>Wind uplift on the ridge line</h3><p>Sustained north winds off Lake Pontchartrain lift the ridge cap and the first course at a rake edge before a homeowner ever sees a visible failure, and homes across Old Metairie and Bucktown carry that exposure first. The tell from the ground is a subtle dark line where a tab is no longer sealed to the course beneath it.</p><p>An inspection catches this early. Left unphotographed and untreated it becomes water damage under the felt, and the same defect turns into <a href="https://www.bigeasyroofing.com/storm-damage/" style="font-weight: bold; text-decoration: underline;">a storm damage claim</a> next NOAA Atlantic hurricane season, which runs 1 June through 30 November.</p></div>
     <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h8"/></svg></span><h3>Pipe boot and flashing failure</h3><p>Rubber pipe boots and metal flashings dry out in the Metairie sun sooner than the shingles they sit next to. Boot collars crack, apron flashings corrode, and step flashings lose their seal at the wall long before the covering itself gives out.</p><p>Boots and flashings are the highest volume defect in a Metairie inspection report. Catching one at the inspection stage means a scoped repair, not a ceiling stain.</p></div>
-    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l5 6h-3l4 5h-3l3 4H6l3-4H6l4-5H7z"/><path d="M12 18v3"/></svg></span><h3>Granule loss on shingle mats</h3><p>Metairie's long warm season and persistent humidity age the shingle mat faster than the manufacturer curve assumes. The tell in an inspection is granule accumulation at the downspout outlet and a bald patch on a south-facing slope where the sun sits longest.</p><p>An inspection scores the remaining service life against the age of the roof. If the mat is close to end of life, <a href="https://www.bigeasyroofing.com/roof-replacement/" style="font-weight: bold; text-decoration: underline;">a planned replacement</a> beats a series of small repairs on economics alone.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l5 6h-3l4 5h-3l3 4H6l3-4H6l4-5H7z"/><path d="M12 18v3"/></svg></span><h3>Granule loss on shingle mats</h3><p>Metairie's long warm season and persistent humidity age the shingle mat faster than the manufacturer curve assumes on a GAF Timberline, Owens Corning Duration or CertainTeed Landmark roof. The tell in an inspection is granule accumulation at the downspout outlet and a bald patch on a south-facing slope where the sun sits longest.</p><p>An inspection scores the remaining service life against the age of the roof. If the mat is close to end of life, <a href="https://www.bigeasyroofing.com/roof-replacement/" style="font-weight: bold; text-decoration: underline;">a planned replacement</a> beats a series of small repairs on economics alone.</p></div>
   </div>
 </div></section>
 
@@ -712,7 +717,7 @@ footer a{color:#fff}
 <section class="promo"><div class="wrap">
   <div class="pcard">
     <div class="pcopy">
-      <h2 id="t-cta">Book your Metairie roof inspection this week</h2>
+      <h2 id="t-cta">Book your <span class="b">Metairie roof inspection</span> this week</h2>
       <p id="p-cta">A 45 to 90 minute visit at the address, dated photographs you keep, and a written report delivered by email whether a fix is needed or not.</p>
       <a class="btn btn-y" href="tel:+15048008196">Call (504) 800-8196</a>
     </div>
@@ -1010,6 +1015,21 @@ footer a{color:#fff}
 
   // On first paint, open the tab that matches the current service group
   setSvcTab(SVC[svcSel.value].g==='Commercial'?'com':'res');
+  // Animated underline on important keywords: fire when the .b enters viewport
+  if ('IntersectionObserver' in window) {
+    var _uObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in-view');
+          _uObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.25, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.b').forEach(function(el){ _uObs.observe(el); });
+  } else {
+    document.querySelectorAll('.b').forEach(function(el){ el.classList.add('in-view'); });
+  }
+
 })();
 </script>
 </body>
