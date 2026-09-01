@@ -106,9 +106,9 @@ html,body{margin:0;height:100%;background:#0a0a0a}
 
 <nav class="proto-picker" aria-label="Prototype variants">
   <span class="proto-picker-highlight" aria-hidden="true"></span>
-  <button class="proto-picker-item" data-active aria-current="true">Price Led</button>
+  <button class="proto-picker-item">Price Led</button>
   <button class="proto-picker-item">Local Authority</button>
-  <button class="proto-picker-item">Cluster Console</button>
+  <button class="proto-picker-item" data-active aria-current="true">Cluster Console &#9733;</button>
   <span class="proto-picker-divider" aria-hidden="true"></span>
   <button class="proto-picker-item proto-picker-replay" aria-label="Replay animation (R)">&#8635;</button>
 </nav>
@@ -161,7 +161,7 @@ document.addEventListener('keydown', function (e) {
   else if (e.key === 'r' || e.key === 'R') mount(current);
 });
 
-setActive((parseInt(new URLSearchParams(location.search).get('v'), 10) || 1) - 1);
+setActive((parseInt(new URLSearchParams(location.search).get('v'), 10) || 3) - 1);
 requestAnimationFrame(function () {
   requestAnimationFrame(function () { picker.setAttribute('data-ready', ''); });
 });
