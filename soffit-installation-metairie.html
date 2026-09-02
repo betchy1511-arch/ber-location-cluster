@@ -749,7 +749,7 @@ footer a{color:#fff}
     "LaPlace":{a:"St. John the Baptist Parish",inc:0},
     "Madisonville":{a:"Town of Madisonville",inc:1,par:"St. Tammany Parish"},
     "Hammond":{a:"City of Hammond",inc:1,par:"Tangipahoa Parish"},
-    "Baton Rouge":{a:"City of Baton Rouge and Parish of East Baton Rouge",inc:1}
+    "Baton Rouge":{a:"City of Baton Rouge and Parish of East Baton Rouge",inc:1,ebr:1,lede:"Baton Rouge is permitted by the consolidated City of Baton Rouge and Parish of East Baton Rouge, and since August 2025 a reroof needs its own permit and inspection."}
   };
   var SVC={
     "res-replacement":{n:"Roof Replacement",g:"Residential",u:"residential/roof-replacement/",ic:"img/brand/ico-replacement.png",d:"Full tear off and re cover, itemised by layers, decking and material."},
@@ -862,13 +862,100 @@ footer a{color:#fff}
   // The service this page was written for. While the visitor is still on it,
   // a city change must not rewrite the hand written service copy.
   var PAGE_SVC = svcSel.value;
+  var LAST_CITY = citySel.value;
+  var LAST_AUTH = (CITY[LAST_CITY] || {}).a || '';
+
+  // Null safe (three tail shells are in use and they do not all carry the same ids) AND
+  // change safe: writes only when the field still holds the OLD jurisdiction's generated
+  // value, so hand written copy is never overwritten.
+  function SETJ(id, oldv, newv){
+    if(oldv === undefined || newv === undefined) return;
+    var e = document.getElementById(id);
+    if(!e) return;
+    if(e.textContent.trim() !== String(oldv).trim()) return;
+    e.textContent = newv;
+  }
+
+  // Permit facts per jurisdiction. Verified at source: Jefferson Parish charges a flat $50
+  // residential re roofing permit; East Baton Rouge has required a roof permit and a geo
+  // tagged photograph set since August 2025 under La. R.S. 40:1730.23(K), added by Act 239
+  // of 2025. No other city has a fee we can source, so none is published for one.
+  function JUR(c){
+    var d = CITY[c] || {a:"the local authority",inc:1};
+    var o = {auth:d.a, code:'2021 IRC'};
+    if(d.fee){
+      o.stat='$50'; o.statl='Jefferson Parish permit';
+      o.fee='$50 flat';
+      o.feep='Residential re roofing permit paid by credit card through MGO Connect. No construction plans and no survey required.';
+      o.authp='Flat $50 residential re roofing permit, paid by card via MGO Connect.';
+      o.lede=d.lede+' Four requirements, all handled by us.';
+      o.codep='Required by Jefferson Parish for re roofing: nailing pattern, underlayment and edge detail.';
+      o.code2p='Jefferson Parish requires re roofing to meet the 2021 International Residential Code for nailing pattern, underlayment and edge detail.';
+      o.insp='Photos only';
+      o.inspp='Geo tagged phase photography replaces a routine site visit.';
+      o.insp2='No routine site visit';
+      o.insp2p='Jefferson Parish verifies from geo tagged photographs. Every phase is documented with the nailing pattern visible and the material packaging showing its wind rating.';
+    } else if(d.ebr){
+      o.stat='Required'; o.statl='East Baton Rouge roof permit';
+      o.fee='Parish schedule';
+      o.feep='East Baton Rouge sets its roofing permit fee on its own published schedule and adds a $25 technology fee to every permit. We pull the permit and itemise the fee in your written scope before anything is signed.';
+      o.authp='Roof permit through the East Baton Rouge Department of Development, applied for on MyGovernmentOnline.';
+      o.lede=d.lede+' Four requirements, all handled by us.';
+      o.codep='La. R.S. 40:1730.23(K) requires a one or two family dwelling to be permitted and inspected for reroofing against the 2021 IRC chapters 8 and 9.';
+      o.code2p='Act 239 of 2025 added La. R.S. 40:1730.23(K), which requires every parish that issues construction permits to permit and inspect reroofing. A house is judged against the 2021 International Residential Code chapters 8 and 9, and any other building against IBC chapter 15.';
+      o.insp='Photos only';
+      o.inspp='Geo tagged phase photography replaces a routine site visit.';
+      o.insp2='16 geo tagged photos';
+      o.insp2p='East Baton Rouge verifies a reroof from a geo tagged photograph set filed through MyGovernmentOnline: two of the existing covering, four of the decking, four of the underlayment and six of the finished roofing.';
+    } else {
+      o.stat='Required'; o.statl=d.a+' permit';
+      o.fee='Set locally';
+      o.feep='A residential re roofing permit is required and is pulled by us. The '+d.a+' fee is confirmed in your written scope before anything is signed.';
+      o.authp='Residential re roofing permit, pulled by us before tear off begins.';
+      o.lede=(d.inc ? c+' is incorporated, so '+art(d.a)+' issues your roofing permit'+(d.par?' rather than '+d.par:'')+'.' : c+' is unincorporated, so '+d.a+' permits your roof directly.')+' Four requirements, all handled by us.';
+      o.code='Set locally';
+      o.codep='Louisiana has adopted the 2021 IRC with state amendments. '+art(d.a).replace(/^the /,'The ')+' decides what applies to a re roof, and we build to it.';
+      o.code2p='Louisiana has adopted the 2021 International Residential Code with state amendments. The edition and the detail that apply to a re roof are set by '+art(d.a)+', and we build to whatever it requires.';
+      o.insp='Set locally';
+      o.inspp='Inspection and documentation requirements are set by the permitting authority and confirmed before we start.';
+      o.insp2='Set by the authority';
+      o.insp2p='Whether an inspector attends or the work is verified from photographs is decided by '+art(d.a)+'. We document every phase either way, with the nailing pattern visible and the material packaging showing its wind rating.';
+    }
+    return o;
+  }
+
+
   function cityOnly(){
     var c = citySel.value, s = SVC[svcSel.value].n;
+    var j = JUR(c);
     $('h-city').textContent = c + ', LA';
     $('crumb-city').textContent = c;
     $('t-more').textContent = 'in ' + c;
     $('t-badge').innerHTML = '<b>' + s + '</b>in ' + c;
     document.title = s + ' in ' + c + ', LA | Big Easy Roofing';
+
+    // Only replace a jurisdiction field whose CURRENT text is exactly what the previous
+    // city would have generated. Anything else is hand written for this service and is
+    // left alone. Without this the gutter page, which correctly says a gutter run needs
+    // No permit, gets roof permit facts stamped over it - the same defect class this
+    // template has already produced three times.
+    var o = JUR(LAST_CITY);
+    SETJ('t-permit', o.auth + ' permit', j.auth + ' permit');
+    SETJ('v-auth', o.auth, j.auth);      SETJ('v-auth-p', o.authp, j.authp);
+    SETJ('s-permit', o.stat, j.stat);    SETJ('s-permit-l', o.statl, j.statl);
+    SETJ('v-fee', o.fee, j.fee);         SETJ('v-fee-p', o.feep, j.feep);
+    SETJ('p-permit', o.lede, j.lede);
+    SETJ('v-code', o.code, j.code);      SETJ('v-code-p', o.codep, j.codep);
+    SETJ('v-code2', o.code, j.code);     SETJ('v-code2-p', o.code2p, j.code2p);
+    SETJ('v-insp', o.insp, j.insp);      SETJ('v-insp-p', o.inspp, j.inspp);
+    SETJ('v-insp2', o.insp2, j.insp2);   SETJ('v-insp2-p', o.insp2p, j.insp2p);
+
+    // Hand written prose is NOT rewritten. A page written for one jurisdiction cannot be
+    // re-rendered into another by string substitution without inventing a false statement,
+    // for example "Baton Rouge sits in unincorporated Jefferson Parish". The permanent fix
+    // is for this dropdown to navigate to that city's own page.
+
+    LAST_CITY = c; LAST_AUTH = j.auth;
     buildServices();
   }
 
