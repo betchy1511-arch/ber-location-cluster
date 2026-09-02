@@ -433,6 +433,7 @@ footer a{color:#fff}
           <option value="res-gutter-repair">Gutters and Downspouts Repair</option>
           <option value="res-siding">Siding Installation</option>
           <option value="res-asbestos">Asbestos Roof Removal</option>
+          <option value="res-insurance">Roof Insurance Claims</option>
         </optgroup>
         <optgroup label="Commercial">
           <option value="com-replacement">Roof Replacement</option>
@@ -760,7 +761,7 @@ footer a{color:#fff}
     "res-replacement":{n:"Roof Replacement",g:"Residential",u:"residential/roof-replacement/",ic:"img/brand/ico-replacement.png",d:"Full tear off and re cover, itemised by layers, decking and material."},
     "res-repairs":{n:"Roof Repairs",g:"Residential",u:"residential/roof-repairs/",ic:"img/brand/ico-repair.png",d:"Leaks, missing shingles, flashing and valley work, priced per repair."},
     "res-inspection":{n:"Roof Inspection",g:"Residential",u:"residential/roof-inspection/",ic:"img/brand/ico-inspection.png",d:"Photographed inspection of roof, flashing and visible decking."},
-    "res-hail":{n:"Hail Damage Roof Repair",g:"Residential",u:"residential/hail-damage-roof-repair/",ic:"img/brand/ico-storm.png",d:"Documented hail damage and help with the insurance claim."},
+    "res-hail":{n:"Hail Damage Roof Repair",g:"Residential",u:"residential/hail-damage-roof-repair/",ic:"img/brand/ico-storm.png",d:"Documented hail damage with a photographed, itemised repair estimate."},
     "res-emergency":{n:"Emergency Roofing",g:"Residential",u:"residential/emergency-roofing/",ic:"img/brand/ico-storm.png",d:"Emergency tarping and make safe work after a storm."},
     "res-leak":{n:"Roof Leak Detection",g:"Residential",u:"residential/roof-leak-detection/",ic:"img/brand/ico-inspection.png",d:"Tracing a leak back to its entry point before anything is opened up."},
     "res-maintenance":{n:"Roof Maintenance",g:"Residential",u:"residential/roof-maintenance/",ic:"img/brand/ico-inspection.png",d:"Scheduled checks that catch a failure while it is still a repair."},
@@ -774,6 +775,7 @@ footer a{color:#fff}
     "res-gutter-repair":{n:"Gutters and Downspouts Repair",g:"Residential",u:"residential/gutters-and-downspouts-repair/",ic:"img/brand/ico-gutters.png",d:"Sagging, leaking and overflowing gutters put back to work."},
     "res-siding":{n:"Siding Installation",g:"Residential",u:"residential/siding-installation/",ic:"img/brand/ico-replacement.png",d:"Siding replacement alongside a roof, usually after storm damage."},
     "res-asbestos":{n:"Asbestos Roof Removal",g:"Residential",u:"residential/asbestos-roof-removal/",ic:"img/brand/ico-storm.png",d:"Safe removal and disposal of an older asbestos covering."},
+    "res-insurance":{n:"Roof Insurance Claims",g:"Residential",u:"residential/roof-insurance-claims/",ic:"img/brand/ico-inspection.png",d:"Photographed storm damage and an itemised estimate for your claim."},
     "com-replacement":{n:"Commercial Roof Replacement",g:"Commercial",u:"commercial/roof-replacement/",ic:"img/brand/ico-commercial.png",d:"Full commercial replacement on flat and low slope systems."},
     "com-repairs":{n:"Commercial Roof Repairs",g:"Commercial",u:"commercial/roof-repairs/",ic:"img/brand/ico-commercial.png",d:"Targeted repair on membrane, built up and low slope roofs."},
     "com-inspections":{n:"Commercial Roof Inspections",g:"Commercial",u:"commercial/roof-inspections/",ic:"img/brand/ico-inspection.png",d:"Documented condition report for owners and property managers."},
@@ -815,6 +817,7 @@ footer a{color:#fff}
     "res-gutter-repair":"https://images.pexels.com/photos/10372434/pexels-photo-10372434.jpeg?auto=compress&cs=tinysrgb&w=800",
     "res-siding":"https://images.pexels.com/photos/14074835/pexels-photo-14074835.jpeg?auto=compress&cs=tinysrgb&w=800",
     "res-asbestos":"https://images.pexels.com/photos/34019842/pexels-photo-34019842.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "res-insurance":"img/photo/estimator.jpg",
     "com-replacement":"https://images.pexels.com/photos/34520319/pexels-photo-34520319.jpeg?auto=compress&cs=tinysrgb&w=800",
     "com-repairs":"https://images.pexels.com/photos/39238333/pexels-photo-39238333.jpeg?auto=compress&cs=tinysrgb&w=800",
     "com-inspections":"https://images.pexels.com/photos/8853521/pexels-photo-8853521.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -909,7 +912,7 @@ footer a{color:#fff}
       $('s-permit-l').textContent='Gutters are not a roof covering';
       $('v-auth').textContent='None';
       $('v-auth-p').textContent='Gutter installation is not a roof covering change, so no '+d.a+' permit is required for a gutter-only job.';
-      $('p-more').innerHTML='The rest of the Big Easy Roofing services available in '+c+', each with its own page, crew and written scope. Where a gutter run has a single failed seam or one sagging hanger, a <a href="https://www.bigeasyroofing.com/service-areas/louisiana/metairie/" style="font-weight: bold; text-decoration: underline;">scoped '+c+' gutter repair</a> is usually the honest answer instead of a full replacement.';
+      $('p-more').innerHTML='The rest of the Big Easy Roofing services available in '+c+', each with its own page, crew and written scope. Where a gutter run has a single failed seam or one sagging hanger, a <a href="https://www.bigeasyroofing.com/service-areas/louisiana/metairie/gutters-and-downspouts-repair/" style="font-weight: bold; text-decoration: underline;">scoped '+c+' gutter repair</a> is usually the honest answer instead of a full replacement.';
       $('p-faq').textContent='The questions '+c+' homeowners actually ask us about gutter installation, answered before you have to pick up the phone.';
       $('t-faq').innerHTML=c+' Gutter Installation <span class="b">FAQs</span>';
       $('t-cta').textContent='Get your free '+c+' gutter quote this week';
@@ -1032,15 +1035,21 @@ footer a{color:#fff}
   window.__updateStageHeight=updateStageHeight;
 
   // Read ?svc= from URL and pre-select the service + right tab
+  var fromParams=false;
   try{
     var params=new URLSearchParams(window.location.search);
     var pSvc=params.get('svc');
-    if(pSvc && SVC[pSvc]) svcSel.value=pSvc;
+    if(pSvc && SVC[pSvc]){ svcSel.value=pSvc; fromParams=true; }
     var pCity=params.get('city');
-    if(pCity && CITY[pCity]) citySel.value=pCity;
+    if(pCity && CITY[pCity]){ citySel.value=pCity; fromParams=true; }
   }catch(_){}
 
-  sync(); spy();
+  // Only let sync() rewrite the copy when the visitor arrived with ?svc=/?city=
+  // or changes a dropdown. On a plain load the hand-written copy on this page is
+  // already correct for its own service, and running sync() would replace it with
+  // the generic roof-replacement copy.
+  if(fromParams){ sync(); } else { buildServices(); }
+  spy();
 
   // On first paint, open the tab that matches the current service group
   setSvcTab(SVC[svcSel.value].g==='Commercial'?'com':'res');

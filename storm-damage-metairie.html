@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23071018'/><path d='M5 18L16 8l11 10v7H5z' fill='%23ffeb01'/></svg>">
 <title>Storm Damage Roof Repair in Metairie, LA | Big Easy Roofing</title>
+<meta name="description" content="Storm damage roof repair in Metairie, LA. Hurricane, wind and hail damage documented and repaired, tarping available. Call (504) 800-8196.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -432,6 +433,7 @@ footer a{color:#fff}
           <option value="res-gutter-repair">Gutters and Downspouts Repair</option>
           <option value="res-siding">Siding Installation</option>
           <option value="res-asbestos">Asbestos Roof Removal</option>
+          <option value="res-insurance">Roof Insurance Claims</option>
         </optgroup>
         <optgroup label="Commercial">
           <option value="com-replacement">Roof Replacement</option>
@@ -751,7 +753,7 @@ footer a{color:#fff}
     "res-replacement":{n:"Roof Replacement",g:"Residential",u:"residential/roof-replacement/",ic:"img/brand/ico-replacement.png",d:"Full tear off and re cover, itemised by layers, decking and material."},
     "res-repairs":{n:"Roof Repairs",g:"Residential",u:"residential/roof-repairs/",ic:"img/brand/ico-repair.png",d:"Leaks, missing shingles, flashing and valley work, priced per repair."},
     "res-inspection":{n:"Roof Inspection",g:"Residential",u:"residential/roof-inspection/",ic:"img/brand/ico-inspection.png",d:"Photographed inspection of roof, flashing and visible decking."},
-    "res-hail":{n:"Hail Damage Roof Repair",g:"Residential",u:"residential/hail-damage-roof-repair/",ic:"img/brand/ico-storm.png",d:"Documented hail damage and help with the insurance claim."},
+    "res-hail":{n:"Hail Damage Roof Repair",g:"Residential",u:"residential/hail-damage-roof-repair/",ic:"img/brand/ico-storm.png",d:"Documented hail damage with a photographed, itemised repair estimate."},
     "res-emergency":{n:"Emergency Roofing",g:"Residential",u:"residential/emergency-roofing/",ic:"img/brand/ico-storm.png",d:"Emergency tarping and make safe work after a storm."},
     "res-leak":{n:"Roof Leak Detection",g:"Residential",u:"residential/roof-leak-detection/",ic:"img/brand/ico-inspection.png",d:"Tracing a leak back to its entry point before anything is opened up."},
     "res-maintenance":{n:"Roof Maintenance",g:"Residential",u:"residential/roof-maintenance/",ic:"img/brand/ico-inspection.png",d:"Scheduled checks that catch a failure while it is still a repair."},
@@ -765,6 +767,7 @@ footer a{color:#fff}
     "res-gutter-repair":{n:"Gutters and Downspouts Repair",g:"Residential",u:"residential/gutters-and-downspouts-repair/",ic:"img/brand/ico-gutters.png",d:"Sagging, leaking and overflowing gutters put back to work."},
     "res-siding":{n:"Siding Installation",g:"Residential",u:"residential/siding-installation/",ic:"img/brand/ico-replacement.png",d:"Siding replacement alongside a roof, usually after storm damage."},
     "res-asbestos":{n:"Asbestos Roof Removal",g:"Residential",u:"residential/asbestos-roof-removal/",ic:"img/brand/ico-storm.png",d:"Safe removal and disposal of an older asbestos covering."},
+    "res-insurance":{n:"Roof Insurance Claims",g:"Residential",u:"residential/roof-insurance-claims/",ic:"img/brand/ico-inspection.png",d:"Photographed storm damage and an itemised estimate for your claim."},
     "com-replacement":{n:"Commercial Roof Replacement",g:"Commercial",u:"commercial/roof-replacement/",ic:"img/brand/ico-commercial.png",d:"Full commercial replacement on flat and low slope systems."},
     "com-repairs":{n:"Commercial Roof Repairs",g:"Commercial",u:"commercial/roof-repairs/",ic:"img/brand/ico-commercial.png",d:"Targeted repair on membrane, built up and low slope roofs."},
     "com-inspections":{n:"Commercial Roof Inspections",g:"Commercial",u:"commercial/roof-inspections/",ic:"img/brand/ico-inspection.png",d:"Documented condition report for owners and property managers."},
@@ -804,6 +807,7 @@ footer a{color:#fff}
     "res-gutter-repair":"https://images.pexels.com/photos/10372434/pexels-photo-10372434.jpeg?auto=compress&cs=tinysrgb&w=800",
     "res-siding":"https://images.pexels.com/photos/14074835/pexels-photo-14074835.jpeg?auto=compress&cs=tinysrgb&w=800",
     "res-asbestos":"https://images.pexels.com/photos/34019842/pexels-photo-34019842.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "res-insurance":"img/photo/estimator.jpg",
     "com-replacement":"https://images.pexels.com/photos/34520319/pexels-photo-34520319.jpeg?auto=compress&cs=tinysrgb&w=800",
     "com-repairs":"https://images.pexels.com/photos/39238333/pexels-photo-39238333.jpeg?auto=compress&cs=tinysrgb&w=800",
     "com-inspections":"https://images.pexels.com/photos/8853521/pexels-photo-8853521.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -973,15 +977,21 @@ footer a{color:#fff}
   window.__updateStageHeight=updateStageHeight;
 
   // Read ?svc= from URL and pre-select the service + right tab
+  var fromParams=false;
   try{
     var params=new URLSearchParams(window.location.search);
     var pSvc=params.get('svc');
-    if(pSvc && SVC[pSvc]) svcSel.value=pSvc;
+    if(pSvc && SVC[pSvc]){ svcSel.value=pSvc; fromParams=true; }
     var pCity=params.get('city');
-    if(pCity && CITY[pCity]) citySel.value=pCity;
+    if(pCity && CITY[pCity]){ citySel.value=pCity; fromParams=true; }
   }catch(_){}
 
-  sync(); spy();
+  // Only let sync() rewrite the copy when the visitor arrived with ?svc=/?city=
+  // or changes a dropdown. On a plain load the hand-written copy on this page is
+  // already correct for its own service, and running sync() would replace it with
+  // the generic roof-replacement copy.
+  if(fromParams){ sync(); } else { buildServices(); }
+  spy();
 
   // On first paint, open the tab that matches the current service group
   setSvcTab(SVC[svcSel.value].g==='Commercial'?'com':'res');
