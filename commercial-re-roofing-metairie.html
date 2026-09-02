@@ -492,7 +492,7 @@ footer a{color:#fff}
   <div class="tex" style="background-image:url('img/photo/tex-granules.jpg')"></div>
   <div class="wrap">
   <div class="sechead"><h2><span class="b" id="t-specs">Metairie commercial re-roofing</span> at a glance</h2>
-  <p class="bluf">A commercial re-roof is one of two jobs. A recover installs a new membrane over the existing one and is cheaper and quicker. A tear off removes everything down to the deck. The International Building Code decides which is permitted, and on a wet roof or a second existing layer the choice is already made for you.</p></div>
+  <p class="bluf">A commercial re-roof is one of two jobs. A recover installs a new membrane over the existing one and is cheaper and quicker. A tear off removes everything down to the deck. The International Building Code decides which is permitted, and on a water soaked roof or a second existing layer the choice is already made for you.</p></div>
   <div class="specgrid">
     <div class="spec"><h4>Code maximum layers</h4><div class="v">2</div><p>The reroofing provisions of the International Building Code allow a maximum of two roof coverings. A building already carrying two must be torn off, not recovered.</p></div>
     <div class="spec"><h4>Estimated recover cost</h4><div class="v">$4 to $12 /sqft</div><p>Membrane over the existing assembly with new insulation or a cover board, on a Metairie commercial roof.</p></div>
@@ -517,11 +517,11 @@ footer a{color:#fff}
   <div class="tex" style="background-image:url('img/photo/tex-shingle.jpg')"></div>
   <div class="wrap">
   <div class="sechead"><h2>Recover or tear off <span class="b" id="t-compare">and which one the code allows</span></h2>
-  <p class="bluf">Four tests decide it and only one is about money. If the existing roof is wet, if it already carries two layers, if the covering is a type the code excludes, or if the deck needs work, a recover is off the table regardless of budget. Where none apply, a recover is usually better value.</p></div>
+  <p class="bluf">Four tests decide it and only one is about money. If the existing roof is water soaked, if it already carries two layers, if the covering is a type the code excludes, or if the deck needs work, a recover is off the table regardless of budget. Where none apply, a recover is usually better value.</p></div>
   <div class="tblwrap"><table class="tbl">
     <thead><tr><th>The question</th><th>Recover</th><th>Tear off and replace</th><th>Who decides</th></tr></thead>
     <tbody>
-      <tr><th class="best">Is the existing insulation wet</th><td class="best">Not permitted. A recover would seal the water in permanently</td><td class="best">Required. Wet insulation comes out with everything else</td><td class="best">The moisture survey</td></tr>
+      <tr><th class="best">How wet is the existing insulation</th><td class="best">Isolated wet areas can be cut out and replaced within a recover</td><td class="best">Required once moisture is widespread, since a recover would seal it in permanently</td><td class="best">The moisture survey</td></tr>
       <tr><th>How many coverings are already on</th><td>Allowed over one existing covering only</td><td>Required once the roof carries two or more applications</td><td>The building code, verified by a test cut</td></tr>
       <tr><th>What is the existing covering</th><td>Allowed over most membranes</td><td>Required over slate, clay, cement or asbestos cement tile</td><td>The building code</td></tr>
       <tr><th>Does the deck need work</th><td>Not until the deck is sound</td><td>Required, and it brings an engineer's stamp with it</td><td>The survey and a structural engineer</td></tr>
@@ -846,7 +846,21 @@ footer a{color:#fff}
     }
   }
 
+  // The service this page was written for. While the visitor is still on it,
+  // a city change must not rewrite the hand written service copy.
+  var PAGE_SVC = svcSel.value;
+  function cityOnly(){
+    var c = citySel.value, s = SVC[svcSel.value].n;
+    $('h-city').textContent = c + ', LA';
+    $('crumb-city').textContent = c;
+    $('t-more').textContent = 'in ' + c;
+    $('t-badge').innerHTML = '<b>' + s + '</b>in ' + c;
+    document.title = s + ' in ' + c + ', LA | Big Easy Roofing';
+    buildServices();
+  }
+
   function sync(){
+    if(svcSel.value === PAGE_SVC){ cityOnly(); return; }
     var key=svcSel.value, c=citySel.value, d=CITY[c]||{a:"the local authority",inc:1};
     var s=SVC[key].n, sl=s.toLowerCase();
     $('h-service').textContent=s;

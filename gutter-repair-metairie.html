@@ -854,7 +854,21 @@ footer a{color:#fff}
     }
   }
 
+  // The service this page was written for. While the visitor is still on it,
+  // a city change must not rewrite the hand written service copy.
+  var PAGE_SVC = svcSel.value;
+  function cityOnly(){
+    var c = citySel.value, s = SVC[svcSel.value].n;
+    $('h-city').textContent = c + ', LA';
+    $('crumb-city').textContent = c;
+    $('t-more').textContent = 'in ' + c;
+    $('t-badge').innerHTML = '<b>' + s + '</b>in ' + c;
+    document.title = s + ' in ' + c + ', LA | Big Easy Roofing';
+    buildServices();
+  }
+
   function sync(){
+    if(svcSel.value === PAGE_SVC){ cityOnly(); return; }
     var key=svcSel.value, c=citySel.value, d=CITY[c]||{a:"the local authority",inc:1};
     var s=SVC[key].n, sl=s.toLowerCase();
     $('h-service').textContent=s;
