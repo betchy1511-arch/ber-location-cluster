@@ -211,7 +211,7 @@ section{padding:58px 0;position:relative;isolation:isolate}
 @media(max-width:900px){.aiv{grid-template-columns:1fr;gap:30px}}
 .aiv-left h2{font-size:clamp(26px,3vw,38px);max-width:none;white-space:nowrap}
 @media(max-width:520px){.aiv-left h2{white-space:normal}}
-.aiv-left p.lede{margin:14px 0 0;color:#3a4450;max-width:44ch}
+.aiv-left p.lede{margin:24px 0 0;color:#3a4450;max-width:44ch}
 .aiv-figure{margin-top:24px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 40px rgba(7,16,24,.14)}
 .aiv-figure img{width:100%;height:260px;object-fit:cover}
 .aiv-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
@@ -249,8 +249,8 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .svctabs button.on span{color:var(--blue)}
 .svctabs button.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--yellow);border-radius:2px}
 .svctabs button:hover:not(.on){color:var(--deep)}
-.svcstage{overflow:hidden;position:relative}
-.svctrack{display:flex;width:200%;transition:transform .55s var(--ease)}
+.svcstage{overflow:hidden;position:relative;transition:height .55s var(--ease)}
+.svctrack{display:flex;width:200%;align-items:flex-start;transition:transform .55s var(--ease)}
 .svcpanel{width:50%;flex:0 0 50%;box-sizing:border-box;padding:6px 2px 2px}
 .svctrack.show-com{transform:translateX(-50%)}
 .svcgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -340,6 +340,7 @@ section{padding:58px 0;position:relative;isolation:isolate}
   background:radial-gradient(120% 150% at 86% 50%,rgba(255,255,255,.26),transparent 58%)}
 .pcopy{text-align:center}
 .pcopy h2{color:#fff;font-size:clamp(24px,3.1vw,36px);max-width:none;margin:0 auto;text-shadow:0 2px 14px rgba(7,16,24,.42);letter-spacing:-.02em}
+.pcopy h2 .b{color:#fff}
 .pcopy p{color:#fff;margin:14px auto 22px;max-width:46ch;font-size:17px;text-shadow:0 1px 10px rgba(7,16,24,.46)}
 .pcopy .btn-y{box-shadow:0 10px 26px rgba(7,16,24,.28)}
 .pshots{position:relative;height:236px}
@@ -418,6 +419,8 @@ footer a{color:#fff}
           <option value="res-repairs">Roof Repairs</option>
           <option value="res-inspection">Roof Inspection</option>
           <option value="res-hail">Hail Damage Roof Repair</option>
+          <option value="res-storm">Storm Damage Roof Repair</option>
+          <option value="res-storm-response">Storm Damage Emergency Response</option>
           <option value="res-emergency">Emergency Roofing</option>
           <option value="res-leak">Roof Leak Detection</option>
           <option value="res-maintenance">Roof Maintenance</option>
@@ -503,6 +506,7 @@ footer a{color:#fff}
     <div class="spec"><h4>Building code</h4><div class="v" id="v-code">2021 IRC</div><p id="v-code-p">Required by Jefferson Parish for re roofing: nailing pattern, underlayment and edge detail.</p></div>
     <div class="spec"><h4>Site inspection</h4><div class="v" id="v-insp">Photos only</div><p id="v-insp-p">Geo tagged phase photography replaces a routine site visit.</p></div>
   </div>
+    <p class="tbl-note" style="background:#fff">Every figure on this page is an estimate, not a quote, and is subject to Big Easy Roofing sign off. Cost and timescale depend on size, pitch, access, weather, materials and whatever is found once work starts, so <a href="tel:+15048008196">call Big Easy Roofing on (504) 800-8196</a> and we will come out and give you an estimate for your own roof.</p>
   <div class="prose">
     <p>The largest line on a Metairie roof replacement is rarely the shingle. It is the tear off and whatever the crew finds under it, because a roof that has already been layered over carries twice the disposal weight and often hides decking that has been absorbing water at the eaves. The decking replacement is priced as a rate per sheet in the written scope rather than discovered on the day, so the number a homeowner signs is the number they pay.</p>
     <p>Financing changes the shape of that number rather than the number itself. Homeowners who would rather spread the cost can <a href="https://www.bigeasyroofing.com/roofing-financing/" style="font-weight: bold; text-decoration: underline;">pay for the work monthly</a> instead of in a single payment, and the parish permit fee is itemised separately either way.</p>
@@ -755,6 +759,8 @@ footer a{color:#fff}
     "res-repairs":{n:"Roof Repairs",g:"Residential",u:"residential/roof-repairs/",ic:"img/brand/ico-repair.png",d:"Leaks, missing shingles, flashing and valley work, priced per repair."},
     "res-inspection":{n:"Roof Inspection",g:"Residential",u:"residential/roof-inspection/",ic:"img/brand/ico-inspection.png",d:"Photographed inspection of roof, flashing and visible decking."},
     "res-hail":{n:"Hail Damage Roof Repair",g:"Residential",u:"residential/hail-damage-roof-repair/",ic:"img/brand/ico-storm.png",d:"Documented hail damage with a photographed, itemised repair estimate."},
+    "res-storm":{n:"Storm Damage Roof Repair",g:"Residential",u:"residential/storm-damage/",ic:"img/brand/ico-storm.png",d:"Wind, hail and impact damage documented and repaired after a named storm."},
+    "res-storm-response":{n:"Storm Damage Emergency Response",g:"Residential",u:"storm-damage-emergency-response/",ic:"img/brand/ico-storm.png",d:"Structural check, made safe and cleared in the first hours after a storm."},
     "res-emergency":{n:"Emergency Roofing",g:"Residential",u:"residential/emergency-roofing/",ic:"img/brand/ico-storm.png",d:"Emergency tarping and make safe work after a storm."},
     "res-leak":{n:"Roof Leak Detection",g:"Residential",u:"residential/roof-leak-detection/",ic:"img/brand/ico-inspection.png",d:"Tracing a leak back to its entry point before anything is opened up."},
     "res-maintenance":{n:"Roof Maintenance",g:"Residential",u:"residential/roof-maintenance/",ic:"img/brand/ico-inspection.png",d:"Scheduled checks that catch a failure while it is still a repair."},
@@ -784,7 +790,7 @@ footer a{color:#fff}
   };
   var svcSel=document.getElementById('svc'), citySel=document.getElementById('city');
   var gridRes=document.getElementById('svcgrid-res'), gridCom=document.getElementById('svcgrid-com');
-  function $(id){return document.getElementById(id);}
+  function $(id){return document.getElementById(id)||{textContent:'',innerHTML:'',value:'',setAttribute:function(){},getAttribute:function(){return null;}};}
   function art(n){return /^(City|Town) of /.test(n) ? 'the '+n : n;}
 
   var ARROW='<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>';
@@ -795,6 +801,8 @@ footer a{color:#fff}
     "res-repairs":"https://images.pexels.com/photos/37677476/pexels-photo-37677476.jpeg?auto=compress&cs=tinysrgb&w=800",
     "res-inspection":"https://images.pexels.com/photos/31762405/pexels-photo-31762405.jpeg?auto=compress&cs=tinysrgb&w=800",
     "res-hail":"https://images.pexels.com/photos/17596993/pexels-photo-17596993.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "res-storm":"img/photo/tarp.jpg",
+    "res-storm-response":"img/photo/tearoff-aerial.jpg",
     "res-emergency":"https://images.pexels.com/photos/34680655/pexels-photo-34680655.jpeg?auto=compress&cs=tinysrgb&w=800",
     "res-leak":"https://images.pexels.com/photos/16863840/pexels-photo-16863840.jpeg?auto=compress&cs=tinysrgb&w=800",
     "res-maintenance":"https://images.pexels.com/photos/35237907/pexels-photo-35237907.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -845,6 +853,11 @@ footer a{color:#fff}
     gridCom.innerHTML=renderGroup('Commercial',cur,c);
     $('t-res-city').textContent='in '+c;
     $('t-com-city').textContent='in '+c;
+    // After the cards paint, re-measure the visible panel so the stage
+    // height snaps to the active panel instead of the taller of the two
+    if(window.__updateStageHeight){
+      requestAnimationFrame(function(){ window.__updateStageHeight(); });
+    }
   }
 
   // The service this page was written for. While the visitor is still on it,
@@ -875,7 +888,7 @@ footer a{color:#fff}
     $('t-compare').textContent='for a '+c+' roof';
     $('t-bestfor').textContent='Most '+c+' homeowners staying put';
     $('t-more').textContent='in '+c;
-    $('p-more').innerHTML='The rest of the Big Easy Roofing services available in '+c+', each with its own page, crew and written scope. Where a full replacement is more than the job needs, a <a href="https://www.bigeasyroofing.com/service-areas/louisiana/metairie/roof-repairs/" style="font-weight: bold; text-decoration: underline;">targeted roof repair</a>, an inspection or gutter work is usually the cheaper honest answer.';
+    $('p-more').innerHTML='The rest of the Big Easy Roofing services available in '+c+', each with its own page, crew and written scope. Where a roof does not need <a href="https://www.bigeasyroofing.com/roof-replacement/" style="font-weight: bold; text-decoration: underline;">a full roof replacement</a>, a repair, an inspection or gutter work is usually the cheaper honest answer.';
     $('p-faq').textContent='The questions '+c+' homeowners actually ask us about '+sl+', answered before you have to pick up the phone.';
     $('t-faq').innerHTML=c+' '+s+' <span class="b">FAQs</span>';
     $('q1').textContent='How much does a new roof cost in '+c;
@@ -961,6 +974,16 @@ footer a{color:#fff}
   // Residential / Commercial slide tabs
   var svcTabs=[].slice.call(document.querySelectorAll('#svctabs button'));
   var svcTrack=document.getElementById('svctrack');
+  var svcStage=svcTrack ? svcTrack.parentElement : null;
+  function updateStageHeight(){
+    if(!svcTrack || !svcStage) return;
+    var showCom=svcTrack.classList.contains('show-com');
+    var panelRes=svcTrack.children[0], panelCom=svcTrack.children[1];
+    var active=showCom?panelCom:panelRes;
+    if(!active) return;
+    var h=active.offsetHeight;
+    if(h>0) svcStage.style.height=h+'px';
+  }
   function setSvcTab(which){
     svcTabs.forEach(function(x){
       var on=(x.getAttribute('data-tab')===which);
@@ -968,8 +991,13 @@ footer a{color:#fff}
       x.setAttribute('aria-selected',on?'true':'false');
     });
     svcTrack.classList.toggle('show-com',which==='com');
+    updateStageHeight();
   }
   svcTabs.forEach(function(b){ b.addEventListener('click',function(){ setSvcTab(b.getAttribute('data-tab')); }); });
+  var _stageResizeT;
+  window.addEventListener('resize',function(){ clearTimeout(_stageResizeT); _stageResizeT=setTimeout(updateStageHeight,120); });
+  // Expose so buildServices() can re-measure after it repaints cards
+  window.__updateStageHeight=updateStageHeight;
 
   // Read ?svc= from URL and pre-select the service + right tab
   var fromParams=false;
