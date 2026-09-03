@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23071018'/><path d='M5 18L16 8l11 10v7H5z' fill='%23ffeb01'/></svg>">
-<title>Roof Replacement in Baton Rouge, LA | Big Easy Roofing</title>
-<meta name="description" content="Roof replacement in Baton Rouge. Since August 2025 East Baton Rouge permits and inspects every reroof from 16 geotagged photos. We pull it and file them.">
+<title>Commercial Roof Repairs in Baton Rouge, LA | Big Easy Roofing</title>
+<meta name="description" content="Commercial roof repairs in Baton Rouge. TPO, EPDM and modified bitumen roofs, with the East Baton Rouge permit path confirmed first. Call (504) 800-8196.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -127,7 +127,6 @@ section{padding:58px 0;position:relative;isolation:isolate}
 #process .sechead{margin:0 0 26px;text-align:left}
 .sechead p{margin:10px auto 0;color:#3a4450}
 .sechead .bluf{font-size:17.5px;color:#26313d;max-width:74ch;margin-left:auto;margin-right:auto}
-/* designed note cards, replaces dumped paragraphs */
 .prose{max-width:none;margin:26px auto 0;color:#2f3a46;font-size:16.5px;line-height:1.72;text-align:left}
 .prose p{margin:0 0 16px}
 .prose p:last-child{margin-bottom:0}
@@ -149,10 +148,6 @@ section{padding:58px 0;position:relative;isolation:isolate}
 #permit .ncard h3{color:#fff}
 #permit .ncard p{color:rgba(255,255,255,.8)}
 #permit .ncard a{color:#8fd0ff}
-.prose{max-width:none;margin:24px auto 0;color:#2f3a46;font-size:16.5px;line-height:1.72}
-.prose p{margin:0 0 16px}
-.prose p:last-child{margin-bottom:0}
-.prose a{color:var(--deep)}
 #permit .prose{max-width:82ch;color:rgba(255,255,255,.86)}
 #permit .prose a{color:#8fd0ff}
 .factrow{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:26px}
@@ -254,8 +249,10 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .svcpanel{width:50%;flex:0 0 50%;box-sizing:border-box;padding:6px 2px 2px}
 .svctrack.show-com{transform:translateX(-50%)}
 .svcgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-@media(max-width:900px){.svcgrid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.svcgrid{grid-template-columns:1fr}}
+/* Centre an orphan card when the last row has only 1 (e.g. 10 items in 3 cols, 16 items in 3 cols) */
+.svcgrid > .svc2:last-child:nth-child(3n+1){grid-column:2 / 3}
+@media(max-width:900px){.svcgrid{grid-template-columns:repeat(2,1fr)} .svcgrid > .svc2:last-child:nth-child(3n+1){grid-column:auto}}
+@media(max-width:560px){.svcgrid{grid-template-columns:1fr} .svcgrid > .svc2:last-child:nth-child(3n+1){grid-column:auto}}
 
 /* Photo-topped service card */
 .svc2{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none;color:inherit;transform-style:preserve-3d;
@@ -273,6 +270,7 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .svc2 .go2 .arw{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.22);transition:transform .3s var(--ease), background .18s var(--ease)}
 .svc2 .go2 .arw svg{width:11px;height:11px}
 .svc2:hover .go2 .arw{transform:translateX(3px) rotate(-45deg);background:rgba(255,255,255,.32)}
+
 
 
 .tbl-note{margin:14px 0 4px;padding:12px 16px;background:var(--cream);border-left:3px solid var(--yellow);border-radius:8px;font-size:14.5px;color:#3a4450;line-height:1.55}
@@ -394,19 +392,19 @@ footer a{color:#fff}
 </div></nav>
 
 <div class="crumbs"><div class="wrap">
-  <a href="https://www.bigeasyroofing.com/">Home</a><i>/</i><a href="https://www.bigeasyroofing.com/service-areas/">Service Areas</a><i>/</i><a href="https://www.bigeasyroofing.com/service-areas/louisiana/">Louisiana</a><i>/</i><a href="#top" id="crumb-city">Baton Rouge</a><i>/</i><b id="crumb-service">Roof Replacement</b>
+  <a href="https://www.bigeasyroofing.com/">Home</a><i>/</i><a href="https://www.bigeasyroofing.com/service-areas/">Service Areas</a><i>/</i><a href="https://www.bigeasyroofing.com/service-areas/louisiana/">Louisiana</a><i>/</i><a href="#top" id="crumb-city">Baton Rouge</a><i>/</i><b id="crumb-service">Commercial Roof Repairs</b>
 </div></div>
 
 <!-- ============ HERO ============ -->
 <header class="console" id="top">
-  <div class="bg" style="background-image:url('img/photo/hero-replacement.jpg')"></div>
+  <div class="bg" style="background-image:url('img/photo/tearoff-aerial.jpg')"></div>
   <div class="scrim"></div>
   <div class="wrap">
-  <h1><span class="b" id="h-service">Roof Replacement</span> in <span id="h-city">Baton Rouge, LA</span></h1>
-  <p class="sub" id="h-sub">Big Easy Roofing replaces roofs across <a href="https://www.bigeasyroofing.com/service-areas/louisiana/baton-rouge/" style="font-weight: bold; text-decoration: underline;">Baton Rouge and East Baton Rouge Parish</a>, with the price written down before tear off begins. Since 1 August 2025 a reroof here needs its own permit and inspection, and the parish signs it off from geotagged photographs of each stage rather than a site visit, so the documentation is part of the job rather than an afterthought. We pull the permit and file the photographs for you.</p>
+  <h1><span class="b" id="h-service">Commercial Roof Repairs</span> in <span id="h-city">Baton Rouge, LA</span></h1>
+  <p class="sub" id="h-sub">Big Easy Roofing repairs commercial and low slope roofs across <a href="https://www.bigeasyroofing.com/service-areas/louisiana/baton-rouge/" style="font-weight: bold; text-decoration: underline;">Baton Rouge and East Baton Rouge Parish</a>. A commercial roof does not fail the way a house roof does, and since August 2025 it does not get permitted the same way either, so we survey the assembly, settle which office and which code cover your building, and put the scope in writing first.</p>
 
   <div class="herocta">
-    <a class="btn btn-y" href="https://www.bigeasyroofing.com/contact/">Get Your FREE Quote Only for Today!</a>
+    <a class="btn btn-y" href="https://www.bigeasyroofing.com/contact/">Get Your Commercial Quote!</a>
     <a class="btn btn-o" href="tel:+15048008196">Call (504) 800-8196</a>
   </div>
 
@@ -415,7 +413,7 @@ footer a{color:#fff}
       <label for="svc">Service</label>
       <select id="svc">
         <optgroup label="Residential">
-          <option value="res-replacement" selected>Roof Replacement</option>
+          <option value="res-replacement">Roof Replacement</option>
           <option value="res-repairs">Roof Repairs</option>
           <option value="res-inspection">Roof Inspection</option>
           <option value="res-hail">Hail Damage Roof Repair</option>
@@ -438,7 +436,7 @@ footer a{color:#fff}
         </optgroup>
         <optgroup label="Commercial">
           <option value="com-replacement">Roof Replacement</option>
-          <option value="com-repairs">Roof Repairs</option>
+          <option value="com-repairs" selected>Roof Repairs</option>
           <option value="com-inspections">Roof Inspections</option>
           <option value="com-hail">Hail Damage Repair</option>
           <option value="com-reroof">Re-Roofing</option>
@@ -476,33 +474,32 @@ footer a{color:#fff}
     <div class="go"><a class="btn btn-y" href="#specs">Learn More</a></div>
   </div>
 
-  <div class="statline"><div class="stat"><b>$7k to $18k</b><span>Estimated asphalt replacement</span></div><div class="stat"><b id="s-permit">Required</b><span id="s-permit-l">East Baton Rouge roof permit</span></div><div class="stat"><b>16 photos</b><span>Filed for your inspection</span></div><div class="stat"><b>1 day</b><span>Most single family roofs</span></div></div>
+  <div class="statline"><div class="stat"><b>IBC Chapter 15</b><span>Code for your building</span></div><div class="stat"><b id="s-permit">East Baton Rouge</b><span id="s-permit-l">Who permits it</span></div><div class="stat"><b>Set on valuation</b><span>How the fee works</span></div><div class="stat"><b>Same week</b><span>Usual survey slot</span></div></div>
 </div></header>
 
 <nav class="subnav" aria-label="Page sections"><div class="wrap">
-  <div class="tabs"><a href="#specs" class="on">Specs</a><a href="#compare">Compare materials</a><a href="#permit">Permit and code</a><a href="#process">Process</a><a href="#more">Other services</a><a href="#faq">FAQ</a></div>
-  <a class="btn btn-b" href="tel:+15048008196">Free inspection</a>
+  <div class="tabs"><a href="#specs" class="on">Specs</a><a href="#compare">Permit fees</a><a href="#permit">Permit and code</a><a href="#process">Process</a><a href="#more">Other services</a><a href="#faq">FAQ</a></div>
+  <a class="btn btn-b" href="tel:+15048008196">Commercial quote</a>
 </div></nav>
 
 <!-- ============ SPECS ============ -->
 <section id="specs" class="sec-cream">
   <div class="tex" style="background-image:url('img/photo/tex-granules.jpg')"></div>
   <div class="wrap">
-  <div class="sechead"><h2><span class="b" id="t-specs">Baton Rouge roof replacement</span> at a glance</h2>
-  <p class="bluf">A full asphalt replacement on a Baton Rouge house is estimated at $7,000 to $18,000, and the thing that changed in 2025 is the paperwork. East Baton Rouge now permits and inspects every reroof, so the job carries a permit and a photograph set from the first day.</p></div>
+  <div class="sechead"><h2><span class="b" id="t-specs">Baton Rouge commercial roof repairs</span> at a glance</h2>
+  <p class="bluf">A commercial roof in Baton Rouge is almost always low slope, which changes what fails, how it is repaired and which code governs it. Since 1 August 2025 it also needs its own permit and inspection, on the commercial limb of the new law rather than the residential one.</p></div>
   <div class="specgrid">
-    <div class="spec"><h4>Estimated replacement cost</h4><div class="v">$7,000 to $18,000</div><p>Most full architectural asphalt replacements on a Baton Rouge home land in this band, moved by size, pitch and how many layers have to come off. Standing seam metal and complex roofs with several valleys run higher. Call Big Easy Roofing on (504) 800-8196 for a written price.</p></div>
-    <div class="spec"><h4>Who issues the permit</h4><div class="v" id="v-auth">East Baton Rouge Parish</div><p id="v-auth-p">The City-Parish Department of Development permits roofs for addresses in Baton Rouge and the unincorporated parish, applied for through MyGovernmentOnline. If your address falls inside the City of St. George limits it is permitted by St. George instead, which we confirm before filing.</p></div>
-    <div class="spec"><h4>Permit fee</h4><div class="v" id="v-fee">Confirmed on quote</div><p id="v-fee-p">East Baton Rouge publishes no flat reroof fee, and a $25 technology fee applies to every parish permit. We confirm the amount with <a href="https://www.brla.gov/2688/Permits-Inspections" style="font-weight: bold; text-decoration: underline;">Permits and Inspections</a> on 225-389-3205 and itemise it in your scope rather than quoting a figure the parish has not published.</p></div>
-    <div class="spec"><h4>Code</h4><div class="v" id="v-code">2021 IRC</div><p id="v-code-p">Louisiana has adopted the 2021 International Residential Code with state amendments, and a house reroof is judged against chapters 8 and 9. That is what the decking, fastener pattern, underlayment and edge detail in the photographs are measured against.</p></div>
-    <div class="spec"><h4>Inspection</h4><div class="v" id="v-insp">Photos only</div><p id="v-insp-p">The parish signs a reroof off from 16 geotagged photographs rather than a routine site visit: two of the existing covering, four of the decking, four of the underlayment and six of the finished roofing, filed as one PDF with the parish roofing information form.</p></div>
-    <div class="spec"><h4>Warranty</h4><div class="v">Workmanship plus manufacturer</div><p>Big Easy Roofing warranties the installation, and the covering carries its own manufacturer warranty. Both are written into the scope before tear off, with the permit and the photograph record handed over at the end.</p></div>
+    <div class="spec"><h4>What we repair</h4><div class="v">Low slope and metal</div><p>Single ply TPO and EPDM, modified bitumen, built up gravel systems, and standing seam or R panel metal. Repairs cover seams and laps, penetrations and curbs, drains and scuppers, parapet and coping details, and storm damage. Call Big Easy Roofing on (504) 800-8196 and we will survey it before quoting.</p></div>
+    <div class="spec"><h4>Who issues the permit</h4><div class="v" id="v-auth">East Baton Rouge Parish</div><p id="v-auth-p">For addresses in Baton Rouge and the unincorporated parish. If the building sits inside the City of St. George limits it is permitted by St. George instead, and Baker, Zachary and Central run their own. We confirm which office covers the address before filing.</p></div>
+    <div class="spec"><h4>Which code applies</h4><div class="v" id="v-code">IBC Chapter 15</div><p id="v-code-p">Act 239 of 2025 splits roofs two ways. Buildings other than one and two family dwellings go to International Building Code Chapter 15. Houses go to the residential code instead. If you own a shop, a warehouse, a church or an apartment block, you are on the commercial limb, written as the 2021 I codes with Louisiana amendments.</p></div>
+    <div class="spec"><h4>How the permit is priced</h4><div class="v" id="v-fee">On construction valuation</div><p id="v-fee-p">There is no flat reroof fee in the East Baton Rouge schedule. A commercial permit is calculated per thousand dollars of construction valuation, and a separate plan review fee is calculated the same way. The bands are in the table below, read from the parish fee page on 3 September 2026.</p></div>
+    <div class="spec"><h4>The survey</h4><div class="v" id="v-insp">Assembly, drainage and moisture</div><p id="v-insp-p">We identify the membrane and its age, walk the drainage to find where water actually stands, check every penetration and curb, and look for wet insulation below the membrane. A repair over saturated insulation fails again, so that gets found before it is priced, not after.</p></div>
+    <div class="spec"><h4>Warranty</h4><div class="v">Workmanship on the repair</div><p>The repair carries our workmanship warranty. Where the membrane is still inside a manufacturer warranty we work to the manufacturer detail to keep it intact, because an incompatible patch can void the remaining cover on the whole roof.</p></div>
   </div>
-  <p class="tbl-note" style="background:#fff">Every figure on this page is an estimate, not a quote, and is subject to Big Easy Roofing sign off. Cost and timescale depend on size, pitch, access, weather, materials and whatever is found once work starts, so <a href="tel:+15048008196">call Big Easy Roofing on (504) 800-8196</a> and we will come out and give you an estimate for your own roof.</p>
   <div class="prose">
-    <p>The practical difference between replacing a roof in Baton Rouge and replacing one anywhere else in Louisiana is that the parish now has to see it. Act 239 of the 2025 session added a new subsection to the state building code law, and it requires any municipality or parish that issues construction permits to permit and inspect roof construction and reroofing. Houses are not carved out. East Baton Rouge began applying it to jobs starting after 1 August 2025.</p>
-    <p>That has a real consequence for how you buy a roof here. A contractor who does not pull the permit is not saving you a step. They are leaving your roof unrecorded, and the photograph set is the only evidence that the decking underneath was sound and the fasteners went in at the right spacing. On a house that later sells, or that later has a storm claim, that record is the thing that answers the question.</p>
-    <p>It also changes who you can use. The photographs have to be geotagged and taken at each stage as the work happens, which means the crew has to be documenting while they work rather than reconstructing afterwards. It is not difficult, but it is a habit, and it is worth asking any Baton Rouge roofer to show you a set from a job they have already closed.</p>
+    <p>A commercial roof rarely announces itself the way a house roof does. There is usually no attic to stain and no ceiling directly under the deck, so the first sign is often a damp patch in an office two bays away from the actual defect, or an insulation board that has been quietly wet for a year. By the time it is visible inside, the assembly below the membrane has normally been holding water for some time.</p>
+    <p>That is why a commercial repair starts with the drainage rather than the leak. Low slope roofs are designed to move water to a small number of drains or scuppers, and almost every repeat repair we see traces back to water that is not getting there: a drain sitting proud of the deck, a scupper blocked since the last storm, or a section that settled and now holds a pond after every rain. Fix the defect and leave the pond, and the same seam opens again the following summer.</p>
+    <p>The second thing that has changed is administrative rather than physical. Until August 2025 a commercial reroof in East Baton Rouge did not need its own roofing permit and inspection. It does now, it runs through MyGovernmentOnline, and the fee is worked out from the value of the job rather than a fixed price. That is worth knowing before a budget is signed off rather than after the first inspection.</p>
   </div>
 </div></section>
 
@@ -510,55 +507,55 @@ footer a{color:#fff}
 <section id="compare">
   <div class="tex" style="background-image:url('img/photo/tex-shingle.jpg')"></div>
   <div class="wrap">
-  <div class="sechead"><h2>What goes on a Baton Rouge roof <span class="b" id="t-compare">and what each one costs</span></h2>
-  <p class="bluf">Four coverings account for nearly every Baton Rouge replacement, and the choice is mostly a question of how long you intend to own the house. The table sets out the estimated installed range, the realistic service life in this climate, and who each one actually suits.</p></div>
+  <div class="sechead"><h2>What the parish charges <span class="b" id="t-compare">to permit a commercial roof</span></h2>
+  <p class="bluf">East Baton Rouge has no roofing line in its fee schedule, so a commercial roof is permitted like any other commercial work: on construction valuation, with a separate plan review fee on top. These are the parish figures, not ours.</p></div>
   <div class="tblwrap"><table class="tbl">
-    <thead><tr><th>Covering</th><th>Estimated installed</th><th>Realistic life here</th><th>Who it suits</th></tr></thead>
+    <thead><tr><th>Construction valuation</th><th>Plan review fee</th><th>Building permit fee</th><th>What this typically covers</th></tr></thead>
     <tbody>
-      <tr><th class="best">Architectural asphalt shingle</th><td class="best">$7,000 to $18,000</td><td class="money best">18 to 22 years</td><td class="best">Most Baton Rouge homeowners staying put</td></tr>
-      <tr><th>Three tab asphalt shingle</th><td>$6,000 to $12,000</td><td class="money">12 to 16 years</td><td>A rental or a short hold before sale</td></tr>
-      <tr><th>Standing seam metal</th><td>$16,000 to $28,000</td><td class="money">40 years or more</td><td>A long hold, or a low slope section that shingle cannot serve</td></tr>
-      <tr><th>Modified bitumen or TPO on a low slope</th><td>Priced per square</td><td class="money">15 to 20 years</td><td>Porches, additions and flat rear sections</td></tr>
+      <tr><th class="best">$100,000 or less</th><td class="best">$3 per thousand, $100 minimum</td><td class="money best">$5 per thousand, $100 minimum</td><td class="best">Where most commercial repair work and small single building re roofs sit</td></tr>
+      <tr><th>Over $100,000 to $500,000</th><td>$3 per thousand, $100 minimum</td><td class="money">$500 plus $4 per thousand above $100,000</td><td>A full single ply or modified bitumen replacement on a mid size building</td></tr>
+      <tr><th>Over $500,000</th><td>$1,500 plus $0.50 per thousand above $500,000</td><td class="money">$2,100 plus $1.50 per thousand above $500,000</td><td>Large industrial roofs, schools, and multi building sites</td></tr>
+      <tr><th>Any value</th><td>Technology fee $25 on every permit</td><td class="money">Reinspection $75, after hours $150</td><td>Added on top of the two fees above. Card payments carry a 5 percent charge</td></tr>
     </tbody>
   </table></div>
-  <p class="tbl-note">Every figure is an estimate and none of it is a quote. Pitch, layers, decking condition and access move all four bands. <a href="tel:+15048008196">Call (504) 800-8196</a> for a written price on your Baton Rouge roof.</p>
+  <p class="tbl-note">Figures read from the <a href="https://www.brla.gov/2694/Permit-Inspection-Fees" style="font-weight: bold; text-decoration: underline;">East Baton Rouge permit and inspection fee page</a> on 3 September 2026 and quoted as the parish charges them. They are the cost of the permit, not the cost of the roof. Fees change and valuation is assessed by the parish, so confirm the current figure with Permits and Inspections on 225-389-3205. For what the work itself costs, <a href="tel:+15048008196">call (504) 800-8196</a> and we will survey the roof and put a price in writing.</p>
 </div></section>
 
 <!-- ============ PERMIT AND CODE ============ -->
 <section id="permit">
   <div class="tex-d" style="background-image:url('img/photo/inspector.jpg')"></div>
   <div class="wrap">
-  <div class="sechead"><h2><span class="b" id="t-permit">The permit, the photographs</span> and which authority actually covers you</h2>
-  <p class="bluf" id="p-permit">Two things decide the paperwork on a Baton Rouge reroof: a state law that made the permit compulsory in 2025, and your address, because East Baton Rouge Parish is five municipalities and they do not all permit through the same office. Both are settled before we start.</p></div>
+  <div class="sechead"><h2><span class="b" id="t-permit">Which code and which office</span> cover a commercial roof</h2>
+  <p class="bluf" id="p-permit">Nearly everything written about the 2025 Louisiana roofing law describes it as a rule about houses. It is not. The statute has two limbs, and a commercial building is on the other one, which changes the code, the inspection and the paperwork.</p></div>
   <div class="iconrow">
     <div class="icard">
       <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h7M8 11h7"/><path d="M18 3v18"/></svg></span>
-      <h3>Permit and inspection are compulsory</h3>
-      <div class="val">R.S. 40:1730.23(K)</div>
-      <p>Act 239 of the 2025 session added subsection K to the state building code law. Any municipality or parish that issues construction permits must permit and inspect roof construction and reroofing. A one or two family dwelling is judged against the 2021 International Residential Code chapters 8 and 9 with Louisiana amendments, and any other building against International Building Code chapter 15.</p>
-    </div>
-    <div class="icard">
-      <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h2.4l1.3-2h6.6l1.3 2H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.4"/></svg></span>
-      <h3>The inspection is photographic</h3>
-      <div class="val" id="v-code2">16 on a reroof</div>
-      <p id="v-code2-p">Louisiana law lets a code enforcement officer accept location verified geotagged photographs for roofing inspections, and East Baton Rouge uses that. Two photographs of the existing covering, four of the decking, four of the underlayment and six of the finished roofing, all landscape, filed as one PDF with the parish roofing information form.</p>
+      <h3>What actually changed</h3>
+      <div class="val" id="v-code2">Permit and inspect</div>
+      <p id="v-code2-p">Act 239 of 2025 added La. R.S. 40:1730.23(K), requiring every municipality and parish that issues construction permits to permit and inspect roof construction and re roofing. East Baton Rouge applied it to jobs beginning after 1 August 2025, and its own notice says it covers roof installations, including both re roofs and new construction, for commercial and residential structures.</p>
     </div>
     <div class="icard">
       <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span>
-      <h3>Where it is filed</h3>
-      <div class="val" id="v-insp2">MyGovernmentOnline</div>
-      <p id="v-insp2-p">The reroof permit is applied for on the MGOCONNECT.ORG portal, and the form and the photograph set go back to the same account. The parish also asks on the form whether any portion of the roof falls below a 4:12 pitch, because that changes the underlayment requirement.</p>
+      <h3>Your building is on the commercial limb</h3>
+      <div class="val" id="v-insp2">IBC Chapter 15</div>
+      <p id="v-insp2-p">Subsection (K)(1) sends every building other than a one and two family dwelling to International Building Code Chapter 15, as adopted by the Louisiana State Uniform Construction Code Council. Only (K)(2), the houses, goes to the residential code. Louisiana is on the 2021 editions with state amendments, and the council has the 2024 editions proposed for 1 January 2027.</p>
+    </div>
+    <div class="icard">
+      <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h2.4l1.3-2h6.6l1.3 2H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.4"/></svg></span>
+      <h3>The inspection can be done from photographs</h3>
+      <div class="val">Geotagged and filed</div>
+      <p>La. R.S. 40:1730.23(J) allows a building code enforcement officer to accept photographs that are location verified with geotagging for roofing inspections. East Baton Rouge takes that up and wants the set filed as a single PDF with its Roofing Information Form through MyGovernmentOnline, all shots in landscape.</p>
     </div>
     <div class="icard">
       <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
-      <h3>No published flat fee</h3>
-      <div class="val">Confirmed on your quote</div>
-      <p>East Baton Rouge publishes no flat reroof fee at all, and a $25 technology fee applies to every parish permit. We confirm the amount with Permits and Inspections on 225-389-3205 and itemise it, rather than quoting a figure the parish has not published.</p>
+      <h3>The office is not always the parish</h3>
+      <div class="val">Check the address first</div>
+      <p>Permitting inside the City of St. George limits transitioned to St. George for applications filed on or after 16 October 2024, and Baker, Zachary and Central run their own. A building can read as Baton Rouge on an envelope and be permitted somewhere else, which is a phone call at the start and a lost fortnight in the middle.</p>
     </div>
   </div>
   <div class="ncards two">
-    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-8 9 8"/><path d="M5 11v9h14v-9"/><path d="M9 20v-5h6v5"/></svg></span><h3>East Baton Rouge is not one jurisdiction, and your address decides which</h3><p>The parish contains Baton Rouge itself, Baker, Zachary, Central and St. George, and permitting is not uniform across them. The one that has changed most recently is St. George: since 16 October 2024 building permits and inspections inside its city limits are handled by the City of St. George rather than by the parish, and applications filed before that date stayed with East Baton Rouge.</p><p>St. George is only the most recent change. Baker, Zachary and Central are separately incorporated too, so a Baton Rouge postal address does not settle which office issues your permit. We confirm that before the application goes in, rather than filing it in the wrong place and losing a week.</p></div>
-    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span><h3>If you are in a local historic district, the permit is not the only approval</h3><p>Baton Rouge draws a distinction that catches people out. A National Register district is an honorific and a tax incentive designation, and it does not control what you put on your roof. A local historic district does: it requires a Certificate of Appropriateness for exterior alterations visible from the street. Spanish Town and Drehr Place are among the local ones.</p><p>A roof is visible from the street, so on a house in a local district the covering and its colour can need approval from the Historic Preservation Commission alongside the building permit. Confirm which list your street is on before materials are ordered, because the two designations are easy to mix up and only one of them can stop the job.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span><h3>The parish roofing form is written in residential code language</h3><p>This is worth knowing before you file. The photograph checklist attached to the East Baton Rouge roof permit notice asks for the deck, the underlayment and the roofing system to be photographed in accordance with the 2021 IRC and state amendments. The IRC is the International Residential Code. Act 239 routes a building that is not a one or two family dwelling to IBC Chapter 15 instead.</p><p>The same form asks whether any portion of the roof has a pitch below 4:12, which on a commercial low slope roof is usually the entire roof, and asks for a photograph of the installed starter strip, which a single ply membrane does not have. None of that stops a commercial roof being permitted. It does mean the documentation route is worth settling with <a href="https://www.brla.gov/2688/Permits-Inspections" style="font-weight: bold; text-decoration: underline;">Permits and Inspections</a> on 225-389-3205 before the crew mobilises, rather than after an inspection is rejected. We do that as part of the job.</p><p>One practical detail sits in the same notice. On new construction or an addition the roof is permitted as part of the main building permit rather than as a separate roofing permit, but the parish still wants the roofing form and the full photograph set filed against it. A new commercial building therefore does not avoid the documentation, it simply arrives under a different permit number, and the work still has to be photographed in sequence as it goes on rather than reconstructed afterwards.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-8 9 8"/><path d="M5 11v9h14v-9"/><path d="M9 20v-5h6v5"/></svg></span><h3>The 25 percent rule is a Florida rule and it is not what triggers an upgrade here</h3><p>It comes up on commercial work constantly, usually from an owner who has read that repairing more than a quarter of the roof forces a full replacement. That is Section 706 of the Florida Building Code, Existing Building. Louisiana is on the International codes and has no equivalent percentage trigger.</p><p>What decides it on a commercial roof here is the scope of work and the permit itself. Once the job is a re roof rather than a repair it is on the Chapter 15 route with its own permit and inspection, whatever fraction of the area that happens to be. The useful question is not what percentage you are replacing, it is whether the parish is going to class the work as a re roof, and that is answerable before you start.</p><p>There is a real percentage rule in East Baton Rouge, and it catches people out because it sounds like the Florida one. Under the parish floodplain rules, work counts as substantial improvement once its cost reaches 50 percent of the market value of the structure, for buildings inside a Special Flood Hazard Area. That is a federal flood requirement rather than a roofing rule, it measures the value of the work against the value of the building rather than the area of the roof, and it only applies in the flood zone. If the building sits in a Special Flood Hazard Area, settle where the work stands against that threshold with the parish before the scope is fixed rather than after, because it can change what else the building is required to do.</p></div>
   </div>
   <div class="seccta">
     <a class="btn btn-y" href="https://www.bigeasyroofing.com/contact/">Get Your FREE Quote Only for Today!</a>
@@ -570,12 +567,12 @@ footer a{color:#fff}
 <section id="local">
   <div class="tex" style="background-image:url('img/photo/tearoff-aerial.jpg')"></div>
   <div class="wrap">
-  <div class="sechead"><h2>What tends to turn up on <span class="b">Baton Rouge roofs</span></h2>
-  <p class="bluf">Three things shape the scope of a Baton Rouge replacement more than the choice of covering does, and each of them moves the price rather than just the finish. Knowing which one you have before the quote is written is the difference between a fixed number and a job that grows once the first course comes off.</p></div>
+  <div class="sechead"><h2>What fails first <span class="b">on Baton Rouge commercial roofs</span></h2>
+  <p class="bluf">Three patterns account for most commercial repair calls in this climate. Each one is a reason a previous repair did not last, and each is fixable, but only if the thing causing it is fixed at the same time rather than patched over.</p></div>
   <div class="ncards">
-    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.6 6 10.4A6 6 0 0 1 6 13.4C6 9.6 12 3 12 3z"/></svg></span><h3>A second layer nobody mentioned</h3><p>Laying a new covering straight over an old one was normal practice for years and plenty of Baton Rouge houses carry two. It matters more now than it used to, because the decking photographs the parish wants cannot be taken through a layer that is still in place.</p><p>Tearing off two layers is more labour and more disposal, and it is one of the most common reasons a replacement quote moves. It is also the point at which soft decking usually turns up, which is why we price the tear off and the decking allowance separately rather than as one number.</p></div>
-    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-8 9 8"/><path d="M5 11v9h14v-9"/><path d="M9 20v-5h6v5"/></svg></span><h3>A roof that has been worked on before, in a hurry</h3><p>Plenty of houses of this age have had a previous roof done at speed, and it shows once the covering is off: decking replaced in patches, fastener patterns that change halfway across a slope, and flashing reused where it should have been renewed. We are not going to guess at why on your house, only at what it costs to put right.</p><p>None of that is visible from the ground. It shows up when the covering comes off, and it is worth knowing before you sign, which is why the inspection photographs are taken at the decking stage rather than only at the end.</p></div>
-    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h8"/></svg></span><h3>Low slope rear additions on an otherwise pitched roof</h3><p>Baton Rouge has a lot of houses with a pitched main roof and a shallow addition or porch across the back. Shingle does not belong below a 4:12 pitch without a specific underlayment build, which is exactly why the parish form asks the question.</p><p>The right answer is usually a different covering on that section rather than running shingle across the whole roof and hoping. It is priced as its own line, and it is the part of a replacement most often left out of a cheap quote.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.6 6 10.4A6 6 0 0 1 6 13.4C6 9.6 12 3 12 3z"/></svg></span><h3>Standing water on a roof that never had the fall it needed</h3><p>A low slope roof is not a flat roof, and the difference is drainage. Where a deck has settled, an insulation layer has compressed, or a drain sits slightly proud of the surface, water stops moving and stays. In Baton Rouge heat that pond then cooks the membrane above it, and a seam that would otherwise have lasted another decade opens inside two summers.</p><p>The tell is a dark ring on the membrane that is still visible when the roof is dry. A repair inside that ring without correcting the fall is a repair with a known expiry date, so we price the drainage correction beside the patch and let you choose with both numbers in front of you.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h8"/></svg></span><h3>Seams and laps giving up before the field of the membrane does</h3><p>Single ply roofs almost never fail in the middle of a sheet. They fail where two sheets meet, because that is where the heat welding, the adhesive or the tape has to do the work. Twenty years of Gulf humidity, thermal movement and ultraviolet ages a lap faster than the field, and an older EPDM roof with taped seams is the commonest example.</p><p>That is good news commercially. A membrane with sound field sheets and failing laps is usually worth repairing or re covering rather than tearing off, which is a materially cheaper answer than the full replacement an owner often assumes they are facing.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l5 6h-3l4 5h-3l3 4H6l3-4H6l4-5H7z"/><path d="M12 18v3"/></svg></span><h3>Penetrations, curbs and parapets, which is where most leaks actually are</h3><p>Every unit, vent, pipe and conduit through a commercial roof is a hole that was made watertight by a detail rather than by the membrane itself. Rooftop equipment gets serviced, engineers walk on flashings, and a curb that was sound at installation is often the thing that has been stepped on for a decade.</p><p>Parapet walls and coping joints belong in the same group. Water gets behind a coping cap and runs down inside the wall, which reads inside the building as a wall problem rather than a roof problem and gets diagnosed late. We check these first because they account for more commercial leaks than the membrane does.</p></div>
   </div>
 </div></section>
 
@@ -584,9 +581,9 @@ footer a{color:#fff}
   <div class="aiv">
     <div class="aiv-left">
       <h2>Big Easy Roofing <span class="b">Process</span></h2>
-      <p class="lede">Four steps, and the documentation runs through all of them rather than being added at the end. The permit is applied for before tear off and the photograph set is built as the work happens, because both are now conditions of the roof being signed off in East Baton Rouge.</p>
+      <p class="lede">Four steps. The first two happen before anyone quotes a price, because on a commercial roof the expensive mistake is repairing the leak and leaving the reason for it.</p>
       <div class="aiv-figure">
-        <img src="img/photo/inspector.jpg" alt="A roofing inspector photographing an area of exposed roof decking and its fastener pattern" width="1024" height="682">
+        <img src="img/photo/inspector.jpg" alt="A roofer inspecting a flashing detail where a roof meets a wall" width="1024" height="682">
       </div>
       <div class="aiv-ctas">
         <a class="btn btn-y" href="https://www.bigeasyroofing.com/contact/">Get Your FREE Quote Only for Today!</a>
@@ -600,34 +597,34 @@ footer a{color:#fff}
       </svg>
       <div class="step">
         <span class="num">01</span>
-        <div><h3>Free inspection and a written price</h3>
-        <p>We come out, photograph the roof and the visible decking, and write a scope with every line itemised: tear off, layers, decking allowance, underlayment, covering, flashing and the permit. You keep the photographs whether or not you use us.</p></div>
+        <div><h3>Survey the assembly and the drainage</h3>
+        <p>We identify the membrane and its age, walk the falls to find where water actually stands, check every penetration, curb, drain and parapet detail, and look for wet insulation under the membrane. You keep the photographs whether or not you use us.</p></div>
       </div>
       <div class="step">
         <span class="num">02</span>
-        <div><h3>Permit applied for through MyGovernmentOnline</h3>
-        <p>We confirm which authority covers your address, then file the reroof application on MGOCONNECT.ORG with the parish roofing information form, including the pitch question. The fee is confirmed with Permits and Inspections and appears as its own line in your scope.</p></div>
+        <div><h3>Settle the permit route before pricing</h3>
+        <p>We confirm whether the scope is a repair or a re roof, which office covers the address, and what documentation the parish wants for a Chapter 15 building. On a commercial roof that answer changes the programme and the cost, so it comes first.</p></div>
       </div>
       <div class="step">
         <span class="num">03</span>
-        <div><h3>Tear off, decking, and the photographs as we go</h3>
-        <p>The old covering comes off, soft decking is replaced and measured against the scope, and the geotagged photographs are taken at each stage: the existing covering, the decking and its fastener pattern, the underlayment, and the finished roof with its accessories.</p></div>
+        <div><h3>Written scope, with the drainage priced separately</h3>
+        <p>You get the defect named, the fix described and the price in writing, with any drainage or insulation correction priced as its own line so you can see what is a patch and what is a cure, and decide accordingly.</p></div>
       </div>
       <div class="step">
         <span class="num">04</span>
-        <div><h3>Close out and hand over</h3>
-        <p>The photograph set and the form go back to the parish through the same portal, the site is cleared and magnet swept, and you get the permit record, the photographs and both warranties in writing. Call us on (504) 800-8196 to book the first step.</p></div>
+        <div><h3>Repair, photograph, and keep you trading</h3>
+        <p>Work is sequenced around your opening hours where it can be, noisy and disruptive stages flagged in advance, the finished detail photographed, and the site left clear. Call (504) 800-8196 to get the survey booked.</p></div>
       </div>
     </div>
   </div>
 </div></section>
 
-<!-- ============ OTHER SERVICES IN THIS CITY ============ -->
+<!-- ============ OTHER SERVICES ============ -->
 <section id="more">
   <div class="tex" style="background-image:url('img/photo/tex-curling.jpg')"></div>
   <div class="wrap">
   <div class="sechead"><h2>Everything else we do <span class="b" id="t-more">in Baton Rouge</span></h2>
-  <p class="bluf" id="p-more">The rest of the Big Easy Roofing services available in Baton Rouge, each with its own page, crew and written scope. Where a roof does not need a full replacement, a repair, an inspection or gutter work is usually the cheaper honest answer.</p></div>
+  <p class="bluf" id="p-more">The rest of the Big Easy Roofing services available in Baton Rouge, each with its own page, crew and written scope. Where a commercial roof is still holding water after a repair, a coating or a re roof is usually the better value over a ten year view.</p></div>
 
   <div class="svctabs" role="tablist" id="svctabs">
     <span class="svc-ask">Filter by service type:</span>
@@ -644,10 +641,10 @@ footer a{color:#fff}
 
 <!-- ============ FAQ ============ -->
 <section id="faq"><div class="wrap">
-  <h2 id="t-faq" class="faqhead">Baton Rouge Roof Replacement <span class="b">FAQs</span></h2>
+  <h2 id="t-faq" class="faqhead">Baton Rouge Commercial Roof Repairs <span class="b">FAQs</span></h2>
   <div class="faqtop">
     <div>
-      <p id="p-faq">The questions that come up before a roof replacement in Baton Rouge, answered before you have to pick up the phone.</p>
+      <p id="p-faq">The questions that come up before a commercial roof repair in Baton Rouge, answered before you have to pick up the phone.</p>
     </div>
     <div class="photostack" aria-hidden="true">
       <figure class="ps1"><img src="img/photo/hail.jpg" alt=""></figure>
@@ -662,38 +659,34 @@ footer a{color:#fff}
       <ul id="topiclist">
         <li><button class="on" data-t="all">All questions</button></li>
         <li><button data-t="cost">Cost</button></li>
-        <li><button data-t="permit">Permit and inspection</button></li>
-        <li><button data-t="scope">Repair or replace</button></li>
-        <li><button data-t="material">Materials</button></li>
-        <li><button data-t="time">Grants</button></li>
+        <li><button data-t="permit">Permit and fees</button></li>
+        <li><button data-t="code">Code</button></li>
+        <li><button data-t="scope">Scope</button></li>
+        <li><button data-t="time">Timing</button></li>
       </ul>
       <div class="askcard">
         <h3>Question not here?</h3>
-        <p id="p-ask">Ask us anything about your Baton Rouge roof. We usually answer the same day, no charge and no obligation.</p>
+        <p id="p-ask">Ask us anything about your Baton Rouge commercial roof. We usually answer the same day, no charge and no obligation.</p>
         <a class="btn btn-y" href="tel:+15048008196">Call (504) 800-8196</a>
       </div>
     </div>
     <div class="qa" id="qa">
-      <details data-t="cost"><summary id="q1">How much does a new roof cost in Baton Rouge</summary>
-        <div class="ans"><p id="a1">Most full architectural asphalt replacements on a Baton Rouge home are estimated between $7,000 and $18,000, depending on size, pitch and how many layers have to come off. Standing seam metal and complex roofs with several valleys run $16,000 to $28,000. The East Baton Rouge permit fee is itemised separately in your written scope rather than absorbed into the price.</p></div></details>
-      <details data-t="permit"><summary id="q2">Do you need a permit to replace a roof in Baton Rouge</summary>
-        <div class="ans"><p id="a2">Yes. Since 1 August 2025 East Baton Rouge has required a permit and an inspection for a reroof, on a house as well as on a commercial building, under La. R.S. 40:1730.23(K). We apply through MyGovernmentOnline, file the parish roofing information form and submit the 16 geotagged photographs it asks for.</p></div></details>
-      <details data-t="permit"><summary id="q3">Will an inspector come to my house</summary>
-        <div class="ans"><p id="a3">Usually not. Louisiana law lets a code enforcement officer accept geotagged photographs for a roofing inspection instead of attending, and East Baton Rouge works that way. The photographs are taken as the work happens, so the decking and the fastener pattern are recorded before they are covered up.</p></div></details>
-      <details data-t="permit"><summary id="q4">What is the new roofing law in Louisiana</summary>
-        <div class="ans"><p id="a4">Act 239 of the 2025 session, which added La. R.S. 40:1730.23(K). It requires every municipality and parish that issues construction permits to permit and inspect roof construction and reroofing, with houses judged against the 2021 IRC chapters 8 and 9 and other buildings against IBC chapter 15. East Baton Rouge applied it to jobs starting after 1 August 2025.</p></div></details>
-      <details data-t="permit"><summary id="q5">What is the 25 percent rule for roofing</summary>
-        <div class="ans"><p id="a5">It is a Florida rule, not a Louisiana one, and it catches people out. Section 706 of the Florida Building Code, Existing Building, limits how much of a roof can be repaired or recovered in a twelve month period before the whole system has to meet current code. Louisiana is on the International codes instead. Here the trigger is the permit itself, and in East Baton Rouge a reroof needs one whatever percentage of the roof it covers.</p></div></details>
-      <details data-t="permit"><summary id="q6">What if my address is in St. George</summary>
-        <div class="ans"><p id="a6">Then your permit is not an East Baton Rouge permit. Since 16 October 2024 building permits and inspections inside the City of St. George limits are handled by St. George itself. We confirm which office covers your address before applying, because a Baton Rouge postal address does not settle it.</p></div></details>
-      <details data-t="scope"><summary id="q7">Should I repair or replace</summary>
-        <div class="ans"><p id="a7">If the damage is contained and the surrounding covering still has life in it, a repair is the cheaper honest answer. On a Baton Rouge roof that has already been layered over, or where the decking at the eaves has softened, patching buys months rather than years and the second layer has to come off before anything can be inspected anyway.</p></div></details>
-      <details data-t="material"><summary id="q8">Is metal worth it in Baton Rouge</summary>
-        <div class="ans"><p id="a8">On a long hold it usually is. Standing seam metal is estimated at $16,000 to $28,000 against $7,000 to $18,000 for architectural asphalt, and it realistically gives forty years or more here against eighteen to twenty two. If you expect to sell within a decade the arithmetic rarely works.</p></div></details>
-      <details data-t="material"><summary id="q9">How long does a 30 year shingle really last here</summary>
-        <div class="ans"><p id="a9">A shingle sold as a thirty year product realistically gives eighteen to twenty two years on a Baton Rouge roof. Gulf Coast heat, humidity and wind driven rain age a covering faster than the test conditions the rating comes from, and a shallow pitch that drains slowly ages it faster still.</p></div></details>
-      <details data-t="time"><summary id="q10">Can I get the state FORTIFIED grant in Baton Rouge</summary>
-        <div class="ans"><p id="a10">Not at the moment. The Louisiana Fortify Homes Program grants up to $10,000 towards a FORTIFIED Roof, but the Louisiana Department of Insurance limits it to a published list of parishes and East Baton Rouge is not on it. Neighbouring Livingston and Ascension are, so check the current list at the department before assuming either way, and do not let a contractor price a job around a grant your address cannot apply for.</p></div></details>
+      <details data-t="cost"><summary id="q1">How much does a commercial roof repair cost in Baton Rouge</summary>
+        <div class="ans"><p id="a1">It depends on the assembly and on what is under the membrane, so we survey before quoting rather than pricing over the phone. The one figure that is published is the permit: East Baton Rouge charges $5 per thousand dollars of construction valuation up to $100,000, with a separate plan review fee at $3 per thousand and a $100 minimum on each. That is the parish fee, not the cost of the work.</p></div></details>
+      <details data-t="cost"><summary id="q2">Is $30,000 too much for a roof</summary>
+        <div class="ans"><p id="a2">On a house that would be a large number. On a commercial low slope roof it can be a repair budget rather than a replacement one, because the price follows the area, the assembly and whether the insulation below is wet. Judge a commercial quote on whether it names the membrane, states the area, says what happens if saturated insulation is found, and prices the drainage separately. A single figure with none of that behind it is not comparable to anything.</p></div></details>
+      <details data-t="permit"><summary id="q3">Does a commercial re roof need a permit in East Baton Rouge</summary>
+        <div class="ans"><p id="a3">Yes, for work beginning after 1 August 2025. Act 239 of 2025 added La. R.S. 40:1730.23(K), which requires parishes and municipalities that issue construction permits to permit and inspect roof construction and re roofing, and the East Baton Rouge notice applies it to commercial and residential structures alike.</p></div></details>
+      <details data-t="permit"><summary id="q4">What does an East Baton Rouge commercial roof permit cost</summary>
+        <div class="ans"><p id="a4">There is no flat roofing fee in the schedule. It is calculated on construction valuation: $5 per thousand up to $100,000, then $500 plus $4 per thousand up to $500,000, then $2,100 plus $1.50 per thousand above that, with a $100 minimum. A separate plan review fee runs at $3 per thousand up to $500,000. A $25 technology fee applies to every permit. Figures read from the parish fee page on 3 September 2026.</p></div></details>
+      <details data-t="code"><summary id="q5">Which building code applies to a commercial roof in Louisiana</summary>
+        <div class="ans"><p id="a5">International Building Code Chapter 15. Act 239 of 2025 splits it explicitly: subsection (K)(1) sends buildings other than one and two family dwellings to IBC Chapter 15, and only (K)(2) sends houses to the residential code. Louisiana is on the 2021 editions with state amendments, with the 2024 editions proposed for 1 January 2027.</p></div></details>
+      <details data-t="code"><summary id="q6">Does the 25 percent rule apply to a commercial roof in Louisiana</summary>
+        <div class="ans"><p id="a6">No. It is Section 706 of the Florida Building Code, Existing Building, and Louisiana is on the International codes with no equivalent percentage trigger. On a commercial roof here what matters is whether the parish classes the work as a re roof rather than a repair, because that is what puts it on the Chapter 15 permit and inspection route.</p></div></details>
+      <details data-t="scope"><summary id="q7">What is the difference between commercial and industrial roofing</summary>
+        <div class="ans"><p id="a7">Mostly scale, access and what the roof is carrying. Commercial usually means a low slope membrane over an occupied building, shops, offices, churches and apartment blocks. Industrial tends to mean larger areas, more rooftop plant, and sometimes chemical or heat exposure that rules out particular membranes. The permit route in East Baton Rouge is the same for both, because the statute divides on whether it is a one and two family dwelling, not on the trade the building is used for.</p></div></details>
+      <details data-t="time"><summary id="q8">Can you repair the roof while we stay open</summary>
+        <div class="ans"><p id="a8">Usually yes. Most commercial repairs are worked around trading hours, with the noisy and disruptive stages flagged in advance so you can plan around them. Where work has to happen outside normal hours, note that East Baton Rouge charges a $150 after hours fee for inspections, which we tell you about before it is on your invoice rather than after.</p></div></details>
     </div>
   </div>
 </div></section>
@@ -702,8 +695,8 @@ footer a{color:#fff}
 <section class="promo"><div class="wrap">
   <div class="pcard">
     <div class="pcopy">
-      <h2 id="t-cta">Get a <span class="b">written price</span> for your Baton Rouge roof</h2>
-      <p id="p-cta">Free inspection, photographs you keep, and a scope with every line itemised including the East Baton Rouge permit, before anything is signed.</p>
+      <h2 id="t-cta">Get a <span class="b">written commercial roof scope</span> this week</h2>
+      <p id="p-cta">We survey the assembly and the drainage, settle the permit route with the parish, and put the defect, the fix and the price in writing before anything starts.</p>
       <a class="btn btn-y" href="tel:+15048008196">Call (504) 800-8196</a>
     </div>
     <div class="pshots" aria-hidden="true">
@@ -711,25 +704,25 @@ footer a{color:#fff}
       <figure class="pb"><img src="img/photo/tarp.jpg" alt=""></figure>
       <figure class="pc"><img src="img/photo/tex-shingle.jpg" alt=""></figure>
     </div>
-    <div class="pbadge"><span id="t-badge"><b>Roof Replacement</b>in Baton Rouge</span></div>
+    <div class="pbadge"><span id="t-badge"><b>Commercial Roof Repairs</b>in Baton Rouge</span></div>
   </div>
 </div></section>
 
 <footer><div class="wrap">
   Big Easy Roofing, 4523 Croyden Ave, New Orleans, LA. <a href="tel:+15048008196">(504) 800-8196</a><br>
-  Prototype page, not a live URL. Proposed location: /service-areas/louisiana/baton-rouge/roof-replacement/
+  Prototype page, not a live URL. Proposed location: /service-areas/louisiana/baton-rouge/commercial-roof-repairs/
 </div></footer>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Roof Replacement","name":"Roof Replacement in Baton Rouge, LA","provider":{"@type":"RoofingContractor","name":"Big Easy Roofing","url":"https://www.bigeasyroofing.com","telephone":"504-800-8196","address":{"@type":"PostalAddress","addressLocality":"New Orleans","addressRegion":"LA","addressCountry":"US"}},"areaServed":{"@type":"City","name":"Baton Rouge","containedInPlace":{"@type":"AdministrativeArea","name":"East Baton Rouge Parish, Louisiana"}},"url":"https://www.bigeasyroofing.com/service-areas/louisiana/baton-rouge/roof-replacement/","description":"Roof replacement for Baton Rouge, Louisiana homes. Full tear off, decking repair and new covering, with the East Baton Rouge roof permit pulled for you and the 16 geotagged photographs the parish requires filed through MyGovernmentOnline."}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a new roof cost in Baton Rouge?","acceptedAnswer":{"@type":"Answer","text":"Most full architectural asphalt replacements on a Baton Rouge home are estimated between $7,000 and $18,000, depending on size, pitch and how many layers have to come off. Standing seam metal and complex roofs with several valleys run $16,000 to $28,000. The East Baton Rouge permit fee is itemised separately in your written scope rather than absorbed into the price."}},{"@type":"Question","name":"Do you need a permit to replace a roof in Baton Rouge?","acceptedAnswer":{"@type":"Answer","text":"Yes. Since 1 August 2025 East Baton Rouge has required a permit and an inspection for a reroof, on a house as well as on a commercial building, under La. R.S. 40:1730.23(K). We apply through MyGovernmentOnline, file the parish roofing information form and submit the 16 geotagged photographs it asks for."}},{"@type":"Question","name":"Will an inspector come to my house?","acceptedAnswer":{"@type":"Answer","text":"Usually not. Louisiana law lets a code enforcement officer accept geotagged photographs for a roofing inspection instead of attending, and East Baton Rouge works that way. The photographs are taken as the work happens, so the decking and the fastener pattern are recorded before they are covered up."}},{"@type":"Question","name":"What is the new roofing law in Louisiana?","acceptedAnswer":{"@type":"Answer","text":"Act 239 of the 2025 session, which added La. R.S. 40:1730.23(K). It requires every municipality and parish that issues construction permits to permit and inspect roof construction and reroofing, with houses judged against the 2021 IRC chapters 8 and 9 and other buildings against IBC chapter 15. East Baton Rouge applied it to jobs starting after 1 August 2025."}},{"@type":"Question","name":"What is the 25 percent rule for roofing?","acceptedAnswer":{"@type":"Answer","text":"It is a Florida rule, not a Louisiana one, and it catches people out. Section 706 of the Florida Building Code, Existing Building, limits how much of a roof can be repaired or recovered in a twelve month period before the whole system has to meet current code. Louisiana is on the International codes instead. Here the trigger is the permit itself, and in East Baton Rouge a reroof needs one whatever percentage of the roof it covers."}},{"@type":"Question","name":"What if my address is in St. George?","acceptedAnswer":{"@type":"Answer","text":"Then your permit is not an East Baton Rouge permit. Since 16 October 2024 building permits and inspections inside the City of St. George limits are handled by St. George itself. We confirm which office covers your address before applying, because a Baton Rouge postal address does not settle it."}},{"@type":"Question","name":"Should I repair or replace?","acceptedAnswer":{"@type":"Answer","text":"If the damage is contained and the surrounding covering still has life in it, a repair is the cheaper honest answer. On a Baton Rouge roof that has already been layered over, or where the decking at the eaves has softened, patching buys months rather than years and the second layer has to come off before anything can be inspected anyway."}},{"@type":"Question","name":"Is metal worth it in Baton Rouge?","acceptedAnswer":{"@type":"Answer","text":"On a long hold it usually is. Standing seam metal is estimated at $16,000 to $28,000 against $7,000 to $18,000 for architectural asphalt, and it realistically gives forty years or more here against eighteen to twenty two. If you expect to sell within a decade the arithmetic rarely works."}},{"@type":"Question","name":"How long does a 30 year shingle really last here?","acceptedAnswer":{"@type":"Answer","text":"A shingle sold as a thirty year product realistically gives eighteen to twenty two years on a Baton Rouge roof. Gulf Coast heat, humidity and wind driven rain age a covering faster than the test conditions the rating comes from, and a shallow pitch that drains slowly ages it faster still."}},{"@type":"Question","name":"Can I get the state FORTIFIED grant in Baton Rouge?","acceptedAnswer":{"@type":"Answer","text":"Not at the moment. The Louisiana Fortify Homes Program grants up to $10,000 towards a FORTIFIED Roof, but the Louisiana Department of Insurance limits it to a published list of parishes and East Baton Rouge is not on it. Neighbouring Livingston and Ascension are, so check the current list at the department before assuming either way, and do not let a contractor price a job around a grant your address cannot apply for."}}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.bigeasyroofing.com/"},{"@type":"ListItem","position":2,"name":"Service Areas","item":"https://www.bigeasyroofing.com/service-areas/"},{"@type":"ListItem","position":3,"name":"Louisiana","item":"https://www.bigeasyroofing.com/service-areas/louisiana/"},{"@type":"ListItem","position":4,"name":"Baton Rouge","item":"https://www.bigeasyroofing.com/service-areas/louisiana/baton-rouge/"},{"@type":"ListItem","position":5,"name":"Roof Replacement"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Commercial Roof Repairs","name":"Commercial Roof Repairs in Baton Rouge, LA","provider":{"@type":"RoofingContractor","name":"Big Easy Roofing","url":"https://www.bigeasyroofing.com","telephone":"504-800-8196","address":{"@type":"PostalAddress","addressLocality":"New Orleans","addressRegion":"LA","addressCountry":"US"}},"areaServed":{"@type":"City","name":"Baton Rouge","containedInPlace":{"@type":"AdministrativeArea","name":"East Baton Rouge Parish, Louisiana"}},"url":"https://www.bigeasyroofing.com/service-areas/louisiana/baton-rouge/commercial-roof-repairs/","description":"Commercial roof repair for Baton Rouge, Louisiana buildings. Low slope single ply, modified bitumen, built up and metal systems, with the East Baton Rouge permit and inspection route confirmed before work starts."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a commercial roof repair cost in Baton Rouge?","acceptedAnswer":{"@type":"Answer","text":"It depends on the assembly and on what is under the membrane, so we survey before quoting rather than pricing over the phone. The one figure that is published is the permit: East Baton Rouge charges $5 per thousand dollars of construction valuation up to $100,000, with a separate plan review fee at $3 per thousand and a $100 minimum on each. That is the parish fee, not the cost of the work."}},{"@type":"Question","name":"Is $30,000 too much for a roof?","acceptedAnswer":{"@type":"Answer","text":"On a house that would be a large number. On a commercial low slope roof it can be a repair budget rather than a replacement one, because the price follows the area, the assembly and whether the insulation below is wet. Judge a commercial quote on whether it names the membrane, states the area, says what happens if saturated insulation is found, and prices the drainage separately. A single figure with none of that behind it is not comparable to anything."}},{"@type":"Question","name":"Does a commercial re roof need a permit in East Baton Rouge?","acceptedAnswer":{"@type":"Answer","text":"Yes, for work beginning after 1 August 2025. Act 239 of 2025 added La. R.S. 40:1730.23(K), which requires parishes and municipalities that issue construction permits to permit and inspect roof construction and re roofing, and the East Baton Rouge notice applies it to commercial and residential structures alike."}},{"@type":"Question","name":"What does an East Baton Rouge commercial roof permit cost?","acceptedAnswer":{"@type":"Answer","text":"There is no flat roofing fee in the schedule. It is calculated on construction valuation: $5 per thousand up to $100,000, then $500 plus $4 per thousand up to $500,000, then $2,100 plus $1.50 per thousand above that, with a $100 minimum. A separate plan review fee runs at $3 per thousand up to $500,000. A $25 technology fee applies to every permit. Figures read from the parish fee page on 3 September 2026."}},{"@type":"Question","name":"Which building code applies to a commercial roof in Louisiana?","acceptedAnswer":{"@type":"Answer","text":"International Building Code Chapter 15. Act 239 of 2025 splits it explicitly: subsection (K)(1) sends buildings other than one and two family dwellings to IBC Chapter 15, and only (K)(2) sends houses to the residential code. Louisiana is on the 2021 editions with state amendments, with the 2024 editions proposed for 1 January 2027."}},{"@type":"Question","name":"Does the 25 percent rule apply to a commercial roof in Louisiana?","acceptedAnswer":{"@type":"Answer","text":"No. It is Section 706 of the Florida Building Code, Existing Building, and Louisiana is on the International codes with no equivalent percentage trigger. On a commercial roof here what matters is whether the parish classes the work as a re roof rather than a repair, because that is what puts it on the Chapter 15 permit and inspection route."}},{"@type":"Question","name":"What is the difference between commercial and industrial roofing?","acceptedAnswer":{"@type":"Answer","text":"Mostly scale, access and what the roof is carrying. Commercial usually means a low slope membrane over an occupied building, shops, offices, churches and apartment blocks. Industrial tends to mean larger areas, more rooftop plant, and sometimes chemical or heat exposure that rules out particular membranes. The permit route in East Baton Rouge is the same for both, because the statute divides on whether it is a one and two family dwelling, not on the trade the building is used for."}},{"@type":"Question","name":"Can you repair the roof while we stay open?","acceptedAnswer":{"@type":"Answer","text":"Usually yes. Most commercial repairs are worked around trading hours, with the noisy and disruptive stages flagged in advance so you can plan around them. Where work has to happen outside normal hours, note that East Baton Rouge charges a $150 after hours fee for inspections, which we tell you about before it is on your invoice rather than after."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.bigeasyroofing.com/"},{"@type":"ListItem","position":2,"name":"Service Areas","item":"https://www.bigeasyroofing.com/service-areas/"},{"@type":"ListItem","position":3,"name":"Louisiana","item":"https://www.bigeasyroofing.com/service-areas/louisiana/"},{"@type":"ListItem","position":4,"name":"Baton Rouge","item":"https://www.bigeasyroofing.com/service-areas/louisiana/baton-rouge/"},{"@type":"ListItem","position":5,"name":"Commercial Roof Repairs"}]}</script>
 <script>
 (function(){
   var CITY={
-    "Metairie":{a:"Jefferson Parish",inc:0,fee:1,lede:"Metairie is unincorporated, so Jefferson Parish permits your roof rather than the City of New Orleans."},
+    "Metairie":{a:"Jefferson Parish",inc:0,fee:1,lede:"Metairie is unincorporated, so Jefferson Parish permits your commercial re-roof directly."},
     "Kenner":{a:"City of Kenner",inc:1,par:"Jefferson Parish"},
     "Harahan":{a:"City of Harahan",inc:1,par:"Jefferson Parish"},
-    "River Ridge":{a:"Jefferson Parish",inc:0,fee:1,lede:"River Ridge is unincorporated, so Jefferson Parish permits your roof directly."},
+    "River Ridge":{a:"Jefferson Parish",inc:0,fee:1,lede:"River Ridge is unincorporated, so Jefferson Parish permits your commercial re-roof directly."},
     "Gretna":{a:"City of Gretna",inc:1,par:"Jefferson Parish"},
     "Mid City New Orleans":{a:"City of New Orleans",inc:1,par:"Orleans Parish"},
     "St. Rose":{a:"St. Charles Parish",inc:0},
@@ -779,6 +772,8 @@ footer a{color:#fff}
   var gridRes=document.getElementById('svcgrid-res'), gridCom=document.getElementById('svcgrid-com');
   function $(id){return document.getElementById(id)||{textContent:'',innerHTML:'',value:'',setAttribute:function(){},getAttribute:function(){return null;}};}
   function art(n){return /^(City|Town) of /.test(n) ? 'the '+n : n;}
+  function isInspection(k){return k==='res-inspection' || k==='com-inspections';}
+  function isCommercial(k){return k==='com-replacement';}
 
   var ARROW='<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>';
 
@@ -840,8 +835,6 @@ footer a{color:#fff}
     gridCom.innerHTML=renderGroup('Commercial',cur,c);
     $('t-res-city').textContent='in '+c;
     $('t-com-city').textContent='in '+c;
-    // After the cards paint, re-measure the visible panel so the stage
-    // height snaps to the active panel instead of the taller of the two
     if(window.__updateStageHeight){
       requestAnimationFrame(function(){ window.__updateStageHeight(); });
     }
@@ -956,60 +949,59 @@ footer a{color:#fff}
     $('crumb-city').textContent=c;
     $('crumb-service').textContent=s;
     document.title=s+' in '+c+', LA | Big Easy Roofing';
-    $('h-sub').textContent='Big Easy Roofing handles '+sl+' across '+c+' and the surrounding parishes, licensed by the Louisiana State Licensing Board for Contractors, with the permit pulled for you and the price written down before tear off begins.';
+    $('t-more').textContent='in '+c;
+    $('t-badge').innerHTML='<b>'+s+'</b>in '+c;
+    $('p-ask').textContent='Ask us anything about your '+c+' '+(isCommercial(key)?'commercial':'')+' roof. We usually answer the same day, no charge and no obligation.';
 
+    if(isCommercial(key)){
+      // Commercial Roof Replacement branch: preserve the page's commercial FAQs and headings.
+      // Only refresh city-dependent labels; leave the specs, systems table, permit copy,
+      // failure section and FAQs intact from the static HTML.
+      $('h-sub').textContent='Big Easy Roofing installs commercial roof replacements across '+c+' and the surrounding parishes, licensed by the Louisiana State Licensing Board for Contractors. Every re-roof is a permitted project under the 2021 International Building Code, with architect or engineer stamped plans as the parish requires, and a manufacturer NDL warranty available at closeout.';
+      $('t-specs').textContent=c+' commercial roof replacement';
+      $('t-compare').textContent=c+' flat roofs';
+      $('t-permit').textContent='Do you need a '+d.a+' commercial building permit';
+      $('v-auth').textContent=d.a;
+      $('p-more').innerHTML='The rest of the commercial roofing services Big Easy Roofing offers in '+c+', each with its own page, crew and written scope. Residential services are on the second tab. Where the assessment finds a scope smaller than a full replacement, our <a href="https://www.bigeasyroofing.com/service-areas/louisiana/'+c.toLowerCase().replace(/[^a-z]+/g,'-')+'/" style="font-weight: bold; text-decoration: underline;">'+c+' service area hub</a> lists the alternate paths.';
+      $('p-faq').textContent='The questions '+c+' property managers and business owners actually ask us about commercial roof replacement, answered before you have to pick up the phone.';
+      $('t-faq').innerHTML=c+' Commercial Roof Replacement <span class="b">FAQs</span>';
+      $('t-cta').textContent='Scope your '+c+' commercial re-roof this month';
+      $('p-cta').textContent='Walk-through with a property manager, written scope per square foot per system, architect or engineer stamped plans as the parish requires, and a manufacturer NDL warranty at closeout.';
+      $('p-permit').textContent='Yes. Commercial roof replacement in '+c+' requires a '+d.a+' commercial building permit, not a residential re-roof form. The parish or city enforces the 2021 International Building Code on commercial work. Jefferson Parish publishes commercial submittal requirements calling for a complete set of plans by a Louisiana registered architect or civil engineer with a statement of supervision, and publishes no roofing specific exemption from that, so the scope is confirmed with the Building Permits Department before anything is filed.';
+      $('s-permit').textContent='IBC 2021';
+      $('s-permit-l').textContent='Commercial building code';
+      buildServices();
+      return;
+    }
+
+    if(isInspection(key)){
+      $('h-sub').textContent='Big Easy Roofing performs free residential and commercial roof inspections across '+c+' and the surrounding parishes, licensed by the Louisiana State Licensing Board for Contractors. Every inspection produces a written photograph-backed report you keep, typically finished on site in 45 to 90 minutes with no permit required.';
+      $('t-specs').textContent=c+' roof inspections';
+      $('t-compare').textContent='a '+c+' roof inspection';
+      $('t-permit').textContent='Do you need a permit';
+      $('v-auth').textContent='None';
+      $('p-more').innerHTML='The rest of the Big Easy Roofing services available in '+c+', each with its own page, crew and written scope.';
+      $('p-faq').textContent='The questions '+c+' homeowners actually ask us about roof inspections, answered before you have to pick up the phone.';
+      $('t-faq').innerHTML=c+' '+s+'s <span class="b">FAQs</span>';
+      $('t-cta').textContent='Book your free '+c+' roof inspection this week';
+      $('p-cta').textContent='Free 45 to 90 minute visit at the address, dated photographs you keep, and a written report delivered by email within 24 hours whether a fix is needed or not.';
+      $('p-permit').textContent='No. A roof inspection is not construction, so '+d.a+' does not require a permit for the visit itself.';
+      $('s-permit').textContent='No permit';
+      $('s-permit-l').textContent='Inspection is not construction';
+      buildServices();
+      return;
+    }
+
+    // Non-inspection / non-commercial-replacement branch: residential replacement / repair / other.
+    $('h-sub').textContent='Big Easy Roofing handles '+sl+' across '+c+' and the surrounding parishes, licensed by the Louisiana State Licensing Board for Contractors, with the permit pulled for you and the price written down before tear off begins.';
     $('t-specs').textContent=c+' '+sl;
     $('t-compare').textContent='for a '+c+' roof';
-    $('t-bestfor').textContent='Most '+c+' homeowners staying put';
-    $('t-more').textContent='in '+c;
-    $('p-more').innerHTML='The rest of the Big Easy Roofing services available in '+c+', each with its own page, crew and written scope. Where a roof does not need <a href="https://www.bigeasyroofing.com/roof-replacement/" style="font-weight: bold; text-decoration: underline;">a full roof replacement</a>, a repair, an inspection or gutter work is usually the cheaper honest answer.';
-    $('p-faq').textContent='The questions '+c+' homeowners actually ask us about '+sl+', answered before you have to pick up the phone.';
-    $('t-faq').innerHTML=c+' '+s+' <span class="b">FAQs</span>';
-    $('q1').textContent='How much does a new roof cost in '+c;
-    $('q2').textContent='Do you need a permit to replace a roof in '+c;
-    $('q5').textContent='Is metal worth it in '+c;
-    $('q6').textContent='How long does a 30 year shingle roof really last in '+c;
-    $('t-cta').textContent='Get a written price for your '+c+' roof';
-    $('t-badge').innerHTML='<b>'+s+'</b>in '+c;
-    $('p-ask').textContent='Ask us anything about your '+c+' roof. We usually answer the same day, no charge and no obligation.';
-
     $('t-permit').textContent=d.a+' permit';
     $('v-auth').textContent=d.a;
-    if(d.fee){
-      $('s-permit').textContent='$50';
-      $('s-permit-l').textContent='Jefferson Parish permit';
-      $('v-fee').textContent='$50 flat';
-      $('v-fee-p').textContent='Residential re roofing permit paid by credit card through MGO Connect. No construction plans and no survey required.';
-      $('v-auth-p').textContent='Flat $50 residential re roofing permit, paid by card via MGO Connect.';
-      $('p-permit').textContent=d.lede+' Four requirements, all handled by us.';
-      $('a1').textContent='Most full architectural asphalt replacements on a '+c+' home land between $7,000 and $18,000, depending on size, pitch and how many layers have to come off. Standing seam metal and complex roofs with multiple valleys run $16,000 to $28,000, and the Jefferson Parish permit adds a flat $50 on top.';
-      $('a2').textContent='Yes. '+c+' sits in unincorporated Jefferson Parish, so the Jefferson Parish Building Permits Department requires a residential re roofing permit for replacing 50 percent or more of the roof covering on a one or two family home. It is a flat $50, paid by card through MGO Connect, with no construction plans and no survey required.';
-      $('v-code').textContent='2021 IRC';
-      $('v-code-p').textContent='Required by Jefferson Parish for re roofing: nailing pattern, underlayment and edge detail.';
-      $('v-code2').textContent='2021 IRC';
-      $('v-code2-p').textContent='Jefferson Parish requires re roofing to meet the 2021 International Residential Code for nailing pattern, underlayment and edge detail.';
-      $('v-insp').textContent='Photos only';
-      $('v-insp-p').textContent='Geo tagged phase photography replaces a routine site visit.';
-      $('v-insp2').textContent='No routine site visit';
-      $('v-insp2-p').textContent='Jefferson Parish verifies from geo tagged photographs. Every phase is documented with the nailing pattern visible and the material packaging showing its wind rating.';
-    } else {
-      $('s-permit').textContent='Required';
-      $('s-permit-l').textContent=d.a+' permit';
-      $('v-fee').textContent='Set locally';
-      $('v-fee-p').textContent='A residential re roofing permit is required and is pulled by us. The '+d.a+' fee is confirmed in your written scope before anything is signed.';
-      $('v-auth-p').textContent='Residential re roofing permit, pulled by us before tear off begins.';
-      $('p-permit').textContent=(d.inc ? c+' is incorporated, so '+art(d.a)+' issues your roofing permit'+(d.par?' rather than '+d.par:'')+'.' : c+' is unincorporated, so '+d.a+' permits your roof directly.')+' Four requirements, all handled by us.';
-      $('a1').textContent='Most full architectural asphalt replacements on a '+c+' home land between $7,000 and $18,000, depending on size, pitch and how many layers have to come off. Standing seam metal and complex roofs with multiple valleys run $16,000 to $28,000, and the '+d.a+' permit fee is itemised separately in your written scope.';
-      $('a2').textContent='Yes. Roof replacement in '+c+' needs a residential re roofing permit from '+art(d.a)+'. Big Easy Roofing pulls it for you, and the fee appears as its own line in your written scope.';
-      $('v-code').textContent='Set locally';
-      $('v-code-p').textContent='Louisiana has adopted the 2021 IRC with state amendments. '+art(d.a).replace(/^the /,'The ')+' decides what applies to a re roof, and we build to it.';
-      $('v-code2').textContent='Set locally';
-      $('v-code2-p').textContent='Louisiana has adopted the 2021 International Residential Code with state amendments. The edition and the detail that apply to a re roof are set by '+art(d.a)+', and we build to whatever it requires.';
-      $('v-insp').textContent='Set locally';
-      $('v-insp-p').textContent='Inspection and documentation requirements are set by the permitting authority and confirmed before we start.';
-      $('v-insp2').textContent='Set by the authority';
-      $('v-insp2-p').textContent='Whether an inspector attends or the work is verified from photographs is decided by '+art(d.a)+'. We document every phase either way, with the nailing pattern visible and the material packaging showing its wind rating.';
-    }
+    $('p-more').innerHTML='The rest of the Big Easy Roofing services available in '+c+', each with its own page, crew and written scope.';
+    $('p-faq').textContent='The questions '+c+' homeowners actually ask us about '+sl+', answered before you have to pick up the phone.';
+    $('t-faq').innerHTML=c+' '+s+' <span class="b">FAQs</span>';
+    $('t-cta').textContent='Get a written price for your '+c+' roof';
     buildServices();
   }
 
@@ -1070,10 +1062,8 @@ footer a{color:#fff}
   svcTabs.forEach(function(b){ b.addEventListener('click',function(){ setSvcTab(b.getAttribute('data-tab')); }); });
   var _stageResizeT;
   window.addEventListener('resize',function(){ clearTimeout(_stageResizeT); _stageResizeT=setTimeout(updateStageHeight,120); });
-  // Expose so buildServices() can re-measure after it repaints cards
   window.__updateStageHeight=updateStageHeight;
 
-  // Read ?svc= from URL and pre-select the service + right tab
   var fromParams=false;
   try{
     var params=new URLSearchParams(window.location.search);
@@ -1090,8 +1080,11 @@ footer a{color:#fff}
   if(fromParams){ sync(); } else { buildServices(); }
   spy();
 
-  // On first paint, open the tab that matches the current service group
+  // On first paint, open the tab that matches the current service group.
+  // This is a commercial-topic page, so the default is Commercial when the
+  // page loads on com-replacement (no ?svc= param).
   setSvcTab(SVC[svcSel.value].g==='Commercial'?'com':'res');
+
   // Animated underline on important keywords: fire when the .b enters viewport
   if ('IntersectionObserver' in window) {
     var _uObs = new IntersectionObserver(function(entries){
@@ -1106,6 +1099,7 @@ footer a{color:#fff}
   } else {
     document.querySelectorAll('.b').forEach(function(el){ el.classList.add('in-view'); });
   }
+
 
 })();
 </script>
