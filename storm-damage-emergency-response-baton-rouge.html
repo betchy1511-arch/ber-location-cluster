@@ -964,7 +964,7 @@ footer a{color:#fff}
     $('t-compare').textContent='for a '+c+' roof';
     $('t-bestfor').textContent='Most '+c+' homeowners staying put';
     $('t-more').textContent='in '+c;
-    $('p-more').innerHTML='The rest of the Big Easy Roofing services available in '+c+', each with its own page, crew and written scope. Where a roof does not need <a href="https://www.bigeasyroofing.com/roof-replacement/" style="font-weight: bold; text-decoration: underline;">a full roof replacement</a>, a repair, an inspection or gutter work is usually the cheaper honest answer.';
+    $('p-more').innerHTML='The rest of the Big Easy Roofing services available in '+c+', each with its own page, crew and written scope. Where a roof does not need <a href="https://www.bigeasyroofing.com/service-areas/louisiana/'+c.toLowerCase().replace(/\./g,"").replace(/\s+/g,"-")+'/roof-replacement/" style="font-weight: bold; text-decoration: underline;">a full roof replacement</a>, a repair, an inspection or gutter work is usually the cheaper honest answer.';
     $('p-faq').textContent='The questions '+c+' homeowners actually ask us about '+sl+', answered before you have to pick up the phone.';
     $('t-faq').innerHTML=c+' '+s+' <span class="b">FAQs</span>';
     $('q1').textContent='How much does a new roof cost in '+c;
@@ -1016,7 +1016,17 @@ footer a{color:#fff}
   }
 
   svcSel.addEventListener('change',sync);
-  citySel.addEventListener('change',sync);
+  citySel.addEventListener('change',function(){
+    // Only Metairie and Baton Rouge have built pages. For those, go to the real page
+    // rather than reskinning this one, because sync() cannot rewrite the body copy.
+    var slug = citySel.value.toLowerCase().replace(/\./g,'').replace(/\s+/g,'-');
+    if (slug === 'metairie' || slug === 'baton-rouge') {
+      var file = location.pathname.split('/').pop();
+      var base = file.replace(/-(metairie|baton-rouge)\.html$/, '');
+      if (base !== file) { location.href = base + '-' + slug + '.html'; return; }
+    }
+    sync();
+  });
 
   var tbtns=[].slice.call(document.querySelectorAll('#topiclist button'));
   tbtns.forEach(function(b){

@@ -1002,7 +1002,17 @@ footer a{color:#fff}
   }
 
   svcSel.addEventListener('change',sync);
-  citySel.addEventListener('change',sync);
+  citySel.addEventListener('change',function(){
+    // Only Metairie and Baton Rouge have built pages. For those, go to the real page
+    // rather than reskinning this one, because sync() cannot rewrite the body copy.
+    var slug = citySel.value.toLowerCase().replace(/\./g,'').replace(/\s+/g,'-');
+    if (slug === 'metairie' || slug === 'baton-rouge') {
+      var file = location.pathname.split('/').pop();
+      var base = file.replace(/-(metairie|baton-rouge)\.html$/, '');
+      if (base !== file) { location.href = base + '-' + slug + '.html'; return; }
+    }
+    sync();
+  });
 
   var tbtns=[].slice.call(document.querySelectorAll('#topiclist button'));
   tbtns.forEach(function(b){
