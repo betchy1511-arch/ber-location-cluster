@@ -759,6 +759,7 @@ footer a{color:#fff}
     "sof-install":{n:"Soffit Installation",g:"Soffit",u:"soffit-services/soffit-installation/",ic:"img/brand/ico-repair.png",d:"New soffit, vented for the roof it sits under."},
     "sof-repair":{n:"Soffit Repair",g:"Soffit",u:"soffit-services/soffit-repair/",ic:"img/brand/ico-repair.png",d:"Damaged or sagging soffit repaired at the eave."}
   };
+  var SLUG_FILE={"res-replacement":"roof-replacement-baton-rouge.html","res-repairs":"roof-repairs-baton-rouge.html","res-inspection":"roof-inspection-baton-rouge.html","res-hail":"hail-damage-roof-repair-baton-rouge.html","res-storm":"storm-damage-roof-repair-baton-rouge.html","res-storm-response":"storm-damage-emergency-response-baton-rouge.html","res-emergency":"emergency-roof-repair-baton-rouge.html","res-leak":"roof-leak-detection-baton-rouge.html","res-maintenance":"roof-maintenance-baton-rouge.html","res-coating":"roof-coating-baton-rouge.html","res-ventilation":"roof-ventilation-baton-rouge.html","res-weatherproofing":"roof-weatherproofing-baton-rouge.html","res-restoration":"roof-restoration-baton-rouge.html","res-flashing":"roof-flashing-repair-baton-rouge.html","res-fascia":"fascia-board-repair-baton-rouge.html","res-gutter-install":"gutter-installation-baton-rouge.html","res-gutter-repair":"gutter-repair-baton-rouge.html","res-siding":"siding-installation-baton-rouge.html","res-asbestos":"asbestos-roof-removal-baton-rouge.html","res-insurance":"roof-insurance-claims-baton-rouge.html","com-replacement":"commercial-roof-replacement-baton-rouge.html","com-repairs":"commercial-roof-repairs-baton-rouge.html","com-inspections":"commercial-roof-inspections-baton-rouge.html","com-hail":"commercial-hail-damage-repair-baton-rouge.html","com-reroof":"commercial-re-roofing-baton-rouge.html","com-coating":"commercial-roof-coating-baton-rouge.html","com-elastomeric":"commercial-elastomeric-coatings-baton-rouge.html","com-ventilation":"commercial-roof-ventilation-baton-rouge.html","com-leak":"commercial-roof-leak-detection-baton-rouge.html","com-siding":"commercial-siding-installation-baton-rouge.html","sof-install":"soffit-installation-baton-rouge.html","sof-repair":"soffit-repair-baton-rouge.html"};
   var svcSel=document.getElementById('svc'), citySel=document.getElementById('city');
   var gridRes=document.getElementById('svcgrid-res'), gridCom=document.getElementById('svcgrid-com');
   function $(id){return document.getElementById(id)||{textContent:'',innerHTML:'',value:'',setAttribute:function(){},getAttribute:function(){return null;}};}
@@ -809,7 +810,7 @@ footer a{color:#fff}
       if(o.g!==groupName) return;
       if(k===cur) return;
       var img=PHOTOS[k]||'';
-      html+='<a class="svc2" href="roof-replacement-metairie.html?svc='+encodeURIComponent(k)+'" data-s="'+k+'">'
+      html+='<a class="svc2" href="'+SLUG_FILE[k]+'" data-s="'+k+'">'
           +'<div class="head"><img src="'+img+'" alt="'+o.n+' in '+c+'" loading="lazy"></div>'
           +'<div class="body">'
           +'<h3>'+o.n+' in '+c+'</h3>'
@@ -1003,7 +1004,7 @@ footer a{color:#fff}
     var slug = citySel.value.toLowerCase().replace(/\./g,'').replace(/\s+/g,'-');
     if (slug === 'metairie' || slug === 'baton-rouge') {
       var file = location.pathname.split('/').pop();
-      var base = file.replace(/-(metairie|baton-rouge)\.html$/, '');
+      var base = file.replace(/-(metairie|baton-rouge|covington)\.html$/, '');
       if (base !== file) { location.href = base + '-' + slug + '.html'; return; }
     }
     sync();

@@ -774,6 +774,7 @@ footer a{color:#fff}
     "sof-install":{n:"Soffit Installation",g:"Soffit",u:"soffit-services/soffit-installation/",ic:"img/brand/ico-repair.png",d:"New soffit, vented for the roof it sits under."},
     "sof-repair":{n:"Soffit Repair",g:"Soffit",u:"soffit-services/soffit-repair/",ic:"img/brand/ico-repair.png",d:"Damaged or sagging soffit repaired at the eave."}
   };
+  var SLUG_FILE={"res-replacement":"roof-replacement-covington.html","res-repairs":"roof-repairs-covington.html","res-inspection":"roof-inspection-covington.html","res-hail":"hail-damage-roof-repair-covington.html","res-storm":"storm-damage-roof-repair-covington.html","res-storm-response":"storm-damage-emergency-response-covington.html","res-emergency":"emergency-roof-repair-covington.html","res-leak":"roof-leak-detection-covington.html","res-maintenance":"roof-maintenance-covington.html","res-coating":"roof-coating-covington.html","res-ventilation":"roof-ventilation-covington.html","res-weatherproofing":"roof-weatherproofing-covington.html","res-restoration":"roof-restoration-covington.html","res-flashing":"roof-flashing-repair-covington.html","res-fascia":"fascia-board-repair-covington.html","res-gutter-install":"gutter-installation-covington.html","res-gutter-repair":"gutter-repair-covington.html","res-siding":"siding-installation-covington.html","res-asbestos":"asbestos-roof-removal-covington.html","res-insurance":"roof-insurance-claims-covington.html","com-replacement":"commercial-roof-replacement-covington.html","com-repairs":"commercial-roof-repairs-covington.html","com-inspections":"commercial-roof-inspections-covington.html","com-hail":"commercial-hail-damage-repair-covington.html","com-reroof":"commercial-re-roofing-covington.html","com-coating":"commercial-roof-coating-covington.html","com-elastomeric":"commercial-elastomeric-coatings-covington.html","com-ventilation":"commercial-roof-ventilation-covington.html","com-leak":"commercial-roof-leak-detection-covington.html","com-siding":"commercial-siding-installation-covington.html","sof-install":"soffit-installation-covington.html","sof-repair":"soffit-repair-covington.html"};
   var svcSel=document.getElementById('svc'), citySel=document.getElementById('city');
   var gridRes=document.getElementById('svcgrid-res'), gridCom=document.getElementById('svcgrid-com');
   function $(id){return document.getElementById(id)||{textContent:'',innerHTML:'',value:'',setAttribute:function(){},getAttribute:function(){return null;}};}
@@ -822,7 +823,7 @@ footer a{color:#fff}
       if(o.g!==groupName) return;
       if(k===cur) return;
       var img=PHOTOS[k]||'';
-      html+='<a class="svc2" href="roof-replacement-metairie.html?svc='+encodeURIComponent(k)+'" data-s="'+k+'">'
+      html+='<a class="svc2" href="'+SLUG_FILE[k]+'" data-s="'+k+'">'
           +'<div class="head"><img src="'+img+'" alt="'+o.n+' in '+c+'" loading="lazy"></div>'
           +'<div class="body">'
           +'<h3>'+o.n+' in '+c+'</h3>'
