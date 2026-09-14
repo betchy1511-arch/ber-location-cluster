@@ -497,7 +497,7 @@ footer a{color:#fff}
     <div class="spec"><h4>Typical duration</h4><div class="v">1 to 2 days</div><p>Time on site from taking the old runs down to splash blocks in place, depending on linear footage, access and how many downspout drops are going in.</p></div>
     <div class="spec"><h4>Who issues the permit</h4><div class="v" id="v-auth">East Baton Rouge Parish</div><p id="v-auth-p">The parish is the permitting authority for Baton Rouge addresses, but gutters are not a roof covering, so a gutter installation does not trigger the re roofing rule that came in during 2025 and no permit is pulled for gutter work on its own.</p></div>
     <div class="spec"><h4>Materials fitted</h4><div class="v" id="v-code">4 systems</div><p id="v-code-p">Seamless 5 inch and 6 inch K style aluminium, galvanised steel, and half round copper on historic or slate roofed houses. We do not fit vinyl, which gives roughly five to ten years on the Gulf coast before it goes brittle.</p></div>
-    <div class="spec"><h4>What sets the size</h4><div class="v" id="v-fee">Roof area and rainfall</div><p id="v-fee-p">A gutter is sized from the roof area draining into it against the rainfall rate it has to carry. NOAA records a 100 year recurrence rainfall rate of 4.0 inches per hour for Baton Rouge Ryan Field, which is what tightens the downspout spacing here.</p></div>
+    <div class="spec"><h4>What sets the size</h4><div class="v" id="v-fee">Roof area and rainfall</div><p id="v-fee-p">A gutter is sized from the roof area draining into it against the rainfall rate it has to carry. NOAA records a 100 year recurrence rainfall rate of 4.0 inches per hour for Baton Rouge Ryan Field, which is a measure of how hard the rain here can fall.</p></div>
     <div class="spec"><h4>Warranty</h4><div class="v" id="v-insp">20 yr paint</div><p id="v-insp-p">Aluminium coil stock normally carries a manufacturer paint warranty of around twenty years, and our workmanship warranty covers the hanging, the seams and the outlets. The paint terms are the manufacturer's, so we confirm what they require before starting.</p></div>
   </div>
   <p class="tbl-note" style="background:#fff">Every figure on this page is an estimate, not a quote, and is subject to Big Easy Roofing sign off. Cost and timescale depend on size, pitch, access, weather, materials and whatever is found once work starts, so <a href="tel:+15048008196">call Big Easy Roofing on (504) 800-8196</a> and we will come out and give you an estimate for your own roof.</p>
@@ -1061,13 +1061,15 @@ footer a{color:#fff}
 
   svcSel.addEventListener('change',sync);
   citySel.addEventListener('change',function(){
-    // Only Metairie and Baton Rouge have built pages. For those, go to the real page
+    // Only cities with a complete 32 page set are listed. For those, go to the real page
     // rather than reskinning this one, because sync() cannot rewrite the body copy.
     var slug = citySel.value.toLowerCase().replace(/\./g,'').replace(/\s+/g,'-');
-    if (slug === 'metairie' || slug === 'baton-rouge') {
+    if (['metairie','baton-rouge','covington','gretna','hammond'].indexOf(slug) !== -1) {
       var file = location.pathname.split('/').pop();
-      var base = file.replace(/-(metairie|baton-rouge|covington)\.html$/, '');
-      if (base !== file) { location.href = base + '-' + slug + '.html'; return; }
+      var base = file.replace(/-(metairie|baton-rouge|covington|gretna|hammond|harahan)\.html$/, '');
+      var LEGACY={"metairie":{"emergency-roof-repair":"emergency-roofing","storm-damage-roof-repair":"storm-damage"}};
+      var realBase=(LEGACY[slug] && LEGACY[slug][base]) || base;
+      if (base !== file) { location.href = realBase + '-' + slug + '.html'; return; }
     }
     sync();
   });
