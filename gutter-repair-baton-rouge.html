@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23071018'/><path d='M5 18L16 8l11 10v7H5z' fill='%23ffeb01'/></svg>">
-<title>Gutter Repair Baton Rouge LA | Sized Against 4.0 in/hr Rain</title>
+<title>Gutter Repair Baton Rouge LA | Capacity, Not Cleanliness</title>
 <meta name="description" content="Gutter repair in Baton Rouge. Sagging runs, leaking seams, blocked downspouts and fascia rot, priced per defect from $150. Call (504) 800-8196.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -478,7 +478,7 @@ footer a{color:#fff}
     <div class="go"><a class="btn btn-y" href="#specs">Learn More</a></div>
   </div>
 
-  <div class="statline"><div class="stat"><b>$150 to $600</b><span>Estimated per defect</span></div><div class="stat"><b id="s-permit">1 visit</b><span id="s-permit-l">Typical gutter repair</span></div><div class="stat"><b>No permit</b><span>Repair, not construction</span></div><div class="stat"><b>4.0 in/hr</b><span>What gutters size against</span></div></div>
+  <div class="statline"><div class="stat"><b>$150 to $600</b><span>Estimated per defect</span></div><div class="stat"><b id="s-permit">1 visit</b><span id="s-permit-l">Typical gutter repair</span></div><div class="stat"><b>No permit</b><span>Repair, not construction</span></div><div class="stat"><b>4.0 in/hr</b><span>What capacity is judged against</span></div></div>
 </div></header>
 
 <nav class="subnav" aria-label="Page sections"><div class="wrap">
@@ -497,7 +497,7 @@ footer a{color:#fff}
     <div class="spec"><h4>Multi defect visit</h4><div class="v">$600 to $1,800</div><p>Two or more defects on the same visit, such as several sagging runs, a few failed seams and a torn end cap, priced as one bundled scope rather than as separate call outs.</p></div>
     <div class="spec"><h4>Who issues the permit</h4><div class="v" id="v-auth">East Baton Rouge Parish</div><p id="v-auth-p">The parish is the permitting authority for Baton Rouge addresses, but a gutter repair is not a roof covering change, so the re roofing rule that came in during 2025 does not reach it and no permit is pulled for a repair only visit. Where a job grows beyond the gutter we confirm the position with the parish before starting.</p></div>
     <div class="spec"><h4>Repair or replace</h4><div class="v" id="v-code">Under 3 defects</div><p id="v-code-p">Under three defects on an otherwise sound run usually means a repair. Three or more on the same run usually means the sealant, the coil stock or the fascia fixing behind it is at the end of its life, and replacing that run is the better value.</p></div>
-    <div class="spec"><h4>What gutters size against</h4><div class="v" id="v-fee">4.0 in/hr</div><p id="v-fee-p">NOAA records a 100 year recurrence rainfall rate of 4.0 inches per hour for Baton Rouge Ryan Field. Gutter capacity is worked out from the roof area feeding a run and the rainfall rate it is sized against, which is why a run that copes in a gentler climate can struggle here.</p></div>
+    <div class="spec"><h4>What capacity is judged against</h4><div class="v" id="v-fee">4.0 in/hr</div><p id="v-fee-p">NOAA records a 100 year recurrence rainfall rate of 4.0 inches per hour for Baton Rouge Ryan Field. Gutter capacity is worked out from the roof area feeding a run and the rainfall rate it has to carry, which is why a run that copes in a gentler climate can struggle here.</p></div>
     <div class="spec"><h4>Warranty</h4><div class="v" id="v-insp">1 yr workmanship</div><p id="v-insp-p">One year workmanship warranty on the repair we carry out, whether that is the sealant, the hangers, the re seat on the fascia or a replacement run.</p></div>
   </div>
   <p class="tbl-note" style="background:#fff">Every figure on this page is an estimate, not a quote, and is subject to Big Easy Roofing sign off. Cost and timescale depend on size, pitch, access, weather, materials and whatever is found once work starts, so <a href="tel:+15048008196">call Big Easy Roofing on (504) 800-8196</a> and we will come out and give you an estimate for your own roof.</p>
@@ -1062,13 +1062,15 @@ footer a{color:#fff}
 
   svcSel.addEventListener('change',sync);
   citySel.addEventListener('change',function(){
-    // Only Metairie and Baton Rouge have built pages. For those, go to the real page
+    // Only cities with a complete 32 page set are listed. For those, go to the real page
     // rather than reskinning this one, because sync() cannot rewrite the body copy.
     var slug = citySel.value.toLowerCase().replace(/\./g,'').replace(/\s+/g,'-');
-    if (slug === 'metairie' || slug === 'baton-rouge') {
+    if (['metairie','baton-rouge','covington','gretna','hammond'].indexOf(slug) !== -1) {
       var file = location.pathname.split('/').pop();
-      var base = file.replace(/-(metairie|baton-rouge|covington)\.html$/, '');
-      if (base !== file) { location.href = base + '-' + slug + '.html'; return; }
+      var base = file.replace(/-(metairie|baton-rouge|covington|gretna|hammond|harahan)\.html$/, '');
+      var LEGACY={"metairie":{"emergency-roof-repair":"emergency-roofing","storm-damage-roof-repair":"storm-damage"}};
+      var realBase=(LEGACY[slug] && LEGACY[slug][base]) || base;
+      if (base !== file) { location.href = realBase + '-' + slug + '.html'; return; }
     }
     sync();
   });
