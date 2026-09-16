@@ -397,7 +397,7 @@ footer a{color:#fff}
 
 <!-- ============ HERO ============ -->
 <header class="console" id="top">
-  <div class="bg" style="background-image:url('img/photo/hail-storm.jpg')"></div>
+  <div class="bg" style="background-image:url('img/photo/hail.jpg')"></div>
   <div class="scrim"></div>
   <div class="wrap">
   <h1><span class="b" id="h-service">Commercial Hail Damage Repair</span> in <span id="h-city">Harahan, LA</span></h1>
@@ -1017,7 +1017,7 @@ footer a{color:#fff}
     var slug = citySel.value.toLowerCase().replace(/\./g,'').replace(/\s+/g,'-');
     if (['metairie','baton-rouge','covington','gretna','hammond'].indexOf(slug) !== -1) {
       var file = location.pathname.split('/').pop();
-      var base = file.replace(/-(metairie|baton-rouge|covington|gretna|hammond|harahan)\.html$/, '');
+      var base = file.replace(/-(metairie|baton-rouge|covington|gretna|hammond|harahan|kenner)\.html$/, '');
       var LEGACY={"metairie":{"emergency-roof-repair":"emergency-roofing","storm-damage-roof-repair":"storm-damage"}};
       var realBase=(LEGACY[slug] && LEGACY[slug][base]) || base;
       if (base !== file) { location.href = realBase + '-' + slug + '.html'; return; }
