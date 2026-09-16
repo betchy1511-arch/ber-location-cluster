@@ -403,7 +403,7 @@ footer a{color:#fff}
   <div class="scrim"></div>
   <div class="wrap">
   <h1><span class="b" id="h-service">Roof Replacement</span> in <span id="h-city">Harahan, LA</span></h1>
-  <p class="sub" id="h-sub">Big Easy Roofing replaces roofs across <a href="https://www.bigeasyroofing.com/service-areas/louisiana/harahan/" style="font-weight: bold; text-decoration: underline;">Harahan and east bank Jefferson Parish</a>, with the price written down before tear off begins. Harahan is the one address in this region where the postal code genuinely does not tell you who permits your roof, because ZIP 70123 covers the city and two unincorporated communities at the same time.</p>
+  <p class="sub" id="h-sub">Big Easy Roofing replaces roofs across <a href="https://www.bigeasyroofing.com/service-areas/louisiana/harahan/" style="font-weight: bold; text-decoration: underline;">Harahan and east bank Jefferson Parish</a>, with the price written down before tear off begins. In Harahan the postal code does not tell you who permits your roof, because ZIP 70123 covers the city and two unincorporated communities at the same time.</p>
 
   <div class="herocta">
     <a class="btn btn-y" href="https://www.bigeasyroofing.com/contact/">Get Your FREE Quote</a>
@@ -1017,7 +1017,7 @@ footer a{color:#fff}
     var slug = citySel.value.toLowerCase().replace(/\./g,'').replace(/\s+/g,'-');
     if (['metairie','baton-rouge','covington','gretna','hammond'].indexOf(slug) !== -1) {
       var file = location.pathname.split('/').pop();
-      var base = file.replace(/-(metairie|baton-rouge|covington|gretna|hammond|harahan)\.html$/, '');
+      var base = file.replace(/-(metairie|baton-rouge|covington|gretna|hammond|harahan|kenner)\.html$/, '');
       var LEGACY={"metairie":{"emergency-roof-repair":"emergency-roofing","storm-damage-roof-repair":"storm-damage"}};
       var realBase=(LEGACY[slug] && LEGACY[slug][base]) || base;
       if (base !== file) { location.href = realBase + '-' + slug + '.html'; return; }
