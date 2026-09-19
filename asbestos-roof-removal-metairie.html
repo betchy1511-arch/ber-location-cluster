@@ -491,7 +491,7 @@ footer a{color:#fff}
   <div class="tex" style="background-image:url('img/photo/tex-granules.jpg')"></div>
   <div class="wrap">
   <div class="sechead"><h2><span class="b" id="t-specs">Metairie asbestos roof removal</span> at a glance</h2>
-  <p class="bluf">Asbestos roof removal in Metairie starts with a sample, not a quote. Testing decides whether the job is an ordinary tear off or a licensed abatement, and the laboratory result, the roof size and the disposal route set the price. Call Big Easy Roofing and we will come out and give you an estimate.</p></div>
+  <p class="bluf">Asbestos roof removal in Metairie starts with a sample, not a quote. Testing decides whether the job is an ordinary tear off or a licensed abatement, and the laboratory result, the roof size and the disposal route set the price. Call <a href="https://www.bigeasyroofing.com/" style="font-weight: bold; text-decoration: underline;">Big Easy Roofing</a> and we will come out and give you an estimate.</p></div>
   <div class="specgrid">
     <div class="spec"><h4>Removal cost</h4><div class="v">Call for an estimate</div><p>Every asbestos roof is priced individually from the laboratory result, the measured area and the disposal route, as a line on top of the new roof that replaces it. Call Big Easy Roofing on (504) 800-8196 and we will come out and give you an estimate.</p></div>
     <div class="spec"><h4>Estimated bulk sample</h4><div class="v">$50 to $150 each</div><p>Polarized light microscopy on a physical sample of each distinct material. A roof usually needs two or three samples: the covering, the felt or underlayment beneath it, and any mastic.</p></div>
@@ -515,7 +515,7 @@ footer a{color:#fff}
   <div class="sechead"><h2>What is on a Metairie roof <span class="b" id="t-compare">and how it gets identified</span></h2>
   <p class="bluf">Four materials account for almost every asbestos finding on a Metairie roof, and each is handled differently. The table below sets out what each one is, how it is confirmed, and what removing it involves. Every row assumes a laboratory result on a physical sample rather than a visual guess.</p></div>
   <div class="tblwrap"><table class="tbl">
-    <thead><tr><th>Material</th><th>How it is confirmed</th><th>Estimated removal</th><th>Federal category if intact</th></tr></thead>
+    <thead><tr><th>Material</th><th>How it is confirmed</th><th>Estimated removal</th><th>EPA category if intact</th></tr></thead>
     <tbody>
       <tr><th class="best">Asbestos cement sheet or shingle</th><td class="best">Bulk sample analysed by polarized light microscopy, one per distinct material</td><td class="money best">Call for an estimate</td><td class="best">Category II nonfriable</td></tr>
       <tr><th>Asphalt roofing felt or built up felt</th><td>Bulk sample from each felt layer, which may differ from the cap sheet</td><td class="money">Call for an estimate</td><td>Category I nonfriable</td></tr>
@@ -706,7 +706,7 @@ footer a{color:#fff}
   <div class="pcard">
     <div class="pcopy">
       <h2 id="t-cta"><span class="b">Get your Metairie roof</span> sampled before anyone quotes it</h2>
-      <p id="p-cta">Free site visit at the address, sampling of every distinct material by a qualified asbestos professional, and a written scope with the removal method, the disposal route and a fixed price once the laboratory result is in.</p>
+      <p id="p-cta">Free site visit at the address, sampling of every distinct material by a qualified asbestos professional, and a written scope with the removal method, the disposal route and a fixed price once the laboratory result is in. If you would rather start in writing, <a href="https://www.bigeasyroofing.com/contact/" style="font-weight: bold; text-decoration: underline;">tell us what the job involves</a> and we will come back with an estimate.</p>
       <a class="btn btn-y" href="tel:+15048008196">Call (504) 800-8196</a>
     </div>
     <div class="pshots" aria-hidden="true">
@@ -965,7 +965,7 @@ footer a{color:#fff}
     $('t-compare').textContent='for a '+c+' roof';
     $('t-bestfor').textContent='Most '+c+' homeowners staying put';
     $('t-more').textContent='in '+c;
-    $('p-more').innerHTML='The rest of the Big Easy Roofing services available in '+c+', each with its own page, crew and written scope. Where a roof does not need <a href="https://www.bigeasyroofing.com/roof-replacement/" style="font-weight: bold; text-decoration: underline;">a full roof replacement</a>, a repair, an inspection or gutter work is usually the cheaper honest answer.';
+    $('p-more').innerHTML='The rest of the Big Easy Roofing services available in '+c+', each with its own page, crew and written scope. Where a roof does not need <a href="https://www.bigeasyroofing.com/service-areas/louisiana/'+c.toLowerCase().replace(/\./g,"").replace(/\s+/g,"-")+'/roof-replacement/" style="font-weight: bold; text-decoration: underline;">a full roof replacement</a>, a repair, an inspection or gutter work is usually the cheaper honest answer.';
     $('p-faq').textContent='The questions '+c+' homeowners actually ask us about '+sl+', answered before you have to pick up the phone.';
     $('t-faq').innerHTML=c+' '+s+' <span class="b">FAQs</span>';
     $('q1').textContent='How much does a new roof cost in '+c;
@@ -1018,13 +1018,15 @@ footer a{color:#fff}
 
   svcSel.addEventListener('change',sync);
   citySel.addEventListener('change',function(){
-    // Only Metairie and Baton Rouge have built pages. For those, go to the real page
+    // Only cities with a complete 32 page set are listed. For those, go to the real page
     // rather than reskinning this one, because sync() cannot rewrite the body copy.
     var slug = citySel.value.toLowerCase().replace(/\./g,'').replace(/\s+/g,'-');
-    if (slug === 'metairie' || slug === 'baton-rouge') {
+    if (['metairie','baton-rouge','covington','gretna','hammond'].indexOf(slug) !== -1) {
       var file = location.pathname.split('/').pop();
-      var base = file.replace(/-(metairie|baton-rouge)\.html$/, '');
-      if (base !== file) { location.href = base + '-' + slug + '.html'; return; }
+      var base = file.replace(/-(metairie|baton-rouge|covington|gretna|hammond|harahan|kenner)\.html$/, '');
+      var LEGACY={"metairie":{"emergency-roof-repair":"emergency-roofing","storm-damage-roof-repair":"storm-damage"}};
+      var realBase=(LEGACY[slug] && LEGACY[slug][base]) || base;
+      if (base !== file) { location.href = realBase + '-' + slug + '.html'; return; }
     }
     sync();
   });

@@ -553,7 +553,7 @@ footer a{color:#fff}
       <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
       <h3>The three conditions</h3>
       <div class="val">On the discount</div>
-      <p>The R.S. 22:1483 discount runs on three conditions: the certificate is issued by an IBHS certified inspector, it is presented to the insurer BEFORE any adjustment takes effect, and the policy actually provides wind coverage. All three matter, and the second is a timing trap because retrofit work done before an inspector is engaged does not become certifiable in arrears.</p>
+      <p>The R.S. 22:1483 discount runs on three conditions: the certificate is issued by an IBHS-trained Evaluator, it is presented to the insurer BEFORE any adjustment takes effect, and the policy actually provides wind coverage. All three matter, and the second is a timing trap because retrofit work done before an inspector is engaged does not become certifiable in arrears.</p>
     </div>
   </div>
   <div class="ncards two">
@@ -1022,7 +1022,7 @@ footer a{color:#fff}
     var slug = citySel.value.toLowerCase().replace(/\./g,'').replace(/\s+/g,'-');
     if (['metairie','baton-rouge','covington','gretna','hammond'].indexOf(slug) !== -1) {
       var file = location.pathname.split('/').pop();
-      var base = file.replace(/-(metairie|baton-rouge|covington|gretna|hammond|harahan)\.html$/, '');
+      var base = file.replace(/-(metairie|baton-rouge|covington|gretna|hammond|harahan|kenner)\.html$/, '');
       var LEGACY={"metairie":{"emergency-roof-repair":"emergency-roofing","storm-damage-roof-repair":"storm-damage"}};
       var realBase=(LEGACY[slug] && LEGACY[slug][base]) || base;
       if (base !== file) { location.href = realBase + '-' + slug + '.html'; return; }
