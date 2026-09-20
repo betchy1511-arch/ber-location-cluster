@@ -512,9 +512,9 @@ footer a{color:#fff}
   <div class="tex" style="background-image:url('img/photo/tex-shingle.jpg')"></div>
   <div class="wrap">
   <div class="sechead"><h2>What is actually up there <span class="b" id="t-compare">and how each one is handled</span></h2>
-  <p class="bluf">Four materials get sampled on a roof and they are not handled the same way. The fifth row is not a material, it is what a guess looks like. The last column matters more than it looks, because the federal category decides the removal method, and the method is the part a cheap quote cuts first.</p></div>
+  <p class="bluf">Four materials get sampled on a roof and they are not handled the same way. The fifth row is not a material, it is what a guess looks like. The last column matters more than it looks, because the EPA category decides the removal method, and the method is the part a cheap quote cuts first.</p></div>
   <div class="tblwrap"><table class="tbl">
-    <thead><tr><th>Material</th><th>How it is confirmed</th><th>Estimated removal</th><th>Federal category if intact</th></tr></thead>
+    <thead><tr><th>Material</th><th>How it is confirmed</th><th>Estimated removal</th><th>EPA category if intact</th></tr></thead>
     <tbody>
       <tr><th class="best">Cement sheet or shingle, the grey product called transite</th><td class="best">One or more bulk samples, the count and the positions set by whoever is sampling</td><td class="money best">Priced per roof</td><td class="best">Category II nonfriable while it stays whole</td></tr>
       <tr><th>Roofing felt, including each layer of a built up roof</th><td>Each felt layer sampled in its own right, since a cap sheet can test differently</td><td class="money">Priced per roof</td><td>Category I nonfriable while it stays whole</td></tr>
@@ -560,7 +560,7 @@ footer a{color:#fff}
   </div>
   <div class="ncards two">
     <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 5.4 6 .9-4.3 4.2 1 6-5.3-2.8L6.7 18.5l1-6L3.4 8.3l6-.9z"/><path d="M8 21.5h8"/></svg></span><h3>What a compliant quote looks like</h3><p>It names the laboratory and the analysis method, it lists how many samples are being taken and of what, and it separates the abatement from the replacement roof rather than folding them into one number. It also names where the waste is going, and who holds the classification for the abatement itself.</p><p>You should end up holding three documents: the laboratory report, the waste record, and photographs of the roof before and after. Those are the record of what was found and where it went, and they are worth keeping with the deeds rather than in a drawer.</p></div>
-    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h2.4l1.3-2h6.6l1.3 2H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.4"/></svg></span><h3>What turns a contained job into a regulated one</h3><p>Method. Intact, both families are nonfriable and the work is contained. An asphalt roofing product that has been sanded, ground, cut or abraded, or a cement product with a high probability of being crumbled or reduced to powder by the forces acting on it, is caught by the regulated definition.</p><p>That is not a technicality. A crew arriving with a circular saw and a skip can move a roof from one category to the other in an afternoon, and it is the homeowner who is left with the site and with the disposal problem, not the crew.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h2.4l1.3-2h6.6l1.3 2H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.4"/></svg></span><h3>What turns a contained job into a regulated one</h3><p>Method, and the classification is the EPA's rather than OSHA's. Intact, both families are nonfriable and the work is contained. An asphalt roofing product that has been sanded, ground, cut or abraded, or a cement product with a high probability of being crumbled or reduced to powder by the forces expected to act on it, is caught by the definition of regulated asbestos containing material at 40 CFR 61.141. Two rulebooks meet here: the EPA sets the classification, OSHA sets the work practices on the roof.</p><p>That is not a technicality. A crew arriving with a circular saw and a skip can move a roof from one category to the other in an afternoon, and it is the homeowner who is left with the site and with the disposal problem, not the crew.</p></div>
   </div>
   <div class="seccta">
     <a class="btn btn-y" href="https://www.bigeasyroofing.com/contact/">Get Your FREE Quote</a>
@@ -1016,7 +1016,7 @@ footer a{color:#fff}
     var slug = citySel.value.toLowerCase().replace(/\./g,'').replace(/\s+/g,'-');
     if (['metairie','baton-rouge','covington','gretna','hammond'].indexOf(slug) !== -1) {
       var file = location.pathname.split('/').pop();
-      var base = file.replace(/-(metairie|baton-rouge|covington|gretna|hammond|harahan)\.html$/, '');
+      var base = file.replace(/-(metairie|baton-rouge|covington|gretna|hammond|harahan|kenner)\.html$/, '');
       var LEGACY={"metairie":{"emergency-roof-repair":"emergency-roofing","storm-damage-roof-repair":"storm-damage"}};
       var realBase=(LEGACY[slug] && LEGACY[slug][base]) || base;
       if (base !== file) { location.href = realBase + '-' + slug + '.html'; return; }
