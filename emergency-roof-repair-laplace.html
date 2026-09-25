@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23071018'/><path d='M5 18L16 8l11 10v7H5z' fill='%23ffeb01'/></svg>">
-<title>Roof Replacement LaPlace LA | Parish Permit Filed in LaPlace</title>
-<meta name="description" content="Roof replacement in LaPlace LA. St. John the Baptist Parish permits are filed at 1811 W. Airline in LaPlace itself. Call (504) 800-8196.">
+<title>Emergency Roof Repair LaPlace LA | Water First, Permit After</title>
+<meta name="description" content="Emergency roof repair in LaPlace LA. The parish emergency inspection line is generally for electrical issues, so call a roofer for a leak. (504) 800-8196.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -254,8 +254,10 @@ section{padding:58px 0;position:relative;isolation:isolate}
 .svcpanel{width:50%;flex:0 0 50%;box-sizing:border-box;padding:6px 2px 2px}
 .svctrack.show-com{transform:translateX(-50%)}
 .svcgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-@media(max-width:900px){.svcgrid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.svcgrid{grid-template-columns:1fr}}
+/* Centre an orphan card when the last row has only 1 (e.g. 10 items in 3 cols, 16 items in 3 cols) */
+.svcgrid > .svc2:last-child:nth-child(3n+1){grid-column:2 / 3}
+@media(max-width:900px){.svcgrid{grid-template-columns:repeat(2,1fr)} .svcgrid > .svc2:last-child:nth-child(3n+1){grid-column:auto}}
+@media(max-width:560px){.svcgrid{grid-template-columns:1fr} .svcgrid > .svc2:last-child:nth-child(3n+1){grid-column:auto}}
 
 /* Photo-topped service card */
 .svc2{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none;color:inherit;transform-style:preserve-3d;
@@ -394,16 +396,16 @@ footer a{color:#fff}
 </div></nav>
 
 <div class="crumbs"><div class="wrap">
-  <span>Home</span><i>/</i><a href="https://www.bigeasyroofing.com/service-areas/">Service Areas</a><i>/</i><a href="https://www.bigeasyroofing.com/service-areas/louisiana/">Louisiana</a><i>/</i><a href="#top" id="crumb-city">LaPlace</a><i>/</i><b id="crumb-service">Roof Replacement</b>
+  <span>Home</span><i>/</i><a href="https://www.bigeasyroofing.com/service-areas/">Service Areas</a><i>/</i><a href="https://www.bigeasyroofing.com/service-areas/louisiana/">Louisiana</a><i>/</i><a href="#top" id="crumb-city">LaPlace</a><i>/</i><b id="crumb-service">Emergency Roof Repair</b>
 </div></div>
 
 <!-- ============ HERO ============ -->
 <header class="console" id="top">
-  <div class="bg" style="background-image:url('img/photo/hero-replacement.jpg')"></div>
+  <div class="bg" style="background-image:url('img/photo/tarp.jpg')"></div>
   <div class="scrim"></div>
   <div class="wrap">
-  <h1><span class="b" id="h-service">Roof Replacement</span> in <span id="h-city">LaPlace, LA</span></h1>
-  <p class="sub" id="h-sub">Big Easy Roofing replaces roofs across <a href="https://www.bigeasyroofing.com/service-areas/louisiana/laplace/" style="font-weight: bold; text-decoration: underline;">LaPlace and the east bank of St. John the Baptist Parish</a>, with the price written down before tear off begins. LaPlace is an unincorporated community of 28,841 people, and the St. John the Baptist Parish government building sits inside the town itself, so a LaPlace reroof permit is filed at the parish level but at your own address rather than a distant seat.</p>
+  <h1><span class="b" id="h-service">Emergency Roof Repair</span> in <span id="h-city">LaPlace, LA</span></h1>
+  <p class="sub" id="h-sub">Big Easy Roofing covers emergency call outs across <a href="https://www.bigeasyroofing.com/service-areas/louisiana/laplace/" style="font-weight: bold; text-decoration: underline;">LaPlace and the east bank of St. John the Baptist Parish</a>. The parish publishes an emergency inspection line, and it is generally for electrical issues, with roof leaks not among the causes it lists. So the water is stopped first, and any permanent roof work that needs a permit goes to the Permit Division once it is open.</p>
 
   <div class="herocta">
     <a class="btn btn-y" href="https://www.bigeasyroofing.com/contact/">Get Your FREE Quote</a>
@@ -415,13 +417,13 @@ footer a{color:#fff}
       <label for="svc">Service</label>
       <select id="svc">
         <optgroup label="Residential">
-          <option value="res-replacement" selected>Roof Replacement</option>
+          <option value="res-replacement">Roof Replacement</option>
           <option value="res-repairs">Roof Repairs</option>
           <option value="res-inspection">Roof Inspection</option>
           <option value="res-hail">Hail Damage Roof Repair</option>
           <option value="res-storm">Storm Damage Roof Repair</option>
           <option value="res-storm-response">Storm Damage Emergency Response</option>
-          <option value="res-emergency">Emergency Roofing</option>
+          <option value="res-emergency" selected>Emergency Roofing</option>
           <option value="res-leak">Roof Leak Detection</option>
           <option value="res-maintenance">Roof Maintenance</option>
           <option value="res-coating">Roof Coating</option>
@@ -476,11 +478,11 @@ footer a{color:#fff}
     <div class="go"><a class="btn btn-y" href="#specs">Learn More</a></div>
   </div>
 
-  <div class="statline"><div class="stat"><b>$7k to $18k</b><span>Estimated full replacement</span></div><div class="stat"><b id="s-permit">MGO or in person</b><span id="s-permit-l">How St. John Parish takes applications</span></div><div class="stat"><b>1811 W. Airline</b><span>Parish government building in LaPlace</span></div><div class="stat"><b>One day</b><span>Most single family roofs</span></div></div>
+  <div class="statline"><div class="stat"><b>$250 to $1,200</b><span>Estimated make safe visit</span></div><div class="stat"><b id="s-permit">Weekdays 8 to 4:30</b><span id="s-permit-l">St. John Parish Permit Division hours</span></div><div class="stat"><b>Electrical</b><span>What the parish emergency line is generally for</span></div><div class="stat"><b>Photographed</b><span>Before anything is covered up</span></div></div>
 </div></header>
 
 <nav class="subnav" aria-label="Page sections"><div class="wrap">
-  <div class="tabs"><a href="#specs" class="on">Specs</a><a href="#compare">Compare materials</a><a href="#permit">Permit and code</a><a href="#process">Process</a><a href="#more">Other services</a><a href="#faq">FAQ</a></div>
+  <div class="tabs"><a href="#specs" class="on">Specs</a><a href="#compare">What make safe covers</a><a href="#permit">Permit and timing</a><a href="#process">Process</a><a href="#more">Other services</a><a href="#faq">FAQ</a></div>
   <span class="btn btn-b">Free inspection</span>
 </div></nav>
 
@@ -488,19 +490,19 @@ footer a{color:#fff}
 <section id="specs" class="sec-cream">
   <div class="tex" style="background-image:url('img/photo/tex-granules.jpg')"></div>
   <div class="wrap">
-  <div class="sechead"><h2><span class="b" id="t-specs">LaPlace roof replacement</span> at a glance</h2>
-  <p class="bluf">A full asphalt replacement on a LaPlace house is estimated at $7,000 to $18,000. LaPlace is an unincorporated community in St. John the Baptist Parish, and the parish government building at 1811 W. Airline Highway sits inside LaPlace itself, so the permit for a LaPlace reroof is a parish permit filed at a LaPlace address.</p></div>
+  <div class="sechead"><h2><span class="b" id="t-specs">LaPlace emergency roof repair</span> at a glance</h2>
+  <p class="bluf">An emergency call out is make safe work. Its job is to stop water entering the house and to record what was found, not to carry out the permanent repair in the rain. The permanent repair is a separate job, scoped in daylight and filed with St. John the Baptist Parish during weekday office hours.</p></div>
   <div class="specgrid">
-    <div class="spec"><h4>LaPlace is unincorporated but the parish is in LaPlace itself</h4><div class="v" id="v-dept">Parish government in LaPlace</div><p id="v-dept-p">St. John the Baptist Parish runs permit review out of the government building at 1811 W. Airline Highway, and that building is inside LaPlace itself. A LaPlace resident files at the parish, and they file it at the same town they live in.</p></div>
-    <div class="spec"><h4>The application goes through MyGovernmentOnline</h4><div class="v" id="v-mgo">MGO portal or in person</div><p id="v-mgo-p">The Parish Planning and Zoning page directs applications to be submitted online at mgoconnect.org/cp/portal or in person at 1811 W. Airline Highway. Most cluster cities use MGO the same way; LaPlace is not the outlier here.</p></div>
-    <div class="spec"><h4>LaPlace is a large CDP</h4><div class="v" id="v-scale">28,841 people, 2020 census</div><p id="v-scale-p">LaPlace is the largest community in St. John the Baptist Parish, on the east bank of the Mississippi River about twenty five miles west of New Orleans. Unincorporated status is the norm for the parish, so a LaPlace mailing address is expected to be a parish permit, not a city one.</p></div>
-    <div class="spec"><h4>The parish fee comes with the review</h4><div class="v" id="v-fee">Cost varies, set by the parish</div><p id="v-fee-p">St. John the Baptist Parish publishes a permit fee sheet, and the residential re-roof line comes from that sheet at review rather than from a headline figure quoted before the paperwork goes in. Any number quoted before the application is a guess.</p></div>
-    <div class="spec"><h4>State law applies here too</h4><div class="v" id="v-law">R.S. 37:3737(I)</div><p id="v-law-p">Louisiana requires any municipality or parish that issues construction permits to permit and inspect roof construction and reroofing. St. John the Baptist Parish issues permits, so a LaPlace reroof is permitted under state law regardless of the parish's own fee structure.</p></div>
-    <div class="spec"><h4>The Mississippi and the highways bound the town</h4><div class="v" id="v-geo">East bank, elevation ten feet</div><p id="v-geo-p">LaPlace sits on the east bank of the Mississippi River at elevation ten feet, with Airline Highway and Interstate 10 running through the town. Low elevation and heavy rainfall put the covering choice and the drainage detail on the front line, and both sit inside the written scope of every LaPlace replacement.</p></div>
+    <div class="spec"><h4>Make safe is not the repair</h4><div class="v" id="v-two">Two jobs, two clocks</div><p id="v-two-p">The call out stops the water. The permanent repair is scoped, priced and permitted afterwards, with the covering opened up properly. A roofer who does both in one visit in bad weather is guessing at the second.</p></div>
+    <div class="spec"><h4>Estimated make safe visit</h4><div class="v" id="v-band">$250 to $1,200</div><p id="v-band-p">Driven by access, pitch, how much area has to be covered and whether the work can be done safely at that hour and in that weather. Every figure here is an estimate, not a quote.</p></div>
+    <div class="spec"><h4>The parish emergency line is generally for electrical issues</h4><div class="v" id="v-line">Roof leaks are not on its list</div><p id="v-line-p">St. John the Baptist Parish says its emergency inspections are generally for electrical issues such as Acts of God, vehicle impact, burnt lugs or fire, so the utility can reconnect power. It is not described as a roof repair route. A leak is our job.</p></div>
+    <div class="spec"><h4>The permit office keeps weekday hours</h4><div class="v" id="v-hours">Monday to Friday, 8am to 4:30pm</div><p id="v-hours-p">Those are the hours the Permit Division lists at 1811 W. Airline Highway in LaPlace. A roof that opens on a Saturday night will not wait for them, which is why stopping the water and filing for the permanent repair are two steps.</p></div>
+    <div class="spec"><h4>Photographs before anything is covered</h4><div class="v" id="v-photo">On the visit</div><p id="v-photo-p">Once a tarp is down, what was underneath it cannot be seen. Dated photographs taken before the make safe work are the only record of the failure as it happened.</p></div>
+    <div class="spec"><h4>What we will not tell you at 2am</h4><div class="v" id="v-cover">What your policy covers</div><p id="v-cover-p">Under R.S. 37:2159.1 a Louisiana roofing contractor may not interpret your insurance cover, and an emergency is when that line gets crossed carelessly. We record what happened and what we did. Your insurer decides the rest.</p></div>
   </div>
   <p class="tbl-note" style="background:#fff">Every figure on this page is an estimate, not a quote, and is subject to <span>Big Easy Roofing</span> sign off. Cost and timescale depend on size, pitch, access, weather, materials and whatever is found once work starts, so <span>call Big Easy Roofing on (504) 800-8196</span> and we will come out and give you an estimate for your own roof.</p>
   <div class="prose">
-    <p>Every figure on this page is an estimate, not a quote, and is subject to Big Easy Roofing sign off. Cost and timescale depend on size, pitch, access, weather, materials and whatever is found once the covering is off, so call Big Easy Roofing on <span>(504) 800-8196</span> for a written price.</p>
+    <p>Every figure on this page is an estimate, not a quote, and is subject to Big Easy Roofing sign off. For an emergency on a LaPlace roof call <span>(504) 800-8196</span>.</p>
   </div>
 </div></section>
 
@@ -508,55 +510,57 @@ footer a{color:#fff}
 <section id="compare">
   <div class="tex" style="background-image:url('img/photo/tex-shingle.jpg')"></div>
   <div class="wrap">
-  <div class="sechead"><h2>Four coverings, and what each <span class="b" id="t-compare">is really buying you</span></h2>
-  <p class="bluf">The covering choice on a LaPlace house is mostly a question of how long you intend to hold the property. Wind exposure and heavy rainfall push the wind rating and the flashing detail up the priority list; the covering itself is one line of a longer scope.</p></div>
+  <div class="sechead"><h2>What a make safe visit <span class="b" id="t-compare">does and does not include</span></h2>
+  <p class="bluf">Keeping the emergency visit apart from the permanent repair means you can see what you are paying for in each. Four things are in scope on the call out. The last two rows are the ones people expect, and both are deliberately left out.</p></div>
   <div class="tblwrap"><table class="tbl">
-    <thead><tr><th>Covering</th><th>Estimated installed</th><th>Realistic service life</th><th>What decides it</th></tr></thead>
+    <thead><tr><th>On the call out</th><th>In scope</th><th>Estimated</th><th>Why</th></tr></thead>
     <tbody>
-      <tr><th class="best">Architectural asphalt shingle</th><td class="best">$7,000 to $18,000</td><td class="money best">20 to 30 years</td><td class="best">The default, and what the FORTIFIED standard is usually written around</td></tr>
-      <tr><th>Three tab asphalt shingle</th><td>$6,000 to $12,000</td><td class="money">15 to 20 years</td><td>Cheaper now, and the shortest life of the four in this heat</td></tr>
-      <tr><th>Standing seam metal</th><td>$18,000 to $40,000</td><td class="money">40 to 60 years</td><td>The longest life and the highest number, for a long hold</td></tr>
-      <tr><th>Modified bitumen on a low slope</th><td>$9,000 to $20,000</td><td class="money">15 to 25 years</td><td>Only where part of the roof is genuinely low slope</td></tr>
+      <tr><th class="best">Stop the water entering</th><td class="best">Yes</td><td class="money best">$250 to $1,200</td><td class="best">The whole purpose of the visit, and the one thing that cannot wait</td></tr>
+      <tr><th>Photograph the failure before covering it</th><td>Yes</td><td class="money">Included</td><td>Once the tarp is down the evidence is underneath it</td></tr>
+      <tr><th>Clear what is unsafe overhead</th><td>Yes, roofing only</td><td class="money">Included where reachable</td><td>Loose covering and hanging trim are a hazard before they are a leak</td></tr>
+      <tr><th>Written note of what was found</th><td>Yes</td><td class="money">Included</td><td>The permanent repair is scoped from this rather than from memory</td></tr>
+      <tr><th>Damaged electrical service or wiring</th><td>No, never</td><td class="money">Electrician and utility</td><td>The parish says its emergency inspections are generally for electrical issues</td></tr>
+      <tr><th>The permanent repair itself</th><td>No, deliberately</td><td class="money">Scoped after</td><td>A repair priced in the dark and the rain is priced badly, for both of us</td></tr>
     </tbody>
   </table></div>
-  <p class="tbl-note">Every figure is an estimate and none of it is a quote. Pitch, layers, decking condition and access move all four bands. Call for a written price on your LaPlace roof.</p>
+  <p class="tbl-note">Every figure is an estimate and none of it is a quote. If permanent work follows, it is scoped from what the call out recorded, which is why it is written down at the time.</p>
 </div></section>
 
 <!-- ============ PERMIT AND CODE ============ -->
 <section id="permit">
   <div class="tex-d" style="background-image:url('img/photo/inspector.jpg')"></div>
   <div class="wrap">
-  <div class="sechead"><h2><span class="b" id="t-permit">The LaPlace permit route</span> goes through St. John Parish</h2>
-  <p class="bluf" id="p-permit">LaPlace is unincorporated, so the permit for a reroof is a parish permit rather than a city permit. What is different is where you file it. St. John the Baptist Parish runs its Planning and Zoning office out of the government building at 1811 W. Airline Highway, which is inside LaPlace itself.</p></div>
+  <div class="sechead"><h2><span class="b" id="t-permit">The permanent repair still goes</span> to St. John the Baptist Parish</h2>
+  <p class="bluf" id="p-permit">An emergency changes the order things happen in, not whether they happen. The make safe visit stops the water. Permanent roof work that needs a permit is then scoped, valued and filed with the Permit Division through MyGovernmentOnline or at the counter in LaPlace, and it starts once the parish has issued the permit.</p></div>
   <div class="iconrow">
     <div class="icard">
+      <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l5 6h-3l4 5h-3l3 4H6l3-4H6l4-5H7z"/><path d="M12 18v3"/></svg></span>
+      <h3>Stopping the water is not the permitted work</h3>
+      <div class="val" id="v-first">Make safe first</div>
+      <p id="v-first-p">The permanent repair or replacement is what gets scoped, valued and permitted. The make safe visit exists to stop the house taking damage while that happens properly. Treating the two as one job produces a bad repair and a rushed application.</p>
+    </div>
+    <div class="icard">
       <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h7M8 11h7"/><path d="M18 3v18"/></svg></span>
-      <h3>The permit itself is not optional</h3>
-      <div class="val" id="v-state">Statewide since 2025</div>
-      <p id="v-state-p">Louisiana requires any municipality or parish that issues construction permits to permit and inspect roof construction and reroofing. The requirement came in through Act 239 of 2025 and is carried at La. R.S. 37:3737(I). St. John the Baptist Parish issues permits, so a LaPlace reroof is permitted here whichever intake route is used.</p>
+      <h3>The permit requirement has not gone away</h3>
+      <div class="val" id="v-state">R.S. 37:3737(I)</div>
+      <p id="v-state-p">Louisiana requires any municipality or parish that issues construction permits to permit and inspect roof construction and reroofing, through Act 239 of 2025. St. John the Baptist Parish issues permits, and the rule still applies to reroofing after a storm. Whether a smaller repair counts is a question for the Permit Division.</p>
     </div>
     <div class="icard">
       <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-8 9 8"/><path d="M5 11v9h14v-9"/><path d="M9 20v-5h6v5"/></svg></span>
-      <h3>Where the application goes</h3>
-      <div class="val" id="v-route">St. John the Baptist Parish directly</div>
-      <p id="v-route-p">The <a href="https://www.sjbparish.gov/Departments/Planning-and-Zoning/Building-Permits" style="font-weight: bold; text-decoration: underline;">Parish Building Permits page</a> directs applications online through <a href="https://www.mgoconnect.org/cp/portal" style="font-weight: bold; text-decoration: underline;">MyGovernmentOnline at mgoconnect.org/cp/portal</a> or in person at 1811 W. Airline Highway, LaPlace LA 70068. The Permit Division is on (985) 651-5565, and the Code Enforcement office is on (985) 359-1195. Office hours are 8am to 4:30pm Monday to Friday.</p>
+      <h3>Where the permanent repair is filed</h3>
+      <div class="val" id="v-parish">St. John the Baptist Parish</div>
+      <p id="v-parish-p">The <a href="https://www.sjbparish.gov/Departments/Planning-and-Zoning/Building-Permits" style="font-weight: bold; text-decoration: underline;">Permit Division</a> is on the first floor of 1811 W. Airline Highway in LaPlace, on (985) 651-5565, weekdays 8am to 4:30pm excluding government holidays. Applications go online through MyGovernmentOnline or in person.</p>
     </div>
     <div class="icard">
       <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span>
-      <h3>The parish fee comes from the fee sheet at review</h3>
-      <div class="val" id="v-invoice">Not from a headline figure</div>
-      <p id="v-invoice-p">St. John the Baptist Parish publishes a Permit Fee Sheet PDF that the reviewer refers to when the application is reviewed, and the residential re-roof line comes from that sheet at review rather than from a rough number quoted at the door. A figure printed on a search result page should be checked with the Permit Division before you rely on it.</p>
-    </div>
-    <div class="icard">
-      <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l5 6h-3l4 5h-3l3 4H6l3-4H6l4-5H7z"/><path d="M12 18v3"/></svg></span>
-      <h3>The parish government building is in LaPlace itself</h3>
-      <div class="val" id="v-city">A short walk or drive, not a trip to a distant seat</div>
-      <p id="v-city-p">The parish government building is at 1811 W. Airline Highway in LaPlace itself, so a LaPlace resident files at their own address rather than driving to a distant parish seat. That is a genuine local practical fact, not a hurdle, and it is what makes the in-person intake option realistic in a way it is not in every parish.</p>
+      <h3>Who the emergency line is for</h3>
+      <div class="val" id="v-emline">Electrical, through South Central Planning</div>
+      <p id="v-emline-p">The <a href="https://www.sjbparish.gov/Departments/Planning-and-Zoning/Code-Enforcement-Inspections-Violations" style="font-weight: bold; text-decoration: underline;">parish emergency inspection instructions</a> send callers to South Central Planning on (985) 851-2900, option 1, whose answering service reaches the on call inspector. The parish says those inspections are generally for electrical issues and utility reconnects.</p>
     </div>
   </div>
   <div class="ncards two">
-    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l5 6h-3l4 5h-3l3 4H6l3-4H6l4-5H7z"/><path d="M12 18v3"/></svg></span><h3>Why the intake route matters as a practical matter</h3><p>Filing through MyGovernmentOnline puts the application into an online account that both the parish reviewer and the roofer can see. In person at the counter puts it into the physical inbox on the first floor of 1811 W. Airline. Either route is standard for St. John the Baptist Parish; the roofer files whichever route the parish prefers on the specific application.</p><p>What that changes for the homeowner is the pattern of who has the answer at any moment. A parish reviewer either has the file open or has not; progress questions go to the Permit Division on (985) 651-5565 rather than to a login screen.</p></div>
-    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>Ask any roofer for a licence number, and check the date</h3><p>From 1 January 2026 the Residential Roofing or Residential Construction classification is required to advertise, solicit, offer, quote, estimate, supervise or perform work on a residential roofing system valued at seven thousand five hundred dollars or more. That is R.S. 37:2156.4, it covers quoting the work and not only doing it, and the wording is "or more", not "over".</p><p>Ask for the Louisiana state licence number and its expiry date, and verify it with the State Licensing Board for Contractors rather than taking the number on the paperwork as proof the classification is current.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>An online application is submitted, not reviewed</h3><p>The parish takes applications through MyGovernmentOnline as well as at the counter. The parish itself says the online system does not guarantee meeting specific deadlines or bypassing required review periods, and a permit is not issued until the completed application has been reviewed.</p><p>That is one more reason the tarp comes first. The house is protected on the night, and the paperwork for the permanent repair goes in properly once it can be dealt with.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l5 6h-3l4 5h-3l3 4H6l3-4H6l4-5H7z"/><path d="M12 18v3"/></svg></span><h3>When the storm also takes the power line</h3><p>Wind and falling limbs can damage the electrical service where it reaches the house, often at or over the roof line. That part is not roofing work. It is for a licensed electrician and the utility, and it is what the parish on call inspector line is there for.</p><p>We make the roof safe around it and stay clear of it. Once the water is stopped, the written note becomes a <a href="https://www.bigeasyroofing.com/service-areas/louisiana/laplace/roof-repairs/" style="font-weight: bold; text-decoration: underline;">roof repair</a> scope, or a <a href="https://www.bigeasyroofing.com/service-areas/louisiana/laplace/roof-inspection/" style="font-weight: bold; text-decoration: underline;">roof inspection</a> if the damage is not confined to one place.</p></div>
   </div>
   <div class="seccta">
     <a class="btn btn-y" href="https://www.bigeasyroofing.com/contact/">Get Your FREE Quote</a>
@@ -568,12 +572,12 @@ footer a{color:#fff}
 <section id="local">
   <div class="tex" style="background-image:url('img/photo/tearoff-aerial.jpg')"></div>
   <div class="wrap">
-  <div class="sechead"><h2>What a LaPlace address <span class="b">changes about the job</span></h2>
-  <p class="bluf">LaPlace sits on the east bank of the Mississippi River in St. John the Baptist Parish, about twenty five miles west of New Orleans, at elevation ten feet. It is unincorporated and the parish government building is at 1811 W. Airline Highway in the town itself, so three things follow from that on a reroof.</p></div>
+  <div class="sechead"><h2>What actually fails <span class="b">in a LaPlace storm</span></h2>
+  <p class="bluf">LaPlace sits on the east bank of the Mississippi River in St. John the Baptist Parish, low and flat at elevation ten feet. The failures behind an emergency call here follow a consistent pattern, and knowing it lets a crew stop the water quickly instead of hunting for it.</p></div>
   <div class="ncards">
-    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span><h3>The permit paperwork is a parish permit</h3><p>Because LaPlace is unincorporated, a reroof permit is a St. John the Baptist Parish permit rather than a city one. Because the parish government building is inside LaPlace, the paperwork does not have to travel far, and the in-person option is a realistic choice rather than a fallback.</p><p>The route the paperwork takes is what differs from Metairie (Jefferson Parish counter) or Kenner (its own city department). LaPlace goes through parish MGO or the parish counter at 1811 W. Airline.</p></div>
-    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-8 9 8"/><path d="M5 11v9h14v-9"/><path d="M9 20v-5h6v5"/></svg></span><h3>The Mississippi and Airline are the landmarks the parish uses</h3><p>LaPlace is bounded to the south by the Mississippi River and threaded by Airline Highway and Interstate 10 east to west, with the parish government building on the stretch of Airline that runs through town. The parish uses street addresses on that grid to route applications rather than parish-wide identifiers, so a specific LaPlace address is enough to open a file.</p><p>A LaPlace address is expected to be an unincorporated parish address, since the parish as a whole is largely unincorporated. There is no city-limits question of the kind that arises in Harahan or Gretna.</p></div>
-    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.6 6 10.4A6 6 0 0 1 6 13.4C6 9.6 12 3 12 3z"/></svg></span><h3>Heat and heavy rainfall age the covering at the details first</h3><p>A covering in this climate almost never fails as a flat surface. It fails at the flashings, the valleys and the pipe boots, which is why those items sit inside a written scope on a replacement rather than being taken as read.</p><p>The other half of the ageing story is attic heat, and ventilation is the underpriced part of the fix. A sealed attic on a hot roof takes years off a shingle, so ventilation is on the scope rather than left as an option.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.6 6 10.4A6 6 0 0 1 6 13.4C6 9.6 12 3 12 3z"/></svg></span><h3>Wind takes the edge before the field</h3><p>Coverings lift at the perimeter, the ridge and around anything that projects, because that is where wind gets underneath. A roof that looks intact from the street has often lost its edge detail first.</p><p>So a make safe visit starts at the edges and the penetrations rather than at the point on the ceiling where the water appeared. The two are rarely in the same place.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-8 9 8"/><path d="M5 11v9h14v-9"/><path d="M9 20v-5h6v5"/></svg></span><h3>Water travels before it shows</h3><p>It runs along the decking and the framing and drops where it finds a gap, which can be several feet from where it got in. Chasing the stain instead of the entry point is the usual reason an emergency visit fails to stop a leak.</p><p>It also means the damage you can see indoors is a poor guide to the size of the problem outside, in either direction.</p></div>
+    <div class="ncard"><span class="nc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span><h3>A Friday night failure meets a Monday counter</h3><p>A roof that fails after 4:30 on a Friday meets a Permit Division whose next listed opening is a weekday morning, later still if Monday is a government holiday. The tarp carries the house through that gap.</p><p>Reroofing still needs the parish permit and, if the work reaches the value threshold, the right licence classification under R.S. 37:2156.4. None of that is urgent on the night, and all of it matters within the week.</p></div>
   </div>
 </div></section>
 
@@ -582,9 +586,9 @@ footer a{color:#fff}
   <div class="aiv">
     <div class="aiv-left">
       <h2>Big Easy Roofing <span class="b">Process</span></h2>
-      <p class="lede">Four steps. LaPlace is a parish permit rather than a city permit, so the paperwork step is called out explicitly.</p>
+      <p class="lede">Four steps. The house comes first and the paperwork second, because the weather does not wait for the parish office to open.</p>
       <div class="aiv-figure">
-        <img src="img/photo/estimator.jpg" alt="A roofing estimator drafting a permit application and scope on a tablet" width="1024" height="682">
+        <img src="img/photo/tarp.jpg" alt="Temporary weatherproofing fitted to a storm damaged residential roof" width="1024" height="682">
       </div>
       <div class="aiv-ctas">
         <a class="btn btn-y" href="https://www.bigeasyroofing.com/contact/">Get Your FREE Quote</a>
@@ -598,23 +602,23 @@ footer a{color:#fff}
       </svg>
       <div class="step">
         <span class="num">01</span>
-        <div><h3>01 Confirm the LaPlace address with St. John Parish</h3>
-        <p>A LaPlace mailing address is expected to be an unincorporated parish address, but the reviewer checks the address against the parish record before drafting the application. That decides which files the application is opened under.</p></div>
+        <div><h3>01 Make the house safe and stop the water</h3>
+        <p>Temporary weatherproofing over the failure, and anything unsafe overhead dealt with where it can be reached safely. Damaged electrical service is left for the electrician.</p></div>
       </div>
       <div class="step">
         <span class="num">02</span>
-        <div><h3>02 Measure, inspect the deck and write the scope with its value</h3>
-        <p>Squares, pitch, layers and the condition of what is under the covering. The construction value that comes out of this is what the parish reviewer uses.</p></div>
+        <div><h3>02 Photograph and write down what was found</h3>
+        <p>Before the covering goes on, because afterwards the evidence is underneath it. The permanent scope is built from this.</p></div>
       </div>
       <div class="step">
         <span class="num">03</span>
-        <div><h3>03 File the Building Permit Application through MGO or in person</h3>
-        <p>Applications go online at mgoconnect.org/cp/portal or in person at 1811 W. Airline Highway in LaPlace. The permit fee comes from the parish fee sheet at review, not from a headline figure quoted at the door.</p></div>
+        <div><h3>03 Scope and value the permanent repair in daylight</h3>
+        <p>With the covering opened up and the value written down, because both the permit and the licensing rule turn on it.</p></div>
       </div>
       <div class="step">
         <span class="num">04</span>
-        <div><h3>04 Tear off, replace, and hand over the paperwork</h3>
-        <p>The scope, the permit and the inspection sign off go to you together, which is what a future buyer or insurer asks for.</p></div>
+        <div><h3>04 File with St. John the Baptist Parish when the office is open</h3>
+        <p>Through MyGovernmentOnline or at the Permit Division counter in LaPlace, weekdays 8am to 4:30pm, then carry out the permanent work once the permit is issued.</p></div>
       </div>
     </div>
   </div>
@@ -625,7 +629,7 @@ footer a{color:#fff}
   <div class="tex" style="background-image:url('img/photo/tex-curling.jpg')"></div>
   <div class="wrap">
   <div class="sechead"><h2>Everything else we do <span class="b" id="t-more">in LaPlace</span></h2>
-  <p class="bluf" id="p-more">The rest of the Big Easy Roofing services available in LaPlace, each with its own page and written scope. Where a roof does not need a full replacement, a repair, an inspection or gutter work is the cheaper honest answer, and the same MGO intake route applies to whichever service you need.</p></div>
+  <p class="bluf" id="p-more">The rest of the Big Easy Roofing services available in LaPlace, each with its own page, crew and written scope. An emergency visit stops the water; what follows is usually a repair or a replacement, priced from the written note taken on the call out rather than from a fresh guess.</p></div>
 
   <div class="svctabs" role="tablist" id="svctabs">
     <span class="svc-ask">Filter by service type:</span>
@@ -642,10 +646,10 @@ footer a{color:#fff}
 
 <!-- ============ FAQ ============ -->
 <section id="faq"><div class="wrap">
-  <h2 id="t-faq" class="faqhead">LaPlace Roof Replacement <span class="b">FAQs</span></h2>
+  <h2 id="t-faq" class="faqhead">LaPlace Emergency Roof Repair <span class="b">FAQs</span></h2>
   <div class="faqtop">
     <div>
-      <p id="p-faq">The questions worth asking before a LaPlace reroof is priced, answered before you have to pick up the phone.</p>
+      <p id="p-faq">What an emergency call out on a LaPlace roof covers, and what happens after the water stops.</p>
     </div>
     <div class="photostack" aria-hidden="true">
       <figure class="ps1"><img src="img/photo/hail.jpg" alt=""></figure>
@@ -659,34 +663,36 @@ footer a{color:#fff}
       <h4>Topic</h4>
       <ul id="topiclist">
         <li><button class="on" data-t="all">All questions</button></li>
-        <li><button data-t="permit">Permit and parish</button></li>
+        <li><button data-t="urgent">The call out</button></li>
+        <li><button data-t="permit">Permits and timing</button></li>
         <li><button data-t="cost">Cost</button></li>
-        <li><button data-t="licence">Licensing</button></li>
-        <li><button data-t="timing">Timing</button></li>
+        <li><button data-t="insurance">Insurance</button></li>
       </ul>
       <div class="askcard">
         <h3>Question not here?</h3>
-        <p id="p-ask">Ask us anything about your LaPlace roof. No charge and no obligation.</p>
+        <p id="p-ask">Call us about a LaPlace roof emergency. No charge to ask.</p>
         <span class="btn btn-y">Call (504) 800-8196</span>
       </div>
     </div>
     <div class="qa" id="qa">
-      <details data-t="permit"><summary id="q1">Do I need a permit to replace my roof in LaPlace</summary>
-        <div class="ans"><p id="a1">Yes. Louisiana requires any municipality or parish that issues construction permits to permit and inspect roof construction and reroofing, and that requirement is carried at La. R.S. 37:3737(I). St. John the Baptist Parish issues permits, so a LaPlace reroof is permitted under that rule.</p></div></details>
-      <details data-t="permit"><summary id="q2">How is the LaPlace permit application filed</summary>
-        <div class="ans"><p id="a2">Online through MyGovernmentOnline at mgoconnect.org/cp/portal or in person at the St. John the Baptist Parish government building at 1811 W. Airline Highway in LaPlace. Downloadable PDF applications are also posted on the parish Building Permits page. Office hours are 8am to 4:30pm Monday to Friday.</p></div></details>
-      <details data-t="cost"><summary id="q3">What does a roofing permit cost in LaPlace</summary>
-        <div class="ans"><p id="a3">The parish publishes a permit fee sheet and the residential re-roof line comes from that sheet at review, so the amount is set at the parish level for the specific application. Any figure quoted before the paperwork goes in should be checked with the Permit Division on (985) 651-5565 before you rely on it.</p></div></details>
-      <details data-t="permit"><summary id="q4">Is LaPlace incorporated</summary>
-        <div class="ans"><p id="a4">No. LaPlace is a census-designated place with a 2020 population of 28,841, on the east bank of the Mississippi in St. John the Baptist Parish. The historic parish seat is Edgard; the parish government building sits inside LaPlace at 1811 W. Airline Highway, so parish services for a LaPlace address are filed at a LaPlace address.</p></div></details>
-      <details data-t="permit"><summary id="q5">Who reviews the permit application</summary>
-        <div class="ans"><p id="a5">The St. John the Baptist Parish Permit Division reviews applications, on (985) 651-5565, with Code Enforcement Inspectors carrying out building inspections on (985) 359-1195. Both offices are on the first floor of 1811 W. Airline Highway, open 8am to 4:30pm Monday to Friday excluding government holidays.</p></div></details>
-      <details data-t="cost"><summary id="q6">What does a roof replacement cost in LaPlace</summary>
-        <div class="ans"><p id="a6">A full asphalt replacement is estimated at $7,000 to $18,000, moved by size, pitch and how many layers have to come off. Standing seam metal and complex roofs with several valleys run higher. Every figure here is an estimate and a written price follows a measurement.</p></div></details>
-      <details data-t="licence"><summary id="q7">How do I check my roofer is licensed for the work</summary>
-        <div class="ans"><p id="a7">Ask for the Louisiana state licence number and its expiry date. From 1 January 2026, work on a residential roofing system valued at seven thousand five hundred dollars or more requires the Residential Roofing or Residential Construction classification under R.S. 37:2156.4. That covers quoting and estimating the work, not only performing it.</p></div></details>
-      <details data-t="timing"><summary id="q8">How long does a LaPlace replacement take</summary>
-        <div class="ans"><p id="a8">Most single family roofs are a day of work once the crew is on site. The calendar is usually set by the permit rather than by the roofing, and in LaPlace that means the timeline depends on when the Parish Permit Division reviews the application and issues the permit.</p></div></details>
+      <details data-t="urgent"><summary id="q1">What does an emergency visit actually do</summary>
+        <div class="ans"><p id="a1">It stops water entering the house and records what was found. It is make safe work, not the permanent repair. The permanent repair is scoped and priced afterwards, in daylight, with the covering opened up properly.</p></div></details>
+      <details data-t="urgent"><summary id="q2">Should I call the parish emergency inspection line about a leaking roof</summary>
+        <div class="ans"><p id="a2">No. St. John the Baptist Parish says its emergency inspections are generally for electrical issues, where an on call inspector checks the damage and calls the utility for a reconnect. For a leak, call a roofer. If the storm also damaged your power supply, call an electrician.</p></div></details>
+      <details data-t="cost"><summary id="q3">What does an emergency call out cost in LaPlace</summary>
+        <div class="ans"><p id="a3">A make safe visit is estimated at $250 to $1,200, driven by access, pitch, how much area needs covering and whether the work can be done safely at that time and in that weather. Every figure here is an estimate, and the permanent work is priced separately.</p></div></details>
+      <details data-t="permit"><summary id="q4">Do I need a permit before you put a tarp on</summary>
+        <div class="ans"><p id="a4">We have not read a St. John the Baptist Parish rule on temporary weatherproofing, so we will not tell you one either way. Reroofing needs the parish permit, and the Permit Division on (985) 651-5565 can say whether your permanent repair and the tarp need one.</p></div></details>
+      <details data-t="permit"><summary id="q5">Can I file the permit application online outside office hours</summary>
+        <div class="ans"><p id="a5">You can submit it online through MyGovernmentOnline. The parish says the online system does not guarantee meeting specific deadlines or bypassing required review periods, and the Permit Division keeps weekday hours of 8am to 4:30pm.</p></div></details>
+      <details data-t="permit"><summary id="q6">Does the permit requirement still apply after a storm</summary>
+        <div class="ans"><p id="a6">Yes, to reroofing. Louisiana requires any municipality or parish that issues construction permits to permit and inspect roof construction and reroofing, at La. R.S. 37:3737(I). Ask the Permit Division whether a smaller permanent repair counts.</p></div></details>
+      <details data-t="insurance"><summary id="q7">Will my insurance pay for the emergency visit</summary>
+        <div class="ans"><p id="a7">That is a question for your insurer, and R.S. 37:2159.1 bars a Louisiana roofing contractor from interpreting your cover. What we can do is record what happened and what we did, with dated photographs taken before anything was covered up.</p></div></details>
+      <details data-t="urgent"><summary id="q8">How long does a tarp last</summary>
+        <div class="ans"><p id="a8">Weeks rather than months in this sun. It buys the time to scope and permit the permanent repair properly. It is not a cheap permanent answer and nobody should sell it as one.</p></div></details>
+      <details data-t="urgent"><summary id="q9">Why is the leak nowhere near the damage I can see outside</summary>
+        <div class="ans"><p id="a9">That is normal. Water runs along the decking and the framing before it drops, so the entry point and the stain are rarely above one another. It is why a make safe visit starts at the edges and the penetrations.</p></div></details>
     </div>
   </div>
 </div></section>
@@ -695,8 +701,8 @@ footer a{color:#fff}
 <section class="promo"><div class="wrap">
   <div class="pcard">
     <div class="pcopy">
-      <h2 id="t-cta">Get the LaPlace <span class="b">parish permit settled</span> before anyone climbs a ladder</h2>
-      <p id="p-cta">LaPlace files through St. John the Baptist Parish at 1811 W. Airline Highway, using MyGovernmentOnline or the counter. The parish fee comes from the fee sheet at review rather than a headline number. We file the paperwork through the right route and put the whole scope in writing before tear off begins. If you would rather start in writing, <a href="https://www.bigeasyroofing.com/contact/" style="font-weight: bold; text-decoration: underline;">tell us what the job involves</a> and we will come back with an estimate.</p>
+      <h2 id="t-cta">Stop the water tonight, <span class="b">file the permanent repair</span> when the parish office opens</h2>
+      <p id="p-cta">An emergency visit stops the house taking damage and records what was found before a tarp hides it. The permanent repair is scoped in daylight, valued in writing and, where it needs a permit, filed with St. John the Baptist Parish through MyGovernmentOnline or at the LaPlace counter during weekday hours. Two jobs, two clocks, and you can see what you pay for in each. If you would rather start in writing, <a href="https://www.bigeasyroofing.com/contact/" style="font-weight: bold; text-decoration: underline;">tell us what the job involves</a> and we will come back with an estimate.</p>
       <span class="btn btn-y">Call (504) 800-8196</span>
     </div>
     <div class="pshots" aria-hidden="true">
@@ -704,18 +710,18 @@ footer a{color:#fff}
       <figure class="pb"><img src="img/photo/tarp.jpg" alt=""></figure>
       <figure class="pc"><img src="img/photo/tex-shingle.jpg" alt=""></figure>
     </div>
-    <div class="pbadge"><span id="t-badge"><b>Roof Replacement</b>in LaPlace</span></div>
+    <div class="pbadge"><span id="t-badge"><b>Emergency Roof Repair</b>in LaPlace</span></div>
   </div>
 </div></section>
 
 <footer><div class="wrap">
   Big Easy Roofing, 4523 Croyden Ave, New Orleans, LA. <span>(504) 800-8196</span><br>
-  Prototype page, not a live URL. Proposed location: /service-areas/louisiana/laplace/roof-replacement/
+  Prototype page, not a live URL. Proposed location: /service-areas/louisiana/laplace/emergency-roof-repair/
 </div></footer>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Roof Replacement","name":"Roof Replacement in LaPlace, LA","provider":{"@type":"RoofingContractor","name":"Big Easy Roofing","url":"https://www.bigeasyroofing.com","telephone":"504-800-8196","address":{"@type":"PostalAddress","addressLocality":"New Orleans","addressRegion":"LA","addressCountry":"US"}},"areaServed":{"@type":"City","name":"LaPlace","containedInPlace":{"@type":"AdministrativeArea","name":"St. John the Baptist Parish, Louisiana"}},"url":"https://www.bigeasyroofing.com/service-areas/louisiana/laplace/roof-replacement/","description":"Roof replacement for LaPlace, Louisiana homes. Full tear off, decking repair and new covering, with the permit filed to St. John the Baptist Parish through MyGovernmentOnline or in person at 1811 W. Airline Highway in LaPlace."}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I need a permit to replace my roof in LaPlace?","acceptedAnswer":{"@type":"Answer","text":"Yes. Louisiana requires any municipality or parish that issues construction permits to permit and inspect roof construction and reroofing, and that requirement is carried at La. R.S. 37:3737(I). St. John the Baptist Parish issues permits, so a LaPlace reroof is permitted under that rule."}},{"@type":"Question","name":"How is the LaPlace permit application filed?","acceptedAnswer":{"@type":"Answer","text":"Online through MyGovernmentOnline at mgoconnect.org/cp/portal or in person at the St. John the Baptist Parish government building at 1811 W. Airline Highway in LaPlace. Downloadable PDF applications are also posted on the parish Building Permits page. Office hours are 8am to 4:30pm Monday to Friday."}},{"@type":"Question","name":"What does a roofing permit cost in LaPlace?","acceptedAnswer":{"@type":"Answer","text":"The parish publishes a permit fee sheet and the residential re-roof line comes from that sheet at review, so the amount is set at the parish level for the specific application. Any figure quoted before the paperwork goes in should be checked with the Permit Division on (985) 651-5565 before you rely on it."}},{"@type":"Question","name":"Is LaPlace incorporated?","acceptedAnswer":{"@type":"Answer","text":"No. LaPlace is a census-designated place with a 2020 population of 28,841, on the east bank of the Mississippi in St. John the Baptist Parish. The historic parish seat is Edgard; the parish government building sits inside LaPlace at 1811 W. Airline Highway, so parish services for a LaPlace address are filed at a LaPlace address."}},{"@type":"Question","name":"Who reviews the permit application?","acceptedAnswer":{"@type":"Answer","text":"The St. John the Baptist Parish Permit Division reviews applications, on (985) 651-5565, with Code Enforcement Inspectors carrying out building inspections on (985) 359-1195. Both offices are on the first floor of 1811 W. Airline Highway, open 8am to 4:30pm Monday to Friday excluding government holidays."}},{"@type":"Question","name":"What does a roof replacement cost in LaPlace?","acceptedAnswer":{"@type":"Answer","text":"A full asphalt replacement is estimated at $7,000 to $18,000, moved by size, pitch and how many layers have to come off. Standing seam metal and complex roofs with several valleys run higher. Every figure here is an estimate and a written price follows a measurement."}},{"@type":"Question","name":"How do I check my roofer is licensed for the work?","acceptedAnswer":{"@type":"Answer","text":"Ask for the Louisiana state licence number and its expiry date. From 1 January 2026, work on a residential roofing system valued at seven thousand five hundred dollars or more requires the Residential Roofing or Residential Construction classification under R.S. 37:2156.4. That covers quoting and estimating the work, not only performing it."}},{"@type":"Question","name":"How long does a LaPlace replacement take?","acceptedAnswer":{"@type":"Answer","text":"Most single family roofs are a day of work once the crew is on site. The calendar is usually set by the permit rather than by the roofing, and in LaPlace that means the timeline depends on when the Parish Permit Division reviews the application and issues the permit."}}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.bigeasyroofing.com/"},{"@type":"ListItem","position":2,"name":"Service Areas","item":"https://www.bigeasyroofing.com/service-areas/"},{"@type":"ListItem","position":3,"name":"Louisiana","item":"https://www.bigeasyroofing.com/service-areas/louisiana/"},{"@type":"ListItem","position":4,"name":"LaPlace","item":"https://www.bigeasyroofing.com/service-areas/louisiana/laplace/"},{"@type":"ListItem","position":5,"name":"Roof Replacement"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Emergency Roof Repair","name":"Emergency Roof Repair in LaPlace, LA","provider":{"@type":"RoofingContractor","name":"Big Easy Roofing","url":"https://www.bigeasyroofing.com","telephone":"504-800-8196","address":{"@type":"PostalAddress","addressLocality":"New Orleans","addressRegion":"LA","addressCountry":"US"}},"areaServed":{"@type":"City","name":"LaPlace","containedInPlace":{"@type":"AdministrativeArea","name":"St. John the Baptist Parish, Louisiana"}},"url":"https://www.bigeasyroofing.com/service-areas/louisiana/laplace/emergency-roof-repair/","description":"Emergency roof repair for LaPlace, Louisiana. Temporary weatherproofing and make safe work to stop water entering, followed by a written scope for the permanent repair."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does an emergency visit actually do?","acceptedAnswer":{"@type":"Answer","text":"It stops water entering the house and records what was found. It is make safe work, not the permanent repair. The permanent repair is scoped and priced afterwards, in daylight, with the covering opened up properly."}},{"@type":"Question","name":"Should I call the parish emergency inspection line about a leaking roof?","acceptedAnswer":{"@type":"Answer","text":"No. St. John the Baptist Parish says its emergency inspections are generally for electrical issues, where an on call inspector checks the damage and calls the utility for a reconnect. For a leak, call a roofer. If the storm also damaged your power supply, call an electrician."}},{"@type":"Question","name":"What does an emergency call out cost in LaPlace?","acceptedAnswer":{"@type":"Answer","text":"A make safe visit is estimated at $250 to $1,200, driven by access, pitch, how much area needs covering and whether the work can be done safely at that time and in that weather. Every figure here is an estimate, and the permanent work is priced separately."}},{"@type":"Question","name":"Do I need a permit before you put a tarp on?","acceptedAnswer":{"@type":"Answer","text":"We have not read a St. John the Baptist Parish rule on temporary weatherproofing, so we will not tell you one either way. Reroofing needs the parish permit, and the Permit Division on (985) 651-5565 can say whether your permanent repair and the tarp need one."}},{"@type":"Question","name":"Can I file the permit application online outside office hours?","acceptedAnswer":{"@type":"Answer","text":"You can submit it online through MyGovernmentOnline. The parish says the online system does not guarantee meeting specific deadlines or bypassing required review periods, and the Permit Division keeps weekday hours of 8am to 4:30pm."}},{"@type":"Question","name":"Does the permit requirement still apply after a storm?","acceptedAnswer":{"@type":"Answer","text":"Yes, to reroofing. Louisiana requires any municipality or parish that issues construction permits to permit and inspect roof construction and reroofing, at La. R.S. 37:3737(I). Ask the Permit Division whether a smaller permanent repair counts."}},{"@type":"Question","name":"Will my insurance pay for the emergency visit?","acceptedAnswer":{"@type":"Answer","text":"That is a question for your insurer, and R.S. 37:2159.1 bars a Louisiana roofing contractor from interpreting your cover. What we can do is record what happened and what we did, with dated photographs taken before anything was covered up."}},{"@type":"Question","name":"How long does a tarp last?","acceptedAnswer":{"@type":"Answer","text":"Weeks rather than months in this sun. It buys the time to scope and permit the permanent repair properly. It is not a cheap permanent answer and nobody should sell it as one."}},{"@type":"Question","name":"Why is the leak nowhere near the damage I can see outside?","acceptedAnswer":{"@type":"Answer","text":"That is normal. Water runs along the decking and the framing before it drops, so the entry point and the stain are rarely above one another. It is why a make safe visit starts at the edges and the penetrations."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.bigeasyroofing.com/"},{"@type":"ListItem","position":2,"name":"Service Areas","item":"https://www.bigeasyroofing.com/service-areas/"},{"@type":"ListItem","position":3,"name":"Louisiana","item":"https://www.bigeasyroofing.com/service-areas/louisiana/"},{"@type":"ListItem","position":4,"name":"LaPlace","item":"https://www.bigeasyroofing.com/service-areas/louisiana/laplace/"},{"@type":"ListItem","position":5,"name":"Emergency Roof Repair"}]}</script>
 <script>
 (function(){
   var CITY={
